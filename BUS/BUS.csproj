@@ -50,5 +50,11 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS_QuanLyDatVe\" />
+    <Folder Include="BUS_QuanLyLichChieu\" />
+    <Folder Include="BUS_QuanLyPhim\" />
+    <Folder Include="BUS_QuanLyTaiKhoan\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -85,5 +85,11 @@
       <Name>BUS</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI_QuanLyDatVe\" />
+    <Folder Include="GUI_QuanLyLichChieu\" />
+    <Folder Include="GUI_QuanLyPhim\" />
+    <Folder Include="GUI_QuanLyTaiKhoan\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
