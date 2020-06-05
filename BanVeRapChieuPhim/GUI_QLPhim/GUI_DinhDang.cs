@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace BanVeRapChieuPhim.GUI_QLPhim
 {
-    public partial class GUI_TheLoai : Form
+    public partial class GUI_DinhDang : Form
     {
-        public GUI_TheLoai()
+        public GUI_DinhDang()
         {
             InitializeComponent();
         }
-
-        
     }
 }
