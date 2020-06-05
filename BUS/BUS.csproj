@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_QuanLyPhim\BUS_TheLoai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,7 +54,6 @@
   <ItemGroup>
     <Folder Include="BUS_QuanLyDatVe\" />
     <Folder Include="BUS_QuanLyLichChieu\" />
-    <Folder Include="BUS_QuanLyPhim\" />
     <Folder Include="BUS_QuanLyTaiKhoan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

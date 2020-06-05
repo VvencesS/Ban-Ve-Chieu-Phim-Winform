@@ -41,15 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_QuanLyTaiKhoan\DAL_NhanVien.cs" />
+    <Compile Include="DAL_QuanLyPhim\DAL_TheLoai.cs" />
+    <Compile Include="DAL_QuanLyTaiKhoan\DAL_ThanhVien.cs" />
     <Compile Include="SQLDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL_QuanLyDatVe\" />
     <Folder Include="DAL_QuanLyLichChieu\" />
-    <Folder Include="DAL_QuanLyPhim\" />
-    <Folder Include="DAL_QuanLyTaiKhoan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
