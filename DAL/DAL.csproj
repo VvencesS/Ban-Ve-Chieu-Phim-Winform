@@ -41,6 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_QuanLyLichChieu\DAL_Ghe.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_KhungThoiGian.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_LoaiGhe.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_Phong.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_SoGhe.cs" />
+    <Compile Include="DAL_QuanLyPhim\DAL_DinhDang.cs" />
+    <Compile Include="DAL_QuanLyPhim\DAL_Phim.cs" />
+    <Compile Include="DAL_QuanLyPhim\DAL_QuocGia.cs" />
     <Compile Include="DAL_QuanLyTaiKhoan\DAL_NhanVien.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_TheLoai.cs" />
     <Compile Include="DAL_QuanLyTaiKhoan\DAL_ThanhVien.cs" />
@@ -49,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL_QuanLyDatVe\" />
-    <Folder Include="DAL_QuanLyLichChieu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

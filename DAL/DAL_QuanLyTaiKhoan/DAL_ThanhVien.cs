@@ -74,7 +74,7 @@ namespace DAL.DAL_QuanLyTaiKhoan
 
         #region  Phương thức chỉnh sửa thông tin một Nhanvien
         /// <summary>
-        /// Phương thức chỉnh sửa thông tin một Nhanvien
+        /// Phương thức chỉnh sửa Thành viên
         /// </summary>
         /// <param name="hoTen"></param>
         /// <param name="email"></param>
@@ -85,13 +85,15 @@ namespace DAL.DAL_QuanLyTaiKhoan
         /// <param name="userName"></param>
         /// <param name="passWord"></param>
         /// <param name="idXaPhuong"></param>
-        /// <param name="maNhanVien"></param>
-        public static void Nhanvien_Update(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string userName, string passWord, int idXaPhuong, , bool trangThai, int maNhanVien)
+        /// <param name=""></param>
+        /// <param name="trangThai"></param>
+        /// <param name="maThanhVien"></param>
+        public static void Nhanvien_Update(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string userName, string passWord, int idXaPhuong, , bool trangThai, int maThanhVien)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_NhanVien] SET[UserName] = @userName,[HoTen] = @hoTen,[Email] = @email,[Sdt] = @sdt,[SoThe] = @soThe," +
-                "[NgaySinh] = @ngaySinh,[GioiTinh] = @gioiTinh,[PassWord] = @passWord,[IDXaPhuong] = @idXaPhuong WHERE MaNhanVien=@maNhanVien");
+                "[NgaySinh] = @ngaySinh,[GioiTinh] = @gioiTinh,[PassWord] = @passWord,[IDXaPhuong] = @idXaPhuong WHERE MaThanhVien=@maThanhVien");
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@userName", userName);
+            cmd.Parameters.AddWithValue("@trangThai", trangThai);
             cmd.Parameters.AddWithValue("@hoTen", hoTen);
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@sdt", sdt);
@@ -100,7 +102,7 @@ namespace DAL.DAL_QuanLyTaiKhoan
             cmd.Parameters.AddWithValue("@gioiTinh", gioiTinh);
             cmd.Parameters.AddWithValue("@passWord", passWord);
             cmd.Parameters.AddWithValue("@idXaPhuong", idXaPhuong);
-            cmd.Parameters.AddWithValue("@maNhanVien", maNhanVien);
+            cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
