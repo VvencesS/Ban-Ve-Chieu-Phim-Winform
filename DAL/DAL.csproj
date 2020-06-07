@@ -46,6 +46,7 @@
     <Compile Include="DAL_QuanLyLichChieu\DAL_LoaiGhe.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_Phong.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_SoGhe.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_Test.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_DinhDang.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_Phim.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_QuocGia.cs" />
