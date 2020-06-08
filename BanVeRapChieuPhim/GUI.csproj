@@ -53,46 +53,145 @@
     <Compile Include="GUI_NhanVien.Designer.cs">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_DinhDang.cs">
+    <Compile Include="GUI_QuanLyDatVe\GUI_Gia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_DinhDang.Designer.cs">
+    <Compile Include="GUI_QuanLyDatVe\GUI_Gia.Designer.cs">
+      <DependentUpon>GUI_Gia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyDatVe\GUI_Ve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyDatVe\GUI_Ve.Designer.cs">
+      <DependentUpon>GUI_Ve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_DinhDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_DinhDang.Designer.cs">
       <DependentUpon>GUI_DinhDang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_Phim.cs">
+    <Compile Include="GUI_QuanLyLichChieu\GUI_Ghe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_Phim.Designer.cs">
+    <Compile Include="GUI_QuanLyLichChieu\GUI_Ghe.Designer.cs">
+      <DependentUpon>GUI_Ghe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_KTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_KTG.Designer.cs">
+      <DependentUpon>GUI_KTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_LoaiGhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_LoaiGhe.Designer.cs">
+      <DependentUpon>GUI_LoaiGhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_Phong.Designer.cs">
+      <DependentUpon>GUI_Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_SoGhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_SoGhe.Designer.cs">
+      <DependentUpon>GUI_SoGhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_TrangThai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_TrangThai.Designer.cs">
+      <DependentUpon>GUI_TrangThai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyPhim\GUI_DinhDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyPhim\GUI_DinhDang.Designer.cs">
+      <DependentUpon>GUI_DinhDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyPhim\GUI_Phim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyPhim\GUI_Phim.Designer.cs">
       <DependentUpon>GUI_Phim.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_QuocGia.cs">
+    <Compile Include="GUI_QuanLyPhim\GUI_QuocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_QuocGia.Designer.cs">
+    <Compile Include="GUI_QuanLyPhim\GUI_QuocGia.Designer.cs">
       <DependentUpon>GUI_QuocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_TheLoai.cs">
+    <Compile Include="GUI_QuanLyPhim\GUI_TheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QLPhim\GUI_TheLoai.Designer.cs">
+    <Compile Include="GUI_QuanLyPhim\GUI_TheLoai.Designer.cs">
       <DependentUpon>GUI_TheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_NhanVien.Designer.cs">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThanhVien.Designer.cs">
+      <DependentUpon>GUI_ThanhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_NhanVien.resx">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QLPhim\GUI_DinhDang.resx">
+    <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_Gia.resx">
+      <DependentUpon>GUI_Gia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_Ve.resx">
+      <DependentUpon>GUI_Ve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_DinhDang.resx">
       <DependentUpon>GUI_DinhDang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QLPhim\GUI_Phim.resx">
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_Ghe.resx">
+      <DependentUpon>GUI_Ghe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_KTG.resx">
+      <DependentUpon>GUI_KTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_LoaiGhe.resx">
+      <DependentUpon>GUI_LoaiGhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_Phong.resx">
+      <DependentUpon>GUI_Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_SoGhe.resx">
+      <DependentUpon>GUI_SoGhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_TrangThai.resx">
+      <DependentUpon>GUI_TrangThai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_DinhDang.resx">
+      <DependentUpon>GUI_DinhDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_Phim.resx">
       <DependentUpon>GUI_Phim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QLPhim\GUI_QuocGia.resx">
+    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_QuocGia.resx">
       <DependentUpon>GUI_QuocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QLPhim\GUI_TheLoai.resx">
+    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_TheLoai.resx">
       <DependentUpon>GUI_TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_NhanVien.resx">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_ThanhVien.resx">
+      <DependentUpon>GUI_ThanhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,11 +222,6 @@
       <Name>BUS</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI_QuanLyDatVe\" />
-    <Folder Include="GUI_QuanLyLichChieu\" />
-    <Folder Include="GUI_QuanLyPhim\" />
-    <Folder Include="GUI_QuanLyTaiKhoan\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
