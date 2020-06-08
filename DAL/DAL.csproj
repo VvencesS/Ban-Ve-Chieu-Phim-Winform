@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_QuanLyDatVe\DAL_DSDatVe.cs" />
+    <Compile Include="DAL_QuanLyDatVe\DAL_Ve.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_Ghe.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_KhungThoiGian.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_LoaiGhe.cs" />
@@ -55,8 +57,6 @@
     <Compile Include="SQLDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL_QuanLyDatVe\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
