@@ -58,6 +58,12 @@
     <Compile Include="GUI_QLPhim\GUI_DinhDang.Designer.cs">
       <DependentUpon>GUI_DinhDang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QLPhim\GUI_Phim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLPhim\GUI_Phim.Designer.cs">
+      <DependentUpon>GUI_Phim.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QLPhim\GUI_QuocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLPhim\GUI_DinhDang.resx">
       <DependentUpon>GUI_DinhDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLPhim\GUI_Phim.resx">
+      <DependentUpon>GUI_Phim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLPhim\GUI_QuocGia.resx">
       <DependentUpon>GUI_QuocGia.cs</DependentUpon>
