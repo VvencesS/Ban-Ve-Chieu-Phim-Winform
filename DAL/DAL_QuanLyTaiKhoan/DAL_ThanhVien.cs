@@ -88,7 +88,7 @@ namespace DAL.DAL_QuanLyTaiKhoan
         /// <param name=""></param>
         /// <param name="trangThai"></param>
         /// <param name="maThanhVien"></param>
-        public static void Nhanvien_Update(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string userName, string passWord, int idXaPhuong, , bool trangThai, int maThanhVien)
+        public static void Nhanvien_Update(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string userName, string passWord, int idXaPhuong, bool trangThai, int maThanhVien)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_NhanVien] SET[UserName] = @userName,[HoTen] = @hoTen,[Email] = @email,[Sdt] = @sdt,[SoThe] = @soThe," +
                 "[NgaySinh] = @ngaySinh,[GioiTinh] = @gioiTinh,[PassWord] = @passWord,[IDXaPhuong] = @idXaPhuong WHERE MaThanhVien=@maThanhVien");
