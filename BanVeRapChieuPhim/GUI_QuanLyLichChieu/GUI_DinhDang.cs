@@ -16,5 +16,7 @@ namespace BanVeRapChieuPhim.GUI_QuanLyLichChieu
         {
             InitializeComponent();
         }
+
+      
     }
 }

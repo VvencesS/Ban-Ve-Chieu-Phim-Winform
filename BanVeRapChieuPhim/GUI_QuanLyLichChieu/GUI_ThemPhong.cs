@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace BanVeRapChieuPhim.GUI_QuanLyLichChieu
 {
-    public partial class GUI_LoaiGhe : Form
+    public partial class GUI_ThemPhong : Form
     {
-        public GUI_LoaiGhe()
+        public GUI_ThemPhong()
         {
             InitializeComponent();
         }
-
-      
     }
 }

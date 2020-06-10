@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BanVeRapChieuPhim.GUI_QuanLyLichChieu
+namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
 {
-    public partial class GUI_LoaiGhe : Form
+    public partial class GUI_ThemVe : Form
     {
-        public GUI_LoaiGhe()
+        public GUI_ThemVe()
         {
             InitializeComponent();
         }

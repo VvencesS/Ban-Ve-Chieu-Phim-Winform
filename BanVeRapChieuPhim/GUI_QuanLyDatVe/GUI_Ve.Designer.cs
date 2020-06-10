@@ -104,7 +104,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(1121, 79);
+            this.btnTimKiem.Location = new System.Drawing.Point(1133, 79);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnTimKiem.Size = new System.Drawing.Size(90, 30);
@@ -125,6 +125,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
