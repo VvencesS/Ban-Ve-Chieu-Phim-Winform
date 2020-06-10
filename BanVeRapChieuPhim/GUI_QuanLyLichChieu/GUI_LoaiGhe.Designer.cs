@@ -36,6 +36,10 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.lbTenLoaiGhe = new System.Windows.Forms.Label();
+            this.txtTenLoaiGhe = new System.Windows.Forms.TextBox();
+            this.lbMaLoaiGhe = new System.Windows.Forms.Label();
+            this.txtMaLoaiGhe = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiGhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,11 +126,51 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // lbTenLoaiGhe
+            // 
+            this.lbTenLoaiGhe.AutoSize = true;
+            this.lbTenLoaiGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLoaiGhe.Location = new System.Drawing.Point(80, 108);
+            this.lbTenLoaiGhe.Name = "lbTenLoaiGhe";
+            this.lbTenLoaiGhe.Size = new System.Drawing.Size(89, 16);
+            this.lbTenLoaiGhe.TabIndex = 89;
+            this.lbTenLoaiGhe.Text = "Tên Loại Ghế";
+            // 
+            // txtTenLoaiGhe
+            // 
+            this.txtTenLoaiGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLoaiGhe.Location = new System.Drawing.Point(214, 105);
+            this.txtTenLoaiGhe.Name = "txtTenLoaiGhe";
+            this.txtTenLoaiGhe.Size = new System.Drawing.Size(230, 22);
+            this.txtTenLoaiGhe.TabIndex = 88;
+            // 
+            // lbMaLoaiGhe
+            // 
+            this.lbMaLoaiGhe.AutoSize = true;
+            this.lbMaLoaiGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaLoaiGhe.Location = new System.Drawing.Point(80, 80);
+            this.lbMaLoaiGhe.Name = "lbMaLoaiGhe";
+            this.lbMaLoaiGhe.Size = new System.Drawing.Size(84, 16);
+            this.lbMaLoaiGhe.TabIndex = 87;
+            this.lbMaLoaiGhe.Text = "Mã Loại Ghế";
+            // 
+            // txtMaLoaiGhe
+            // 
+            this.txtMaLoaiGhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLoaiGhe.Location = new System.Drawing.Point(214, 77);
+            this.txtMaLoaiGhe.Name = "txtMaLoaiGhe";
+            this.txtMaLoaiGhe.Size = new System.Drawing.Size(230, 22);
+            this.txtMaLoaiGhe.TabIndex = 86;
+            // 
             // GUI_LoaiGhe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 450);
+            this.Controls.Add(this.lbTenLoaiGhe);
+            this.Controls.Add(this.txtTenLoaiGhe);
+            this.Controls.Add(this.lbMaLoaiGhe);
+            this.Controls.Add(this.txtMaLoaiGhe);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -151,5 +195,9 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Label lbTenLoaiGhe;
+        private System.Windows.Forms.TextBox txtTenLoaiGhe;
+        private System.Windows.Forms.Label lbMaLoaiGhe;
+        private System.Windows.Forms.TextBox txtMaLoaiGhe;
     }
 }

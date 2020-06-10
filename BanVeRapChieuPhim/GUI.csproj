@@ -59,6 +59,12 @@
     <Compile Include="GUI_QuanLyDatVe\GUI_Gia.Designer.cs">
       <DependentUpon>GUI_Gia.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyDatVe\GUI_ThemVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyDatVe\GUI_ThemVe.Designer.cs">
+      <DependentUpon>GUI_ThemVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QuanLyDatVe\GUI_Ve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,18 @@
     </Compile>
     <Compile Include="GUI_QuanLyLichChieu\GUI_SoGhe.Designer.cs">
       <DependentUpon>GUI_SoGhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_ThemGhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_ThemGhe.Designer.cs">
+      <DependentUpon>GUI_ThemGhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_ThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyLichChieu\GUI_ThemPhong.Designer.cs">
+      <DependentUpon>GUI_ThemPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QuanLyLichChieu\GUI_TrangThai.cs">
       <SubType>Form</SubType>
@@ -143,6 +161,18 @@
     <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThanhVien.Designer.cs">
       <DependentUpon>GUI_ThanhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThemNhanVien.Designer.cs">
+      <DependentUpon>GUI_ThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThemThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThemThanhVien.Designer.cs">
+      <DependentUpon>GUI_ThemThanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_NhanVien.resx">
@@ -150,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_Gia.resx">
       <DependentUpon>GUI_Gia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_ThemVe.resx">
+      <DependentUpon>GUI_ThemVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_Ve.resx">
       <DependentUpon>GUI_Ve.cs</DependentUpon>
@@ -172,6 +205,12 @@
     <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_SoGhe.resx">
       <DependentUpon>GUI_SoGhe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_ThemGhe.resx">
+      <DependentUpon>GUI_ThemGhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_ThemPhong.resx">
+      <DependentUpon>GUI_ThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_TrangThai.resx">
       <DependentUpon>GUI_TrangThai.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_ThanhVien.resx">
       <DependentUpon>GUI_ThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_ThemNhanVien.resx">
+      <DependentUpon>GUI_ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_ThemThanhVien.resx">
+      <DependentUpon>GUI_ThemThanhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
