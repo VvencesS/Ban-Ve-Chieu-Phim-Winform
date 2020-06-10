@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DangNhap.Designer.cs">
+      <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QuanLyDatVe\GUI_Gia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,8 +173,17 @@
     <Compile Include="GUI_QuanLyTaiKhoan\GUI_ThemThanhVien.Designer.cs">
       <DependentUpon>GUI_ThemThanhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_TrangChu.Designer.cs">
+      <DependentUpon>GUI_TrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI_DangNhap.resx">
+      <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_Gia.resx">
       <DependentUpon>GUI_Gia.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +244,9 @@
     <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_ThemThanhVien.resx">
       <DependentUpon>GUI_ThemThanhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_TrangChu.resx">
+      <DependentUpon>GUI_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -258,6 +276,8 @@
       <Name>BUS</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\beta-slide.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

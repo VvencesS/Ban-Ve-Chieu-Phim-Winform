@@ -16,7 +16,7 @@ namespace BanVeRapChieuPhim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI_NhanVien());
+            Application.Run(new GUI_TrangChu());
         }
     }
 }
