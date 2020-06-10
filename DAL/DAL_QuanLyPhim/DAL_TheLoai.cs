@@ -53,8 +53,6 @@ namespace DAL.DAL_QuanLyPhim
             cmd.Parameters.AddWithValue("@tenTheLoai", tenTheLoai);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-
-
         #endregion
 
         #region Phương thức lấy ra danh sách tất cả thể loại

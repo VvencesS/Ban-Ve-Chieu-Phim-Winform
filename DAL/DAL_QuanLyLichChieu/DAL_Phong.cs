@@ -32,7 +32,7 @@ namespace DAL.DAL_QuanLyLichChieu
         /// <param name="soHangMax"></param>
         /// <param name="soCotMax"></param>
         /// <param name="maDinhDang"></param>
-        public static void Phong_Inser(string tenPhong, int soHangMax, int soCotMax, int maDinhDang)
+        public static void Phong_Insert(string tenPhong, int soHangMax, int soCotMax, int maDinhDang)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Phong]([TenPhong],[SoHangMax],[SoCotMax],[MaDinhDang]) VALUES(@tenPhong,@soHangMax,@soCotMax,@maDinhDang)");
             cmd.CommandType = CommandType.Text;
@@ -85,7 +85,7 @@ namespace DAL.DAL_QuanLyLichChieu
         /// </summary>
         /// <param name="maPhong"></param>
         /// <returns></returns>
-        public static DataTable ThongTinKTGTheoMa(int maPhong)
+        public static DataTable ThongTinPhongTheoMa(int maPhong)
         {
             SqlCommand cmd = new SqlCommand("SELECT [MaPhong],[TenPhong],[SoHangMax],[SoCotMax],tb_DinhDang.TenDinhDang FROM [dbo].[tb_Phong] INNER JOIN tb_DinhDang ON tb_Phong.MaDinhDang=tb_DinhDang.MaDinhDang WHERE [MaPhong]=@maPhong");
             cmd.CommandType = CommandType.Text;

@@ -19,7 +19,7 @@ namespace DAL.DAL_QuanLyDatVe
         /// <param name="soGhe"></param>
         /// <param name="maKTG"></param>
         /// <param name="maGia"></param>
-        public static void Ve_Inser(int maPhim, int maPhong, string soGhe, int maKTG, int maGia)
+        public static void Ve_Insert(int maPhim, int maPhong, string soGhe, int maKTG, int maGia)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Ve]([MaPhim],[MaPhong],[SoGhe],[MaKTG],[MaGia]) VALUES(@maPhim,@maPhong,@soGhe,@maKTG,@maGia)");
             cmd.CommandType = CommandType.Text;

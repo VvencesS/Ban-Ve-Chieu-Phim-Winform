@@ -29,7 +29,7 @@ namespace DAL.DAL_QuanLyLichChieu
         /// </summary>
         /// <param name="maLoaiGhe"></param>
         /// <returns></returns>
-        public static DataTable ThongTinLoaiGheTheoMa(string maLoaiGhe)
+        public static DataTable ThongTinLoaiGheTheoMa(int maLoaiGhe)
         {
             SqlCommand cmd = new SqlCommand("SELECT [MaLoaiGhe],[TenLoai] FROM [dbo].[tb_LoaiGhe] WHERE [MaLoaiGhe]=@maLoaiGhe");
             cmd.CommandType = CommandType.Text;

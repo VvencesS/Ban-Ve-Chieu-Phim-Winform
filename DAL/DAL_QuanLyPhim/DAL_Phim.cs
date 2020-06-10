@@ -40,7 +40,7 @@ namespace DAL.DAL_QuanLyPhim
         /// <param name="trailer"></param>
         /// <param name="maDinhDang"></param>
         /// <param name="maNhanVien"></param>
-        public static void Phim_Inser(string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, DateTime thoiLuong, DateTime khoiChieu, DateTime ketThuc, 
+        public static void Phim_Inser(string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, string thoiLuong, DateTime khoiChieu, DateTime ketThuc, 
             string daoDien, string noiDung, string trailer, int maDinhDang, int maNhanVien)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Phim]([TenPhim],[AnhDaiDien],[MaTheLoai],[MaQuocGia],[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer],[MaDinhDang],[MaNhanVien]) " +
@@ -79,7 +79,7 @@ namespace DAL.DAL_QuanLyPhim
         /// <param name="trailer"></param>
         /// <param name="maDinhDang"></param>
         /// <param name="maNhanVien"></param>
-        public static void Phim_Update(int maPhim, string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, DateTime thoiLuong, DateTime khoiChieu, DateTime ketThuc,
+        public static void Phim_Update(int maPhim, string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, string thoiLuong, DateTime khoiChieu, DateTime ketThuc,
             string daoDien, string noiDung, string trailer, int maDinhDang, int maNhanVien)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_Phim] SET [TenPhim] = @tenPhim,[AnhDaiDien] = @anhDaiDien,[MaTheLoai] = @maTheLoai,[MaQuocGia] = @maQuocGia," +
@@ -100,8 +100,6 @@ namespace DAL.DAL_QuanLyPhim
             cmd.Parameters.AddWithValue("@maPhim", maPhim);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-
-
         #endregion
 
         #region Phương thức lấy ra danh sách tất cả phim

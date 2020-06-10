@@ -16,7 +16,7 @@ namespace DAL.DAL_QuanLyDatVe
         /// </summary>
         /// <param name="maVe"></param>
         /// <param name="maThanhVien"></param>
-        public static void DSDatVe_Inser(int maVe, int maThanhVien)
+        public static void DSDatVe_Insert(int maVe, int maThanhVien)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_DSVeDat]([MaVe],[MaThanhVien]) VALUES(@maVe,@maThanhVien)");
             cmd.CommandType = CommandType.Text;
@@ -26,12 +26,13 @@ namespace DAL.DAL_QuanLyDatVe
         }
         #endregion
 
-        #region Phương thức lấy ra danh sách tất cả ds vé
+        #region Phương thức lấy ra danh sách tất cả ds vé theo mã thành viên
         /// <summary>
-        /// Phương thức lấy ra danh sách tất cả ds vé
+        /// Phương thức lấy ra danh sách tất cả ds vé theo mã thành viên
         /// </summary>
+        /// <param name="maThanhVien"></param>
         /// <returns></returns>
-        public static DataTable ThongTinTatCaDSDatVe()
+        public static DataTable ThongTinDSDatVeTheMaTV(int maThanhVien)
         {
             SqlCommand cmd = new SqlCommand("SELECT tb_Ve.MaVe,tb_Phim.TenPhim,tb_Phong.TenPhong,tb_DinhDang.TenDinhDang,tb_DatGhe.SoGhe,tb_KTG.NgayChieu,tb_KTG.GioChieu,tb_Gia.DonGia,tb_ThanhVien.HoTen FROM [dbo].[tb_DSVeDat]"+
                 "INNER JOIN tb_Ve ON tb_Ve.MaVe = tb_DSVeDat.MaVe"+
@@ -41,8 +42,9 @@ namespace DAL.DAL_QuanLyDatVe
                 "INNER JOIN tb_DatGhe ON tb_DatGhe.MaVe = tb_Ve.MaVe"+
                 "INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_Ve.MaKTG"+
                 "INNER JOIN tb_Gia ON tb_Gia.MaGia = tb_Ve.MaGia"+
-                "INNER JOIN tb_ThanhVien ON tb_ThanhVien.MaThanhVien = tb_DSVeDat.MaThanhVien");
+                "INNER JOIN tb_ThanhVien ON tb_ThanhVien.MaThanhVien = tb_DSVeDat.MaThanhVien WHERE MaThanhVien=@maThanhVien");
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

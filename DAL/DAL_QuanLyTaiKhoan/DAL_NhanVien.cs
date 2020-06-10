@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace DAL.DAL_QuanLyTaiKhoan
 {
     public class DAL_NhanVien
     {
@@ -27,12 +27,30 @@ namespace DAL
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra Nhân viên theo mã
+        /// <summary>
+        /// Phương thức lấy ra danh sách tất cả Nhân viên
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable LayNhanvienTheoMa(int maNhanVien)
+        {
+            SqlCommand cmd = new SqlCommand("select tb_NhanVien.MaNhanVien, tb_NhanVien.HoTen, tb_NhanVien.Email, " +
+                "tb_NhanVien.GioiTinh, tb_NhanVien.Sdt, tb_NhanVien.NgaySinh, tb_NhanVien.UserName, tb_NhanVien.PassWord, " +
+                "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho from tb_NhanVien " +
+                "inner join tb_XaPhuong on tb_NhanVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
+                "inner join tb_QuanHuyen on tb_QuanHuyen.IDQuanHuyen = tb_XaPhuong.IDQuanHuyen " +
+                "inner join tb_TinhThanhPho on tb_TinhThanhPho.IDTinhThanhPho = tb_QuanHuyen.IDTinhThanhPho where MaNhanVien=@maNhaVien");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maNhaVien", maNhanVien);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
         #region Phương thức xóa nhân viên theo mã nhân viên truyền vào
         /// <summary>
         /// Phương thức xóa nhân viên theo mã nhân viên truyền vào
         /// </summary>
         /// <param name="maNhanVien"></param>
-        public static void Nhanvien_Delete(string maNhanVien)
+        public static void Nhanvien_Delete(int maNhanVien)
         {
             SqlCommand cmd = new SqlCommand("DELETE FROM [dbo].[tb_NhanVien] WHERE MaNhanVien=@maNhanVien");
             cmd.CommandType = CommandType.Text;
@@ -54,7 +72,7 @@ namespace DAL
         /// <param name="userName"></param>
         /// <param name="passWord"></param>
         /// <param name="idXaPhuong"></param>
-        public static void Nhanvien_Inser(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string userName, string passWord, int idXaPhuong)
+        public static void Nhanvien_Inser(string userName, string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string passWord, int idXaPhuong)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_NhanVien] ([UserName],[HoTen],[Email],[Sdt],[SoThe],[NgaySinh],[GioiTinh],[PassWord],[IDXaPhuong]) " +
                 "VALUES(@userName,@hoTen,@email,@sdt,@soThe,@ngaySinh,@gioiTinh,@passWord,@idXaPhuong)");
@@ -86,7 +104,7 @@ namespace DAL
         /// <param name="passWord"></param>
         /// <param name="idXaPhuong"></param>
         /// <param name="maNhanVien"></param>
-        public static void Nhanvien_Update(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string userName, string passWord, int idXaPhuong, int maNhanVien)
+        public static void Nhanvien_Update(string userName, string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string passWord, int idXaPhuong, int maNhanVien)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_NhanVien] SET[UserName] = @userName,[HoTen] = @hoTen,[Email] = @email,[Sdt] = @sdt,[SoThe] = @soThe," +
                 "[NgaySinh] = @ngaySinh,[GioiTinh] = @gioiTinh,[PassWord] = @passWord,[IDXaPhuong] = @idXaPhuong WHERE MaNhanVien=@maNhanVien");

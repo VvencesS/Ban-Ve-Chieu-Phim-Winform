@@ -45,7 +45,7 @@ namespace DAL.DAL_QuanLyPhim
         /// <param name="maQuocGia"></param>
         /// <param name="tenQuocGia"></param>
 
-        public static void TheLoai_Update(int maQuocGia, string tenQuocGia)
+        public static void QuocGia_Update(int maQuocGia, string tenQuocGia)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_QuocGia] SET [TenQuocGia] = @tenQuocGia WHERE MaQuocGia=@maQuocGia");
             cmd.CommandType = CommandType.Text;
@@ -53,8 +53,6 @@ namespace DAL.DAL_QuanLyPhim
             cmd.Parameters.AddWithValue("@tenQuocGia", tenQuocGia);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-
-
         #endregion
 
         #region Phương thức lấy ra danh sách tất cả quốc gia

@@ -30,7 +30,7 @@ namespace DAL.DAL_QuanLyLichChieu
         /// </summary>
         /// <param name="ngayChieu"></param>
         /// <param name="gioChieu"></param>
-        public static void KTG_Inser(DateTime ngayChieu, DateTime gioChieu)
+        public static void KTG_Insert(DateTime ngayChieu, string gioChieu)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_KTG]([NgayChieu],[GioChieu]) VALUES(@ngayChieu,@gioChieu)");
             cmd.CommandType = CommandType.Text;
@@ -47,17 +47,15 @@ namespace DAL.DAL_QuanLyLichChieu
         /// <param name="maKTG"></param>
         /// <param name="ngayChieu"></param>
         /// <param name="gioChieu"></param>
-        public static void KTG_Update(int maKTG, DateTime ngayChieu, DateTime gioChieu)
+        public static void KTG_Update(int maKTG, DateTime ngayChieu, string gioChieu)
         {
-            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_DinhDang] SET [NgayChieu] = @ngayChieu, [GioChieu]=@gioChieu WHERE MaKTG=@maKTG");
+            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_KTG] SET [NgayChieu] = @ngayChieu, [GioChieu]=@gioChieu WHERE MaKTG=@maKTG");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@ngayChieu", ngayChieu);
             cmd.Parameters.AddWithValue("@gioChieu", gioChieu);
             cmd.Parameters.AddWithValue("@maKTG", maKTG);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-
-
         #endregion
 
         #region Phương thức lấy ra danh sách tất cả KTG

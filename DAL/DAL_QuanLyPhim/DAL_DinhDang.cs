@@ -52,8 +52,6 @@ namespace DAL.DAL_QuanLyPhim
             cmd.Parameters.AddWithValue("@tenDinhDang", tenDinhDang);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-
-
         #endregion
 
         #region Phương thức lấy ra danh sách tất cả định dang
@@ -75,7 +73,7 @@ namespace DAL.DAL_QuanLyPhim
         /// </summary>
         /// <param name="maDinhDang"></param>
         /// <returns></returns>
-        public static DataTable ThongTinQuocGiaTheoMa(int maDinhDang)
+        public static DataTable ThongTinDinhDangTheoMa(int maDinhDang)
         {
             SqlCommand cmd = new SqlCommand("SELECT [MaDinhDang],[TenDinhDang] FROM [dbo].[tb_DinhDang] WHERE [MaDinhDang]=@maDinhDang");
             cmd.CommandType = CommandType.Text;

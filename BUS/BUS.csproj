@@ -42,9 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_QuanLyDatVe\BUS_DSDatVe.cs" />
+    <Compile Include="BUS_QuanLyDatVe\BUS_Ve.cs" />
+    <Compile Include="BUS_QuanLyLichChieu\BUS_Ghe.cs" />
+    <Compile Include="BUS_QuanLyLichChieu\BUS_KhungThoiGian.cs" />
+    <Compile Include="BUS_QuanLyLichChieu\BUS_LoaiGhe.cs" />
+    <Compile Include="BUS_QuanLyLichChieu\BUS_Phong.cs" />
+    <Compile Include="BUS_QuanLyLichChieu\BUS_SoGhe.cs" />
+    <Compile Include="BUS_QuanLyPhim\BUS_DinhDang.cs" />
+    <Compile Include="BUS_QuanLyPhim\BUS_Phim.cs" />
+    <Compile Include="BUS_QuanLyPhim\BUS_QuocGia.cs" />
     <Compile Include="BUS_QuanLyPhim\BUS_TheLoai.cs" />
+    <Compile Include="BUS_QuanLyTaiKhoan\BUS_NhanVien.cs" />
+    <Compile Include="BUS_QuanLyTaiKhoan\BUS_ThanhVien.cs" />
+    <Compile Include="MaHoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XuLyNgayThang.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -52,10 +65,6 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS_QuanLyDatVe\" />
-    <Folder Include="BUS_QuanLyLichChieu\" />
-    <Folder Include="BUS_QuanLyTaiKhoan\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
