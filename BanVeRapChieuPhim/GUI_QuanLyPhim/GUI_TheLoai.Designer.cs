@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvTheLoai = new System.Windows.Forms.DataGridView();
-            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -38,59 +36,55 @@
             this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.lblTenTheLoai = new System.Windows.Forms.Label();
             this.txtTenTheLoai = new System.Windows.Forms.TextBox();
+            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTheLoai
             // 
+            this.dgvTheLoai.AllowUserToAddRows = false;
+            this.dgvTheLoai.AllowUserToDeleteRows = false;
+            this.dgvTheLoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTheLoai,
             this.TenTheLoai});
-            this.dgvTheLoai.Location = new System.Drawing.Point(1, 168);
+            this.dgvTheLoai.Location = new System.Drawing.Point(4, 187);
+            this.dgvTheLoai.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTheLoai.Name = "dgvTheLoai";
+            this.dgvTheLoai.ReadOnly = true;
             this.dgvTheLoai.RowHeadersWidth = 51;
             this.dgvTheLoai.RowTemplate.Height = 24;
-            this.dgvTheLoai.Size = new System.Drawing.Size(307, 278);
-            this.dgvTheLoai.TabIndex = 0;
-            // 
-            // MaTheLoai
-            // 
-            this.MaTheLoai.HeaderText = "Mã Thể Loại";
-            this.MaTheLoai.MinimumWidth = 6;
-            this.MaTheLoai.Name = "MaTheLoai";
-            this.MaTheLoai.Width = 125;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.HeaderText = "Tên Thể Loại";
-            this.TenTheLoai.MinimumWidth = 6;
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.Width = 125;
+            this.dgvTheLoai.Size = new System.Drawing.Size(1672, 257);
+            this.dgvTheLoai.TabIndex = 50;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(35, 471);
+            this.btnThem.Location = new System.Drawing.Point(905, 465);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(63, 37);
+            this.btnThem.Size = new System.Drawing.Size(85, 49);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(123, 471);
+            this.btnSua.Location = new System.Drawing.Point(1047, 465);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(70, 37);
+            this.btnSua.Size = new System.Drawing.Size(95, 49);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(218, 471);
+            this.btnXoa.Location = new System.Drawing.Point(1188, 465);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(72, 37);
+            this.btnXoa.Size = new System.Drawing.Size(91, 49);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -98,7 +92,7 @@
             // lblMaTheLoai
             // 
             this.lblMaTheLoai.AutoSize = true;
-            this.lblMaTheLoai.Location = new System.Drawing.Point(32, 37);
+            this.lblMaTheLoai.Location = new System.Drawing.Point(33, 115);
             this.lblMaTheLoai.Name = "lblMaTheLoai";
             this.lblMaTheLoai.Size = new System.Drawing.Size(87, 17);
             this.lblMaTheLoai.TabIndex = 4;
@@ -106,15 +100,15 @@
             // 
             // txtMaTheLoai
             // 
-            this.txtMaTheLoai.Location = new System.Drawing.Point(131, 37);
+            this.txtMaTheLoai.Location = new System.Drawing.Point(149, 110);
             this.txtMaTheLoai.Name = "txtMaTheLoai";
-            this.txtMaTheLoai.Size = new System.Drawing.Size(138, 22);
+            this.txtMaTheLoai.Size = new System.Drawing.Size(260, 22);
             this.txtMaTheLoai.TabIndex = 5;
             // 
             // lblTenTheLoai
             // 
             this.lblTenTheLoai.AutoSize = true;
-            this.lblTenTheLoai.Location = new System.Drawing.Point(26, 93);
+            this.lblTenTheLoai.Location = new System.Drawing.Point(447, 115);
             this.lblTenTheLoai.Name = "lblTenTheLoai";
             this.lblTenTheLoai.Size = new System.Drawing.Size(93, 17);
             this.lblTenTheLoai.TabIndex = 6;
@@ -122,16 +116,55 @@
             // 
             // txtTenTheLoai
             // 
-            this.txtTenTheLoai.Location = new System.Drawing.Point(131, 93);
+            this.txtTenTheLoai.Location = new System.Drawing.Point(580, 110);
             this.txtTenTheLoai.Name = "txtTenTheLoai";
-            this.txtTenTheLoai.Size = new System.Drawing.Size(138, 22);
+            this.txtTenTheLoai.Size = new System.Drawing.Size(287, 22);
             this.txtTenTheLoai.TabIndex = 7;
+            // 
+            // MaTheLoai
+            // 
+            this.MaTheLoai.DataPropertyName = "MaTheLoai";
+            this.MaTheLoai.HeaderText = "Mã Thể Loại";
+            this.MaTheLoai.MinimumWidth = 6;
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
+            // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.DataPropertyName = "TenTheLoai";
+            this.TenTheLoai.HeaderText = "Tên Thể Loại";
+            this.TenTheLoai.MinimumWidth = 6;
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(1309, 465);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(85, 49);
+            this.btnThoat.TabIndex = 51;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(609, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 39);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Thể Loại";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // GUI_TheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 532);
+            this.ClientSize = new System.Drawing.Size(1436, 532);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTenTheLoai);
             this.Controls.Add(this.lblTenTheLoai);
             this.Controls.Add(this.txtMaTheLoai);
@@ -154,11 +187,13 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.Label lblMaTheLoai;
         private System.Windows.Forms.TextBox txtMaTheLoai;
         private System.Windows.Forms.Label lblTenTheLoai;
         private System.Windows.Forms.TextBox txtTenTheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label1;
     }
 }

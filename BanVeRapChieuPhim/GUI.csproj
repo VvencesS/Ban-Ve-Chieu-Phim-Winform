@@ -149,6 +149,12 @@
     <Compile Include="GUI_QuanLyPhim\GUI_TheLoai.Designer.cs">
       <DependentUpon>GUI_TheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyPhim\GUI_ThemPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyPhim\GUI_ThemPhim.Designer.cs">
+      <DependentUpon>GUI_ThemPhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QuanLyTaiKhoan\GUI_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyPhim\GUI_TheLoai.resx">
       <DependentUpon>GUI_TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_ThemPhim.resx">
+      <DependentUpon>GUI_ThemPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyTaiKhoan\GUI_NhanVien.resx">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>

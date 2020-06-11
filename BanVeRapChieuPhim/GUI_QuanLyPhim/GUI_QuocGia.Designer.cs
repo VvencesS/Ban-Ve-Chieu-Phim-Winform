@@ -38,59 +38,67 @@
             this.txtMaQuocGia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenQuocGia = new System.Windows.Forms.TextBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuocGia)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvQuocGia
             // 
+            this.dgvQuocGia.AllowUserToAddRows = false;
+            this.dgvQuocGia.AllowUserToDeleteRows = false;
+            this.dgvQuocGia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvQuocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaQuocGia,
             this.TenQuocGia});
-            this.dgvQuocGia.Location = new System.Drawing.Point(2, 165);
+            this.dgvQuocGia.Location = new System.Drawing.Point(3, 187);
+            this.dgvQuocGia.Margin = new System.Windows.Forms.Padding(4);
             this.dgvQuocGia.Name = "dgvQuocGia";
+            this.dgvQuocGia.ReadOnly = true;
             this.dgvQuocGia.RowHeadersWidth = 51;
             this.dgvQuocGia.RowTemplate.Height = 24;
-            this.dgvQuocGia.Size = new System.Drawing.Size(305, 280);
-            this.dgvQuocGia.TabIndex = 0;
+            this.dgvQuocGia.Size = new System.Drawing.Size(1628, 257);
+            this.dgvQuocGia.TabIndex = 50;
             // 
             // MaQuocGia
             // 
             this.MaQuocGia.HeaderText = "Mã Quốc Gia";
             this.MaQuocGia.MinimumWidth = 6;
             this.MaQuocGia.Name = "MaQuocGia";
-            this.MaQuocGia.Width = 125;
+            this.MaQuocGia.ReadOnly = true;
             // 
             // TenQuocGia
             // 
             this.TenQuocGia.HeaderText = "Tên Quốc Gia";
             this.TenQuocGia.MinimumWidth = 6;
             this.TenQuocGia.Name = "TenQuocGia";
-            this.TenQuocGia.Width = 125;
+            this.TenQuocGia.ReadOnly = true;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(12, 486);
+            this.btnThem.Location = new System.Drawing.Point(1072, 472);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 35);
+            this.btnThem.Size = new System.Drawing.Size(94, 49);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(111, 486);
+            this.btnSua.Location = new System.Drawing.Point(1220, 472);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 35);
+            this.btnSua.Size = new System.Drawing.Size(88, 49);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(206, 486);
+            this.btnXoa.Location = new System.Drawing.Point(1352, 472);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 35);
+            this.btnXoa.Size = new System.Drawing.Size(89, 49);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -98,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 40);
+            this.label1.Location = new System.Drawing.Point(61, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 4;
@@ -106,15 +114,15 @@
             // 
             // txtMaQuocGia
             // 
-            this.txtMaQuocGia.Location = new System.Drawing.Point(132, 40);
+            this.txtMaQuocGia.Location = new System.Drawing.Point(176, 116);
             this.txtMaQuocGia.Name = "txtMaQuocGia";
-            this.txtMaQuocGia.Size = new System.Drawing.Size(149, 22);
+            this.txtMaQuocGia.Size = new System.Drawing.Size(290, 22);
             this.txtMaQuocGia.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 103);
+            this.label2.Location = new System.Drawing.Point(576, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 6;
@@ -122,16 +130,39 @@
             // 
             // txtTenQuocGia
             // 
-            this.txtTenQuocGia.Location = new System.Drawing.Point(132, 103);
+            this.txtTenQuocGia.Location = new System.Drawing.Point(721, 116);
             this.txtTenQuocGia.Name = "txtTenQuocGia";
-            this.txtTenQuocGia.Size = new System.Drawing.Size(149, 22);
+            this.txtTenQuocGia.Size = new System.Drawing.Size(316, 22);
             this.txtTenQuocGia.TabIndex = 7;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(1489, 472);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(88, 49);
+            this.btnThoat.TabIndex = 51;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(724, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 39);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Quốc Gia";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // GUI_QuocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 552);
+            this.ClientSize = new System.Drawing.Size(1629, 552);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTenQuocGia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaQuocGia);
@@ -160,5 +191,7 @@
         private System.Windows.Forms.TextBox txtMaQuocGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenQuocGia;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label3;
     }
 }
