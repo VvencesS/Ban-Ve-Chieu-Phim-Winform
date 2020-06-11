@@ -17,5 +17,9 @@ namespace BanVeRapChieuPhim
             InitializeComponent();
         }
 
+        private void mnuNhanVien_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

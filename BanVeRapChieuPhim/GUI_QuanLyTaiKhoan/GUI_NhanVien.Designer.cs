@@ -65,7 +65,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(1119, 91);
+            this.btnTimKiem.Location = new System.Drawing.Point(1119, 87);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnTimKiem.Size = new System.Drawing.Size(90, 30);
@@ -77,7 +77,7 @@
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTimKiem.Location = new System.Drawing.Point(813, 95);
+            this.txtTimKiem.Location = new System.Drawing.Point(813, 91);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;

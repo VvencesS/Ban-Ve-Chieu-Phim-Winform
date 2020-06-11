@@ -15,6 +15,11 @@ namespace BanVeRapChieuPhim.GUI_QuanLyTaiKhoan
         public GUI_NhanVien()
         {
             InitializeComponent();
+            LoadData();
+        }
+        public void LoadData()
+        {
+            dgvNhanVien.DataSource = BUS.BUS_QuanLyTaiKhoan.BUS_NhanVien.ThongTinNhanVien();
         }
     }
 }
