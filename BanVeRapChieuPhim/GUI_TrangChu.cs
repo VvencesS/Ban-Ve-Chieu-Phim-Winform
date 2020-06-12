@@ -84,7 +84,7 @@ namespace BanVeRapChieuPhim
 
         private void mnuDN_DX_Click(object sender, EventArgs e)
         {
-            if (mnuDangNhap.Text == "Đăng xuất")
+            if (mnuDN_DX.Text == "Đăng xuất")
             {
                 DialogResult drt = MessageBox.Show("Bạn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
                 if (drt == DialogResult.OK)
@@ -93,7 +93,7 @@ namespace BanVeRapChieuPhim
                     mnuQLLichChieu.Enabled = false;
                     mnuQLPhim.Enabled = false;
                     mnuQLTaiKhoan.Enabled = false;
-                    mnuDangNhap.Text = "Đăng nhập";
+                    mnuDN_DX.Text = "Đăng nhập";
                 }
             }
             else
@@ -106,7 +106,7 @@ namespace BanVeRapChieuPhim
                     mnuQLLichChieu.Enabled = true;
                     mnuQLPhim.Enabled = true;
                     mnuQLTaiKhoan.Enabled = true;
-                    mnuDangNhap.Text = "Đăng xuất";
+                    mnuDN_DX.Text = "Đăng xuất";
                 }
             }
         }

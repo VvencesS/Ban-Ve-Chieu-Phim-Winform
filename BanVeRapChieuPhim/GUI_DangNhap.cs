@@ -28,8 +28,11 @@ namespace BanVeRapChieuPhim
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            try
+            if(txtTaiKhoan.Text.Trim().ToString() == "" || txtMatKhau.Text.Trim().ToString() == "")
             {
+                lblLoi.Text = "Vui lòng nhập đầy đủ tài khoản và mật khẩu!";
+            }
+            else {
                 DataTable dt = BUS.BUS_QuanLyTaiKhoan.BUS_NhanVien.Login(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim());
                 if (dt.Rows.Count > 0)
                 {
@@ -41,10 +44,7 @@ namespace BanVeRapChieuPhim
                     lblLoi.Text = "Tài khoản hoặc mật khẩu không đúng!";
                 }
             }
-            catch 
-            {
-                MessageBox.Show("Kết nối thất bại!");
-            }
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
