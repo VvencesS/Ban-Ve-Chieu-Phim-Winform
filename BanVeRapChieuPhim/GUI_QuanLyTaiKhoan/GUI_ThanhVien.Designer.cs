@@ -236,6 +236,7 @@
             this.btnLichSuDatVe.TabIndex = 66;
             this.btnLichSuDatVe.Text = "Lịch Sử Đặt Vé";
             this.btnLichSuDatVe.UseVisualStyleBackColor = true;
+         
             // 
             // GUI_ThanhVien
             // 
