@@ -16,8 +16,6 @@ namespace BanVeRapChieuPhim.GUI_QuanLyTaiKhoan
         {
             InitializeComponent();
         }
-
- 
       
     }
 }
