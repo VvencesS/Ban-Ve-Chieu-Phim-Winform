@@ -122,5 +122,15 @@ namespace DAL.DAL_QuanLyTaiKhoan
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
+        #region Login
+        public static DataTable Login(string userName,string passWord)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tb_ThanhVien WHERE UserName=@userName and PassWord=@passWord");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@userName", userName);
+            cmd.Parameters.AddWithValue("@passWord", passWord);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }

@@ -35,6 +35,7 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.lblLoi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -98,6 +99,7 @@
             this.btnThoat.TabIndex = 85;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangNhap
             // 
@@ -110,12 +112,23 @@
             this.btnDangNhap.TabIndex = 84;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // lblLoi
+            // 
+            this.lblLoi.AutoSize = true;
+            this.lblLoi.ForeColor = System.Drawing.Color.Red;
+            this.lblLoi.Location = new System.Drawing.Point(198, 180);
+            this.lblLoi.Name = "lblLoi";
+            this.lblLoi.Size = new System.Drawing.Size(0, 13);
+            this.lblLoi.TabIndex = 86;
             // 
             // GUI_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 266);
+            this.Controls.Add(this.lblLoi);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.Label lblLoi;
     }
 }

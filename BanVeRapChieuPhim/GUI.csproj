@@ -125,28 +125,28 @@
     <Compile Include="GUI_QuanLyLichChieu\GUI_TrangThai.Designer.cs">
       <DependentUpon>GUI_TrangThai.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_DinhDang.cs">
+    <Compile Include="GUI_QLPhim\GUI_DinhDang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_DinhDang.Designer.cs">
+    <Compile Include="GUI_QLPhim\GUI_DinhDang.Designer.cs">
       <DependentUpon>GUI_DinhDang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_Phim.cs">
+    <Compile Include="GUI_QLPhim\GUI_Phim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_Phim.Designer.cs">
+    <Compile Include="GUI_QLPhim\GUI_Phim.Designer.cs">
       <DependentUpon>GUI_Phim.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_QuocGia.cs">
+    <Compile Include="GUI_QLPhim\GUI_QuocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_QuocGia.Designer.cs">
+    <Compile Include="GUI_QLPhim\GUI_QuocGia.Designer.cs">
       <DependentUpon>GUI_QuocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_TheLoai.cs">
+    <Compile Include="GUI_QLPhim\GUI_TheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuanLyPhim\GUI_TheLoai.Designer.cs">
+    <Compile Include="GUI_QLPhim\GUI_TheLoai.Designer.cs">
       <DependentUpon>GUI_TheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QuanLyPhim\GUI_ThemPhim.cs">
@@ -226,16 +226,16 @@
     <EmbeddedResource Include="GUI_QuanLyLichChieu\GUI_TrangThai.resx">
       <DependentUpon>GUI_TrangThai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_DinhDang.resx">
+    <EmbeddedResource Include="GUI_QLPhim\GUI_DinhDang.resx">
       <DependentUpon>GUI_DinhDang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_Phim.resx">
+    <EmbeddedResource Include="GUI_QLPhim\GUI_Phim.resx">
       <DependentUpon>GUI_Phim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_QuocGia.resx">
+    <EmbeddedResource Include="GUI_QLPhim\GUI_QuocGia.resx">
       <DependentUpon>GUI_QuocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyPhim\GUI_TheLoai.resx">
+    <EmbeddedResource Include="GUI_QLPhim\GUI_TheLoai.resx">
       <DependentUpon>GUI_TheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyPhim\GUI_ThemPhim.resx">

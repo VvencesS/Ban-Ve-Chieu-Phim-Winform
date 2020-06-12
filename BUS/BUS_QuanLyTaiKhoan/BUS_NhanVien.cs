@@ -80,5 +80,9 @@ namespace BUS.BUS_QuanLyTaiKhoan
                 DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Nhanvien_Update(userName, hoTen, email, sdt, soThe, gt, ns, MaHoa.MaHoaMD5(passWord), idXP, maNhanVien);
             }
         }
+        public static DataTable Login(string userName, string passWord)
+        {
+            return DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Login(userName, MaHoa.MaHoaMD5(passWord));
+        }
     }
 }
