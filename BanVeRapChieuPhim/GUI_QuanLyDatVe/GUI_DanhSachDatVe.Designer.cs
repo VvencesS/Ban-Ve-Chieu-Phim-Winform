@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvVe = new System.Windows.Forms.DataGridView();
+            this.dgvDanhSachDatVe = new System.Windows.Forms.DataGridView();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.MaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDatVe)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -59,14 +59,14 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.UseCompatibleTextRendering = true;
             // 
-            // dgvVe
+            // dgvDanhSachDatVe
             // 
-            this.dgvVe.AllowUserToAddRows = false;
-            this.dgvVe.AllowUserToDeleteRows = false;
-            this.dgvVe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDanhSachDatVe.AllowUserToAddRows = false;
+            this.dgvDanhSachDatVe.AllowUserToDeleteRows = false;
+            this.dgvDanhSachDatVe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvDanhSachDatVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSachDatVe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSachDatVe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaVe,
             this.TenPhim,
             this.TenPhong,
@@ -76,12 +76,12 @@
             this.GioChieu,
             this.DonGia,
             this.HoTen});
-            this.dgvVe.Location = new System.Drawing.Point(2, 152);
-            this.dgvVe.Name = "dgvVe";
-            this.dgvVe.ReadOnly = true;
-            this.dgvVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVe.Size = new System.Drawing.Size(1254, 209);
-            this.dgvVe.TabIndex = 60;
+            this.dgvDanhSachDatVe.Location = new System.Drawing.Point(2, 152);
+            this.dgvDanhSachDatVe.Name = "dgvDanhSachDatVe";
+            this.dgvDanhSachDatVe.ReadOnly = true;
+            this.dgvDanhSachDatVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDanhSachDatVe.Size = new System.Drawing.Size(1254, 209);
+            this.dgvDanhSachDatVe.TabIndex = 60;
             // 
             // btnTimKiem
             // 
@@ -178,11 +178,11 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.dgvVe);
+            this.Controls.Add(this.dgvDanhSachDatVe);
             this.Controls.Add(this.label2);
             this.Name = "GUI_DanhSachDatVe";
             this.Text = "GUI_DanhSachDatVe";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDatVe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +191,7 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvVe;
+        private System.Windows.Forms.DataGridView dgvDanhSachDatVe;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaVe;
