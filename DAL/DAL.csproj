@@ -48,7 +48,10 @@
     <Compile Include="DAL_QuanLyLichChieu\DAL_KhungThoiGian.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_LoaiGhe.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_Phong.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_QuanHuyen.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_SoGhe.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_TinhThanhPho.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_XaPhuong.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_DinhDang.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_Phim.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_QuocGia.cs" />
@@ -58,6 +61,8 @@
     <Compile Include="SQLDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\BanVeRapChieuPhim-v.5.0.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

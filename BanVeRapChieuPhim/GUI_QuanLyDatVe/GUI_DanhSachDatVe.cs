@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BanVeRapChieuPhim.GUI_QuanLyTaiKhoan
+namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
 {
-    public partial class GUI_ThanhVien : Form
+    public partial class GUI_DanhSachDatVe : Form
     {
-        public GUI_ThanhVien()
+        public GUI_DanhSachDatVe()
         {
             InitializeComponent();
         }
-      
     }
 }

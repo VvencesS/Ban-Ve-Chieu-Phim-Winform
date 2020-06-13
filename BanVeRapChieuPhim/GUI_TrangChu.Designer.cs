@@ -95,24 +95,28 @@
             this.mnuPhim.Name = "mnuPhim";
             this.mnuPhim.Size = new System.Drawing.Size(180, 22);
             this.mnuPhim.Text = "Phim";
+            this.mnuPhim.Click += new System.EventHandler(this.mnuPhim_Click);
             // 
             // mnuDinhDangPhim
             // 
             this.mnuDinhDangPhim.Name = "mnuDinhDangPhim";
             this.mnuDinhDangPhim.Size = new System.Drawing.Size(180, 22);
             this.mnuDinhDangPhim.Text = "Định dạng phim";
+            this.mnuDinhDangPhim.Click += new System.EventHandler(this.mnuDinhDangPhim_Click);
             // 
             // mnuQuocGia
             // 
             this.mnuQuocGia.Name = "mnuQuocGia";
             this.mnuQuocGia.Size = new System.Drawing.Size(180, 22);
             this.mnuQuocGia.Text = "Quốc gia";
+            this.mnuQuocGia.Click += new System.EventHandler(this.mnuQuocGia_Click);
             // 
             // mnuTheLoai
             // 
             this.mnuTheLoai.Name = "mnuTheLoai";
             this.mnuTheLoai.Size = new System.Drawing.Size(180, 22);
             this.mnuTheLoai.Text = "Thể loại";
+            this.mnuTheLoai.Click += new System.EventHandler(this.mnuTheLoai_Click);
             // 
             // mnuQLLichChieu
             // 
@@ -129,18 +133,21 @@
             this.mnuKTG.Name = "mnuKTG";
             this.mnuKTG.Size = new System.Drawing.Size(180, 22);
             this.mnuKTG.Text = "Khung thời gian";
+            this.mnuKTG.Click += new System.EventHandler(this.mnuKTG_Click);
             // 
             // mnuPhongChieu
             // 
             this.mnuPhongChieu.Name = "mnuPhongChieu";
             this.mnuPhongChieu.Size = new System.Drawing.Size(180, 22);
             this.mnuPhongChieu.Text = "Phòng chiếu";
+            this.mnuPhongChieu.Click += new System.EventHandler(this.mnuPhongChieu_Click);
             // 
             // mnuGhe
             // 
             this.mnuGhe.Name = "mnuGhe";
             this.mnuGhe.Size = new System.Drawing.Size(180, 22);
             this.mnuGhe.Text = "Ghế";
+            this.mnuGhe.Click += new System.EventHandler(this.mnuGhe_Click);
             // 
             // mnuQLTaiKhoan
             // 
@@ -156,12 +163,14 @@
             this.mnuNhanVien.Name = "mnuNhanVien";
             this.mnuNhanVien.Size = new System.Drawing.Size(180, 22);
             this.mnuNhanVien.Text = "Nhân viên ";
+            this.mnuNhanVien.Click += new System.EventHandler(this.mnuNhanVien_Click);
             // 
             // mnuThanhVien
             // 
             this.mnuThanhVien.Name = "mnuThanhVien";
             this.mnuThanhVien.Size = new System.Drawing.Size(180, 22);
             this.mnuThanhVien.Text = "Thành viên";
+            this.mnuThanhVien.Click += new System.EventHandler(this.mnuThanhVien_Click);
             // 
             // mnuQLDatVe
             // 
@@ -177,12 +186,14 @@
             this.mnuVe.Name = "mnuVe";
             this.mnuVe.Size = new System.Drawing.Size(180, 22);
             this.mnuVe.Text = "Vé";
+            this.mnuVe.Click += new System.EventHandler(this.mnuVe_Click);
             // 
             // mnuDSDatVe
             // 
             this.mnuDSDatVe.Name = "mnuDSDatVe";
             this.mnuDSDatVe.Size = new System.Drawing.Size(180, 22);
             this.mnuDSDatVe.Text = "Danh sách vé đặt";
+            this.mnuDSDatVe.Click += new System.EventHandler(this.mnuDSDatVe_Click);
             // 
             // mnuDangNhap
             // 
@@ -198,8 +209,9 @@
             // mnuDN_DX
             // 
             this.mnuDN_DX.Name = "mnuDN_DX";
-            this.mnuDN_DX.Size = new System.Drawing.Size(70, 19);
+            this.mnuDN_DX.Size = new System.Drawing.Size(113, 19);
             this.mnuDN_DX.Text = "Đăng nhập";
+            this.mnuDN_DX.Click += new System.EventHandler(this.mnuDN_DX_Click);
             // 
             // label1
             // 
@@ -222,6 +234,7 @@
             this.Name = "GUI_TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.GUI_TrangChu_Load);
             this.mnuTrangChu.ResumeLayout(false);
             this.mnuTrangChu.PerformLayout();
             this.mnuDangNhap.ResumeLayout(false);

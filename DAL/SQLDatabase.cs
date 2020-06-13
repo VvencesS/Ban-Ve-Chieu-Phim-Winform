@@ -20,11 +20,9 @@ namespace DAL
             {
                 if (_connectionString.Equals(""))
                 {
-<<<<<<< Updated upstream
-                    _connectionString = @"Data Source=DESKTOP-VI0T1A7\ANHIT;Initial Catalog=BanVeRapChieuPhim;Persist Security Info=True;User ID=sa;Password=1999";
-=======
+
+
                     _connectionString = @"Data Source=.\sqlexpress;Initial Catalog=BanVeRapChieuPhim;User ID=sa;password=123456789";
->>>>>>> Stashed changes
                 }
                 return _connectionString;
             }
