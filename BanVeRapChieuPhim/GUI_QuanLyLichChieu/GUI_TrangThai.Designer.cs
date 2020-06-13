@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvTrangThai = new System.Windows.Forms.DataGridView();
-            this.MaTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaTrangThai = new System.Windows.Forms.TextBox();
+            this.MaTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrangThai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,18 +55,6 @@
             this.dgvTrangThai.ReadOnly = true;
             this.dgvTrangThai.Size = new System.Drawing.Size(1254, 209);
             this.dgvTrangThai.TabIndex = 52;
-            // 
-            // MaTrangThai
-            // 
-            this.MaTrangThai.HeaderText = "Mã Trạng Thái";
-            this.MaTrangThai.Name = "MaTrangThai";
-            this.MaTrangThai.ReadOnly = true;
-            // 
-            // MoTa
-            // 
-            this.MoTa.HeaderText = "Mô Tả";
-            this.MoTa.Name = "MoTa";
-            this.MoTa.ReadOnly = true;
             // 
             // label2
             // 
@@ -127,6 +115,20 @@
             this.txtMaTrangThai.Size = new System.Drawing.Size(230, 22);
             this.txtMaTrangThai.TabIndex = 86;
             // 
+            // MaTrangThai
+            // 
+            this.MaTrangThai.DataPropertyName = "MaTrangThai";
+            this.MaTrangThai.HeaderText = "Mã Trạng Thái";
+            this.MaTrangThai.Name = "MaTrangThai";
+            this.MaTrangThai.ReadOnly = true;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô Tả";
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            // 
             // GUI_TrangThai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,13 +152,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
     }
 }

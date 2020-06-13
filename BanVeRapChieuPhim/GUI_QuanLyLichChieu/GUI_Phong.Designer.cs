@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvPhong = new System.Windows.Forms.DataGridView();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoHangMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoCotMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -41,6 +36,11 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoHangMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCotMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,42 +56,12 @@
             this.TenPhong,
             this.SoHangMax,
             this.SoCotMax,
-            this.MaDinhDang});
+            this.TenDinhDang});
             this.dgvPhong.Location = new System.Drawing.Point(3, 152);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.ReadOnly = true;
             this.dgvPhong.Size = new System.Drawing.Size(1254, 209);
             this.dgvPhong.TabIndex = 50;
-            // 
-            // MaPhong
-            // 
-            this.MaPhong.HeaderText = "Mã Phòng";
-            this.MaPhong.Name = "MaPhong";
-            this.MaPhong.ReadOnly = true;
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.HeaderText = "Tên Phòng";
-            this.TenPhong.Name = "TenPhong";
-            this.TenPhong.ReadOnly = true;
-            // 
-            // SoHangMax
-            // 
-            this.SoHangMax.HeaderText = "Số Hàng Max";
-            this.SoHangMax.Name = "SoHangMax";
-            this.SoHangMax.ReadOnly = true;
-            // 
-            // SoCotMax
-            // 
-            this.SoCotMax.HeaderText = "Số Cột Max";
-            this.SoCotMax.Name = "SoCotMax";
-            this.SoCotMax.ReadOnly = true;
-            // 
-            // MaDinhDang
-            // 
-            this.MaDinhDang.HeaderText = "Mã Định Dạng";
-            this.MaDinhDang.Name = "MaDinhDang";
-            this.MaDinhDang.ReadOnly = true;
             // 
             // label2
             // 
@@ -170,6 +140,41 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã Phòng";
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.ReadOnly = true;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên Phòng";
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.ReadOnly = true;
+            // 
+            // SoHangMax
+            // 
+            this.SoHangMax.DataPropertyName = "SoHangMax";
+            this.SoHangMax.HeaderText = "Số Hàng Max";
+            this.SoHangMax.Name = "SoHangMax";
+            this.SoHangMax.ReadOnly = true;
+            // 
+            // SoCotMax
+            // 
+            this.SoCotMax.DataPropertyName = "SoCotMax";
+            this.SoCotMax.HeaderText = "Số Cột Max";
+            this.SoCotMax.Name = "SoCotMax";
+            this.SoCotMax.ReadOnly = true;
+            // 
+            // TenDinhDang
+            // 
+            this.TenDinhDang.DataPropertyName = "TenDinhDang";
+            this.TenDinhDang.HeaderText = "Định Dạng";
+            this.TenDinhDang.Name = "TenDinhDang";
+            this.TenDinhDang.ReadOnly = true;
+            // 
             // GUI_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,11 +199,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoHangMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoCotMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDinhDang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -206,5 +206,10 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoHangMax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoCotMax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDinhDang;
     }
 }

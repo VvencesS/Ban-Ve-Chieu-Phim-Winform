@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -43,7 +44,7 @@
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenXaPhuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,7 +165,6 @@
             this.btnLichSuDatVe.TabIndex = 66;
             this.btnLichSuDatVe.Text = "Lịch Sử Đặt Vé";
             this.btnLichSuDatVe.UseVisualStyleBackColor = true;
-         
             // 
             // MaThanhVien
             // 
@@ -172,69 +172,85 @@
             this.MaThanhVien.HeaderText = "Mã Thành Viên";
             this.MaThanhVien.Name = "MaThanhVien";
             this.MaThanhVien.ReadOnly = true;
+            this.MaThanhVien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // HoVaTen
             // 
+            this.HoVaTen.DataPropertyName = "HoVaTen";
             this.HoVaTen.HeaderText = "Họ Và Tên";
             this.HoVaTen.Name = "HoVaTen";
             this.HoVaTen.ReadOnly = true;
             // 
             // Email
             // 
+            this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
             // Password
             // 
+            this.Password.DataPropertyName = "Password";
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
             // 
             // SDT
             // 
+            this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
             // 
             // SoThe
             // 
+            this.SoThe.DataPropertyName = "SoThe";
             this.SoThe.HeaderText = "Số Thẻ";
             this.SoThe.Name = "SoThe";
             this.SoThe.ReadOnly = true;
             // 
             // NgaySinh
             // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
+            this.NgaySinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NgaySinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // GioiTinh
             // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle1.NullValue = "faile";
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle1;
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
             // 
             // TrangThai
             // 
+            this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
             // 
             // TenXaPhuong
             // 
+            this.TenXaPhuong.DataPropertyName = "TenXaPhuong";
             this.TenXaPhuong.HeaderText = "Xã, Phường";
             this.TenXaPhuong.Name = "TenXaPhuong";
             this.TenXaPhuong.ReadOnly = true;
             // 
             // TenQuanHuyen
             // 
+            this.TenQuanHuyen.DataPropertyName = "TenQuanHuyen";
             this.TenQuanHuyen.HeaderText = "Quận, Huyện";
             this.TenQuanHuyen.Name = "TenQuanHuyen";
             this.TenQuanHuyen.ReadOnly = true;
             // 
             // TenTinhThanhPho
             // 
+            this.TenTinhThanhPho.DataPropertyName = "TenTinhThanhPho";
             this.TenTinhThanhPho.HeaderText = "Tỉnh,Thành Phố";
             this.TenTinhThanhPho.Name = "TenTinhThanhPho";
             this.TenTinhThanhPho.ReadOnly = true;
@@ -278,7 +294,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenXaPhuong;

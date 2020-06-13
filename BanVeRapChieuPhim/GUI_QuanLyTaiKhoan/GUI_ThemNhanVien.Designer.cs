@@ -315,6 +315,7 @@
             this.cboGioiTinh.Size = new System.Drawing.Size(207, 24);
             this.cboGioiTinh.TabIndex = 206;
             this.cboGioiTinh.Text = "--Chọn giới tính--";
+            
             // 
             // txtSoThe
             // 

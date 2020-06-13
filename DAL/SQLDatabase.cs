@@ -20,7 +20,7 @@ namespace DAL
             {
                 if (_connectionString.Equals(""))
                 {
-                    _connectionString = @"Data Source=DESKTOP-4H2CDN2\SQLEXPRESS;Initial Catalog=BanVeRapChieuPhim;User ID=sa;password=MeoLuoi99";
+                    _connectionString = @"Data Source=DESKTOP-VI0T1A7\ANHIT;Initial Catalog=BanVeRapChieuPhim;User ID=sa;password=1999";
                 }
                 return _connectionString;
             }

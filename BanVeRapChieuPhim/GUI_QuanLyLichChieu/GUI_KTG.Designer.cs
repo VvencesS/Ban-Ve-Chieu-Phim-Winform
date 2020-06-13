@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvKTG = new System.Windows.Forms.DataGridView();
-            this.MaKTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +42,9 @@
             this.txtMaKTG = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtGioChieu = new System.Windows.Forms.TextBox();
+            this.MaKTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKTG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,24 +64,6 @@
             this.dgvKTG.ReadOnly = true;
             this.dgvKTG.Size = new System.Drawing.Size(1254, 209);
             this.dgvKTG.TabIndex = 61;
-            // 
-            // MaKTG
-            // 
-            this.MaKTG.HeaderText = "Mã Khung Thời Gian";
-            this.MaKTG.Name = "MaKTG";
-            this.MaKTG.ReadOnly = true;
-            // 
-            // NgayChieu
-            // 
-            this.NgayChieu.HeaderText = "Ngày Chiếu";
-            this.NgayChieu.Name = "NgayChieu";
-            this.NgayChieu.ReadOnly = true;
-            // 
-            // GioChieu
-            // 
-            this.GioChieu.HeaderText = "Giờ Chiếu";
-            this.GioChieu.Name = "GioChieu";
-            this.GioChieu.ReadOnly = true;
             // 
             // btnTimKiem
             // 
@@ -214,6 +196,27 @@
             this.txtGioChieu.Size = new System.Drawing.Size(230, 22);
             this.txtGioChieu.TabIndex = 90;
             // 
+            // MaKTG
+            // 
+            this.MaKTG.DataPropertyName = "MaKTG";
+            this.MaKTG.HeaderText = "Mã Khung Thời Gian";
+            this.MaKTG.Name = "MaKTG";
+            this.MaKTG.ReadOnly = true;
+            // 
+            // NgayChieu
+            // 
+            this.NgayChieu.DataPropertyName = "NgayChieu";
+            this.NgayChieu.HeaderText = "Ngày Chiếu";
+            this.NgayChieu.Name = "NgayChieu";
+            this.NgayChieu.ReadOnly = true;
+            // 
+            // GioChieu
+            // 
+            this.GioChieu.DataPropertyName = "GioChieu";
+            this.GioChieu.HeaderText = "Giờ Chiếu";
+            this.GioChieu.Name = "GioChieu";
+            this.GioChieu.ReadOnly = true;
+            // 
             // GUI_KTG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,9 +247,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvKTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayChieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioChieu;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label2;
@@ -260,5 +260,8 @@
         private System.Windows.Forms.TextBox txtMaKTG;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtGioChieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayChieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioChieu;
     }
 }

@@ -192,5 +192,7 @@ namespace BanVeRapChieuPhim.GUI_QuanLyTaiKhoan
                 LoadQuanHuyenTheoMaTinhThanhPho(int.Parse(cboTinhThanhPho.SelectedValue.ToString()));
             }
         }
+
+     
     }
 }

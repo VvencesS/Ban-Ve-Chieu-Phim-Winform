@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvLoaiGhe = new System.Windows.Forms.DataGridView();
-            this.MaLoaiGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -40,6 +38,8 @@
             this.txtTenLoaiGhe = new System.Windows.Forms.TextBox();
             this.lbMaLoaiGhe = new System.Windows.Forms.Label();
             this.txtMaLoaiGhe = new System.Windows.Forms.TextBox();
+            this.MaLoaiGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiGhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,18 +58,6 @@
             this.dgvLoaiGhe.ReadOnly = true;
             this.dgvLoaiGhe.Size = new System.Drawing.Size(1254, 209);
             this.dgvLoaiGhe.TabIndex = 53;
-            // 
-            // MaLoaiGhe
-            // 
-            this.MaLoaiGhe.HeaderText = "Mã Loại Ghế";
-            this.MaLoaiGhe.Name = "MaLoaiGhe";
-            this.MaLoaiGhe.ReadOnly = true;
-            // 
-            // TenLoai
-            // 
-            this.TenLoai.HeaderText = "Tên Loại Ghế";
-            this.TenLoai.Name = "TenLoai";
-            this.TenLoai.ReadOnly = true;
             // 
             // label2
             // 
@@ -162,6 +150,20 @@
             this.txtMaLoaiGhe.Size = new System.Drawing.Size(230, 22);
             this.txtMaLoaiGhe.TabIndex = 86;
             // 
+            // MaLoaiGhe
+            // 
+            this.MaLoaiGhe.DataPropertyName = "MaLoaiGhe";
+            this.MaLoaiGhe.HeaderText = "Mã Loại Ghế";
+            this.MaLoaiGhe.Name = "MaLoaiGhe";
+            this.MaLoaiGhe.ReadOnly = true;
+            // 
+            // TenLoai
+            // 
+            this.TenLoai.DataPropertyName = "TenLoai";
+            this.TenLoai.HeaderText = "Tên Loại Ghế";
+            this.TenLoai.Name = "TenLoai";
+            this.TenLoai.ReadOnly = true;
+            // 
             // GUI_LoaiGhe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,8 +190,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvLoaiGhe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiGhe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoai;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
@@ -199,5 +199,7 @@
         private System.Windows.Forms.TextBox txtTenLoaiGhe;
         private System.Windows.Forms.Label lbMaLoaiGhe;
         private System.Windows.Forms.TextBox txtMaLoaiGhe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiGhe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoai;
     }
 }
