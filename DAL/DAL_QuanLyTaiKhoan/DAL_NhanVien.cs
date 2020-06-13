@@ -34,7 +34,7 @@ namespace DAL.DAL_QuanLyTaiKhoan
         /// <returns></returns>
         public static DataTable LayNhanvienTheoMa(int maNhanVien)
         {
-            SqlCommand cmd = new SqlCommand("select tb_NhanVien.MaNhanVien, tb_NhanVien.HoTen, tb_NhanVien.Email, " +
+            SqlCommand cmd = new SqlCommand("select tb_NhanVien.MaNhanVien, tb_NhanVien.HoTen, tb_NhanVien.Email, tb_NhanVien.SoThe," +
                 "tb_NhanVien.GioiTinh, tb_NhanVien.Sdt, tb_NhanVien.NgaySinh, tb_NhanVien.UserName, tb_NhanVien.PassWord, " +
                 "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho from tb_NhanVien " +
                 "inner join tb_XaPhuong on tb_NhanVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
@@ -123,12 +123,32 @@ namespace DAL.DAL_QuanLyTaiKhoan
         }
         #endregion
         #region Login
+        /// <summary>
+        /// Phương thức login
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="passWord"></param>
+        /// <returns></returns>
         public static DataTable Login(string userName,string passWord)
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM tb_NhanVien WHERE UserName=@userName and PassWord=@passWord");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@userName", userName);
             cmd.Parameters.AddWithValue("@passWord", passWord);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
+        #region Tìm kiếm
+        /// <summary>
+        /// Phương thức tìm kiếm theo họ tên hoặc username
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public static DataTable Search(string search)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tb_NhanVien WHERE UserName LIKE N'%'+ @search + '%' OR HoTen LIKE N'%'+@search+'%'");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@search", search);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

@@ -53,8 +53,8 @@ namespace BUS.BUS_QuanLyTaiKhoan
         {
             DateTime ns = XuLyNgayThang.XuLyChuoiNgayThang(ngaySinh);
             int idXP = int.Parse(idXaPhuong);
-            bool gt = (gioiTinh == "Nam" || gioiTinh == "nam") ? true : false;
-            DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Nhanvien_Inser(userName, hoTen, email, sdt, soThe, gt, ns, MaHoa.MaHoaMD5(passWord), idXP);
+            bool gt = (gioiTinh == "Nam") ? true : false;
+            DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Nhanvien_Inser(userName, hoTen, email, sdt, soThe, gt, ns, passWord, idXP);
         }
         /// <summary>
         /// Phương thức cập nhật nhân viên
@@ -77,12 +77,27 @@ namespace BUS.BUS_QuanLyTaiKhoan
                 DateTime ns = XuLyNgayThang.XuLyChuoiNgayThang(ngaySinh);
                 int idXP = int.Parse(idXaPhuong);
                 bool gt = (gioiTinh == "Nam" || gioiTinh == "nam") ? true : false;
-                DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Nhanvien_Update(userName, hoTen, email, sdt, soThe, gt, ns, MaHoa.MaHoaMD5(passWord), idXP, maNhanVien);
+                DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Nhanvien_Update(userName, hoTen, email, sdt, soThe, gt, ns, passWord, idXP, maNhanVien);
             }
         }
+        /// <summary>
+        /// Phương thức login
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="passWord"></param>
+        /// <returns></returns>
         public static DataTable Login(string userName, string passWord)
         {
             return DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Login(userName, MaHoa.MaHoaMD5(passWord));
+        }
+        /// <summary>
+        /// Phương thức tìm kiếm
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public static DataTable TimKiem(string search)
+        {
+            return DAL.DAL_QuanLyTaiKhoan.DAL_NhanVien.Search(search);
         }
     }
 }
