@@ -74,6 +74,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(657, 387);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -315,7 +316,6 @@
             this.cboGioiTinh.Size = new System.Drawing.Size(207, 24);
             this.cboGioiTinh.TabIndex = 206;
             this.cboGioiTinh.Text = "--Chọn giới tính--";
-            
             // 
             // txtSoThe
             // 
@@ -338,8 +338,10 @@
             // 
             // GUI_ThemNhanVien
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.txtSoThe);
             this.Controls.Add(this.label3);

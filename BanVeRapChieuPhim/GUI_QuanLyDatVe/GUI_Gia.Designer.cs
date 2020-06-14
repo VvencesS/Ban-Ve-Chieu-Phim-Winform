@@ -88,6 +88,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(765, 399);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
@@ -166,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1260, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDonGia);
@@ -178,6 +180,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvGia);
             this.Name = "GUI_Gia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Gia";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGia)).EndInit();
             this.ResumeLayout(false);

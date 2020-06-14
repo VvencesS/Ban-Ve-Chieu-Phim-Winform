@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvTrangThai = new System.Windows.Forms.DataGridView();
+            this.MaTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaTrangThai = new System.Windows.Forms.TextBox();
-            this.MaTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrangThai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,20 @@
             this.dgvTrangThai.Size = new System.Drawing.Size(1254, 209);
             this.dgvTrangThai.TabIndex = 52;
             // 
+            // MaTrangThai
+            // 
+            this.MaTrangThai.DataPropertyName = "MaTrangThai";
+            this.MaTrangThai.HeaderText = "Mã Trạng Thái";
+            this.MaTrangThai.Name = "MaTrangThai";
+            this.MaTrangThai.ReadOnly = true;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô Tả";
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -72,6 +86,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(1096, 398);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
@@ -115,24 +130,11 @@
             this.txtMaTrangThai.Size = new System.Drawing.Size(230, 22);
             this.txtMaTrangThai.TabIndex = 86;
             // 
-            // MaTrangThai
-            // 
-            this.MaTrangThai.DataPropertyName = "MaTrangThai";
-            this.MaTrangThai.HeaderText = "Mã Trạng Thái";
-            this.MaTrangThai.Name = "MaTrangThai";
-            this.MaTrangThai.ReadOnly = true;
-            // 
-            // MoTa
-            // 
-            this.MoTa.DataPropertyName = "MoTa";
-            this.MoTa.HeaderText = "Mô Tả";
-            this.MoTa.Name = "MoTa";
-            this.MoTa.ReadOnly = true;
-            // 
             // GUI_TrangThai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1258, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMoTa);
@@ -142,6 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnThoat);
             this.Name = "GUI_TrangThai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_TrangThai";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrangThai)).EndInit();
             this.ResumeLayout(false);

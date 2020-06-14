@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvPhong = new System.Windows.Forms.DataGridView();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoHangMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCotMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -36,11 +41,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoHangMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoCotMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,41 @@
             this.dgvPhong.ReadOnly = true;
             this.dgvPhong.Size = new System.Drawing.Size(1254, 209);
             this.dgvPhong.TabIndex = 50;
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã Phòng";
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.ReadOnly = true;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên Phòng";
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.ReadOnly = true;
+            // 
+            // SoHangMax
+            // 
+            this.SoHangMax.DataPropertyName = "SoHangMax";
+            this.SoHangMax.HeaderText = "Số Hàng Max";
+            this.SoHangMax.Name = "SoHangMax";
+            this.SoHangMax.ReadOnly = true;
+            // 
+            // SoCotMax
+            // 
+            this.SoCotMax.DataPropertyName = "SoCotMax";
+            this.SoCotMax.HeaderText = "Số Cột Max";
+            this.SoCotMax.Name = "SoCotMax";
+            this.SoCotMax.ReadOnly = true;
+            // 
+            // TenDinhDang
+            // 
+            this.TenDinhDang.DataPropertyName = "TenDinhDang";
+            this.TenDinhDang.HeaderText = "Định Dạng";
+            this.TenDinhDang.Name = "TenDinhDang";
+            this.TenDinhDang.ReadOnly = true;
             // 
             // label2
             // 
@@ -102,6 +137,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(765, 399);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
@@ -140,45 +176,11 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // MaPhong
-            // 
-            this.MaPhong.DataPropertyName = "MaPhong";
-            this.MaPhong.HeaderText = "Mã Phòng";
-            this.MaPhong.Name = "MaPhong";
-            this.MaPhong.ReadOnly = true;
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.DataPropertyName = "TenPhong";
-            this.TenPhong.HeaderText = "Tên Phòng";
-            this.TenPhong.Name = "TenPhong";
-            this.TenPhong.ReadOnly = true;
-            // 
-            // SoHangMax
-            // 
-            this.SoHangMax.DataPropertyName = "SoHangMax";
-            this.SoHangMax.HeaderText = "Số Hàng Max";
-            this.SoHangMax.Name = "SoHangMax";
-            this.SoHangMax.ReadOnly = true;
-            // 
-            // SoCotMax
-            // 
-            this.SoCotMax.DataPropertyName = "SoCotMax";
-            this.SoCotMax.HeaderText = "Số Cột Max";
-            this.SoCotMax.Name = "SoCotMax";
-            this.SoCotMax.ReadOnly = true;
-            // 
-            // TenDinhDang
-            // 
-            this.TenDinhDang.DataPropertyName = "TenDinhDang";
-            this.TenDinhDang.HeaderText = "Định Dạng";
-            this.TenDinhDang.Name = "TenDinhDang";
-            this.TenDinhDang.ReadOnly = true;
-            // 
             // GUI_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1260, 450);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
@@ -189,6 +191,7 @@
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Name = "GUI_Phong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Phong";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
             this.ResumeLayout(false);

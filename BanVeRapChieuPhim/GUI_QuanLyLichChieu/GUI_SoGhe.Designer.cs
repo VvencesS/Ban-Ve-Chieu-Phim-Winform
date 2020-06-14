@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvSoGhe = new System.Windows.Forms.DataGridView();
+            this.SoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -40,9 +43,6 @@
             this.txtSoGhe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSoCot = new System.Windows.Forms.TextBox();
-            this.SoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoCot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoGhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +63,27 @@
             this.dgvSoGhe.Size = new System.Drawing.Size(1254, 209);
             this.dgvSoGhe.TabIndex = 41;
             // 
+            // SoGhe
+            // 
+            this.SoGhe.DataPropertyName = "SoGhe";
+            this.SoGhe.HeaderText = "Số Ghế";
+            this.SoGhe.Name = "SoGhe";
+            this.SoGhe.ReadOnly = true;
+            // 
+            // SoHang
+            // 
+            this.SoHang.DataPropertyName = "SoHang";
+            this.SoHang.HeaderText = "Số Hàng";
+            this.SoHang.Name = "SoHang";
+            this.SoHang.ReadOnly = true;
+            // 
+            // SoCot
+            // 
+            this.SoCot.DataPropertyName = "SoCot";
+            this.SoCot.HeaderText = "Số Cột";
+            this.SoCot.Name = "SoCot";
+            this.SoCot.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -80,6 +101,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(764, 410);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
@@ -172,31 +194,11 @@
             this.txtSoCot.Size = new System.Drawing.Size(230, 22);
             this.txtSoCot.TabIndex = 90;
             // 
-            // SoGhe
-            // 
-            this.SoGhe.DataPropertyName = "SoGhe";
-            this.SoGhe.HeaderText = "Số Ghế";
-            this.SoGhe.Name = "SoGhe";
-            this.SoGhe.ReadOnly = true;
-            // 
-            // SoHang
-            // 
-            this.SoHang.DataPropertyName = "SoHang";
-            this.SoHang.HeaderText = "Số Hàng";
-            this.SoHang.Name = "SoHang";
-            this.SoHang.ReadOnly = true;
-            // 
-            // SoCot
-            // 
-            this.SoCot.DataPropertyName = "SoCot";
-            this.SoCot.HeaderText = "Số Cột";
-            this.SoCot.Name = "SoCot";
-            this.SoCot.ReadOnly = true;
-            // 
             // GUI_SoGhe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1259, 465);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSoCot);
@@ -211,6 +213,7 @@
             this.Controls.Add(this.dgvSoGhe);
             this.Controls.Add(this.label2);
             this.Name = "GUI_SoGhe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_SoGhe";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoGhe)).EndInit();
             this.ResumeLayout(false);

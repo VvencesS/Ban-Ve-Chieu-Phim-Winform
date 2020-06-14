@@ -181,6 +181,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(658, 387);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -202,8 +203,10 @@
             // 
             // GUI_ThemVe
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1260, 450);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
@@ -221,6 +224,7 @@
             this.Controls.Add(this.lbMaVe);
             this.Controls.Add(this.label2);
             this.Name = "GUI_ThemVe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ThemVe";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -30,8 +30,6 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDanhSachDatVe = new System.Windows.Forms.DataGridView();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.MaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +39,8 @@
             this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDatVe)).BeginInit();
             this.SuspendLayout();
@@ -82,27 +82,6 @@
             this.dgvDanhSachDatVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachDatVe.Size = new System.Drawing.Size(1254, 209);
             this.dgvDanhSachDatVe.TabIndex = 60;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(1133, 79);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTimKiem.Size = new System.Drawing.Size(90, 30);
-            this.btnTimKiem.TabIndex = 62;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTimKiem.Location = new System.Drawing.Point(827, 83);
-            this.txtTimKiem.Multiline = true;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTimKiem.Size = new System.Drawing.Size(300, 25);
-            this.txtTimKiem.TabIndex = 61;
             // 
             // MaVe
             // 
@@ -158,6 +137,27 @@
             this.HoTen.Name = "HoTen";
             this.HoTen.ReadOnly = true;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(1133, 79);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTimKiem.Size = new System.Drawing.Size(90, 30);
+            this.btnTimKiem.TabIndex = 62;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtTimKiem.Location = new System.Drawing.Point(827, 83);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTimKiem.Size = new System.Drawing.Size(300, 25);
+            this.txtTimKiem.TabIndex = 61;
+            // 
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
@@ -171,6 +171,7 @@
             // 
             // GUI_DanhSachDatVe
             // 
+            this.AcceptButton = this.btnTimKiem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnThoat;
@@ -181,6 +182,7 @@
             this.Controls.Add(this.dgvDanhSachDatVe);
             this.Controls.Add(this.label2);
             this.Name = "GUI_DanhSachDatVe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_DanhSachDatVe";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDatVe)).EndInit();
             this.ResumeLayout(false);

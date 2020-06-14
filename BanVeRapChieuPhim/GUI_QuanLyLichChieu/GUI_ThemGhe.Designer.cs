@@ -159,6 +159,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(657, 380);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -180,8 +181,10 @@
             // 
             // GUI_ThemGhe
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1258, 450);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
@@ -197,6 +200,7 @@
             this.Controls.Add(this.lbMaGhe);
             this.Controls.Add(this.label1);
             this.Name = "GUI_ThemGhe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ThemGhe";
             this.ResumeLayout(false);
             this.PerformLayout();

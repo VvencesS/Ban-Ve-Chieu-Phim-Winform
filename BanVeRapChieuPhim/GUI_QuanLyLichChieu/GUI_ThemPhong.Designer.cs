@@ -60,6 +60,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(655, 382);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -177,8 +178,10 @@
             // 
             // GUI_ThemPhong
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.txtSoCotMax);
             this.Controls.Add(this.txtSoHangMax);
@@ -194,6 +197,7 @@
             this.Controls.Add(this.lbMaPhong);
             this.Controls.Add(this.label2);
             this.Name = "GUI_ThemPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ThemPhong";
             this.ResumeLayout(false);
             this.PerformLayout();

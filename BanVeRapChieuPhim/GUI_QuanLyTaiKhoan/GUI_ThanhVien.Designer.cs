@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvThanhVien = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.TenXaPhuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenQuanHuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTinhThanhPho = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,57 +114,76 @@
             this.dgvThanhVien.ReadOnly = true;
             this.dgvThanhVien.Size = new System.Drawing.Size(1254, 209);
             this.dgvThanhVien.TabIndex = 56;
+            this.dgvThanhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhVien_CellClick);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Location = new System.Drawing.Point(282, 399);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
+            this.btnRefresh.TabIndex = 77;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
-            this.btnThoat.Location = new System.Drawing.Point(823, 399);
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnThoat.Location = new System.Drawing.Point(884, 399);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
-            this.btnThoat.TabIndex = 70;
+            this.btnThoat.TabIndex = 76;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(583, 399);
+            this.btnXoa.Location = new System.Drawing.Point(644, 399);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(90, 30);
-            this.btnXoa.TabIndex = 69;
+            this.btnXoa.TabIndex = 75;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
             this.btnSua.AutoSize = true;
-            this.btnSua.Location = new System.Drawing.Point(463, 399);
+            this.btnSua.Location = new System.Drawing.Point(524, 399);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(90, 30);
-            this.btnSua.TabIndex = 68;
+            this.btnSua.TabIndex = 74;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
             this.btnThem.AutoSize = true;
-            this.btnThem.Location = new System.Drawing.Point(343, 399);
+            this.btnThem.Location = new System.Drawing.Point(404, 399);
             this.btnThem.Name = "btnThem";
             this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnThem.Size = new System.Drawing.Size(90, 30);
-            this.btnThem.TabIndex = 67;
+            this.btnThem.TabIndex = 73;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnLichSuDatVe
             // 
             this.btnLichSuDatVe.AutoSize = true;
-            this.btnLichSuDatVe.Location = new System.Drawing.Point(703, 399);
+            this.btnLichSuDatVe.Location = new System.Drawing.Point(764, 399);
             this.btnLichSuDatVe.Name = "btnLichSuDatVe";
             this.btnLichSuDatVe.Size = new System.Drawing.Size(90, 30);
-            this.btnLichSuDatVe.TabIndex = 66;
+            this.btnLichSuDatVe.TabIndex = 72;
             this.btnLichSuDatVe.Text = "Lịch Sử Đặt Vé";
             this.btnLichSuDatVe.UseVisualStyleBackColor = true;
+            this.btnLichSuDatVe.Click += new System.EventHandler(this.btnLichSuDatVe_Click);
             // 
             // MaThanhVien
             // 
@@ -176,7 +195,7 @@
             // 
             // HoVaTen
             // 
-            this.HoVaTen.DataPropertyName = "HoVaTen";
+            this.HoVaTen.DataPropertyName = "HoTen";
             this.HoVaTen.HeaderText = "Họ Và Tên";
             this.HoVaTen.Name = "HoVaTen";
             this.HoVaTen.ReadOnly = true;
@@ -194,6 +213,7 @@
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
+            this.Password.Visible = false;
             // 
             // SDT
             // 
@@ -216,16 +236,15 @@
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
             this.NgaySinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NgaySinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle1.NullValue = "faile";
-            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle1;
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
+            this.GioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GioiTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // TrangThai
             // 
@@ -233,6 +252,8 @@
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
+            this.TrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // TenXaPhuong
             // 
@@ -259,7 +280,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1257, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -270,6 +293,7 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dgvThanhVien);
             this.Name = "GUI_ThanhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ThanhVien";
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhVien)).EndInit();
             this.ResumeLayout(false);
@@ -283,6 +307,7 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView dgvThanhVien;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
@@ -294,9 +319,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn NgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenXaPhuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenQuanHuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTinhThanhPho;

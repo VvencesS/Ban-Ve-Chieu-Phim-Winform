@@ -50,12 +50,13 @@ namespace BUS.BUS_QuanLyTaiKhoan
         /// <param name="passWord"></param>
         /// <param name="idXaPhuong"></param>
         /// <param name="trangThai"></param>
-        public static void ThemMoiThanhVien(string hoTen, string email, string sdt, string soThe, string gioiTinh, string ngaySinh, string passWord, string idXaPhuong, bool trangThai)
+        public static void ThemMoiThanhVien(string hoTen, string email, string sdt, string soThe, string gioiTinh, string ngaySinh, string passWord, string idXaPhuong, string trangThai)
         {
             DateTime ns = XuLyNgayThang.XuLyChuoiNgayThang(ngaySinh);
             int idXP = int.Parse(idXaPhuong);
-            bool gt = (gioiTinh == "Nam" || gioiTinh == "nam") ? true : false;
-            DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThanhVien_Inser(hoTen, email, sdt, soThe, gt, ns, MaHoa.MaHoaMD5(passWord), idXP, trangThai);
+            bool gt = (gioiTinh == "Nam") ? true : false;
+            bool tt = (trangThai == "Đã kích hoạt") ? true : false;
+            DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThanhVien_Inser(hoTen, email, sdt, soThe, gt, ns, MaHoa.MaHoaMD5(passWord), idXP,tt);
         }
         /// <summary>
         /// Phương thức cập nhật Thành viên
@@ -70,16 +71,26 @@ namespace BUS.BUS_QuanLyTaiKhoan
         /// <param name="idXaPhuong"></param>
         /// <param name="trangThai"></param>
         /// <param name="maThanhVien"></param>
-        public static void CapNhatThanhVien(string hoTen, string email, string sdt, string soThe, string gioiTinh, string ngaySinh, string passWord, string idXaPhuong, bool trangThai ,int maThanhVien)
+        public static void CapNhatThanhVien(string hoTen, string email, string sdt, string soThe, string gioiTinh, string ngaySinh, string passWord, string idXaPhuong, string trangThai ,int maThanhVien)
         {
             DataTable dt = DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThongTinThanhVienByMa(maThanhVien);
             if (dt.Rows.Count > 0)
             {
                 DateTime ns = XuLyNgayThang.XuLyChuoiNgayThang(ngaySinh);
                 int idXP = int.Parse(idXaPhuong);
-                bool gt = (gioiTinh == "Nam" || gioiTinh == "nam") ? true : false;
-                DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThanhVien_Update(hoTen, email, sdt, soThe, gt, ns, MaHoa.MaHoaMD5(passWord), idXP, trangThai,maThanhVien);
+                bool gt = (gioiTinh == "Nam") ? true : false;
+                bool tt = (trangThai == "Đã kích hoạt") ? true : false;
+                DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThanhVien_Update(hoTen, email, sdt, soThe, gt, ns,passWord, idXP,tt,maThanhVien);
             }
+        }
+        /// <summary>
+        /// Phương thức tìm kiếm
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public static DataTable TimKiem(string search)
+        {
+            return DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.Search(search);
         }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvLoaiGhe = new System.Windows.Forms.DataGridView();
+            this.MaLoaiGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.txtTenLoaiGhe = new System.Windows.Forms.TextBox();
             this.lbMaLoaiGhe = new System.Windows.Forms.Label();
             this.txtMaLoaiGhe = new System.Windows.Forms.TextBox();
-            this.MaLoaiGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiGhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,20 @@
             this.dgvLoaiGhe.Size = new System.Drawing.Size(1254, 209);
             this.dgvLoaiGhe.TabIndex = 53;
             // 
+            // MaLoaiGhe
+            // 
+            this.MaLoaiGhe.DataPropertyName = "MaLoaiGhe";
+            this.MaLoaiGhe.HeaderText = "Mã Loại Ghế";
+            this.MaLoaiGhe.Name = "MaLoaiGhe";
+            this.MaLoaiGhe.ReadOnly = true;
+            // 
+            // TenLoai
+            // 
+            this.TenLoai.DataPropertyName = "TenLoai";
+            this.TenLoai.HeaderText = "Tên Loại Ghế";
+            this.TenLoai.Name = "TenLoai";
+            this.TenLoai.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -76,6 +90,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(764, 399);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
@@ -150,24 +165,11 @@
             this.txtMaLoaiGhe.Size = new System.Drawing.Size(230, 22);
             this.txtMaLoaiGhe.TabIndex = 86;
             // 
-            // MaLoaiGhe
-            // 
-            this.MaLoaiGhe.DataPropertyName = "MaLoaiGhe";
-            this.MaLoaiGhe.HeaderText = "Mã Loại Ghế";
-            this.MaLoaiGhe.Name = "MaLoaiGhe";
-            this.MaLoaiGhe.ReadOnly = true;
-            // 
-            // TenLoai
-            // 
-            this.TenLoai.DataPropertyName = "TenLoai";
-            this.TenLoai.HeaderText = "Tên Loại Ghế";
-            this.TenLoai.Name = "TenLoai";
-            this.TenLoai.ReadOnly = true;
-            // 
             // GUI_LoaiGhe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.lbTenLoaiGhe);
             this.Controls.Add(this.txtTenLoaiGhe);
@@ -180,6 +182,7 @@
             this.Controls.Add(this.dgvLoaiGhe);
             this.Controls.Add(this.label2);
             this.Name = "GUI_LoaiGhe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_LoaiGhe";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiGhe)).EndInit();
             this.ResumeLayout(false);

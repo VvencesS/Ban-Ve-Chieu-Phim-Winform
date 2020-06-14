@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvKTG = new System.Windows.Forms.DataGridView();
+            this.MaKTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,9 +45,6 @@
             this.txtMaKTG = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtGioChieu = new System.Windows.Forms.TextBox();
-            this.MaKTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKTG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,27 @@
             this.dgvKTG.ReadOnly = true;
             this.dgvKTG.Size = new System.Drawing.Size(1254, 209);
             this.dgvKTG.TabIndex = 61;
+            // 
+            // MaKTG
+            // 
+            this.MaKTG.DataPropertyName = "MaKTG";
+            this.MaKTG.HeaderText = "Mã Khung Thời Gian";
+            this.MaKTG.Name = "MaKTG";
+            this.MaKTG.ReadOnly = true;
+            // 
+            // NgayChieu
+            // 
+            this.NgayChieu.DataPropertyName = "NgayChieu";
+            this.NgayChieu.HeaderText = "Ngày Chiếu";
+            this.NgayChieu.Name = "NgayChieu";
+            this.NgayChieu.ReadOnly = true;
+            // 
+            // GioChieu
+            // 
+            this.GioChieu.DataPropertyName = "GioChieu";
+            this.GioChieu.HeaderText = "Giờ Chiếu";
+            this.GioChieu.Name = "GioChieu";
+            this.GioChieu.ReadOnly = true;
             // 
             // btnTimKiem
             // 
@@ -104,6 +125,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(764, 410);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
@@ -134,6 +156,7 @@
             // btnThem
             // 
             this.btnThem.AutoSize = true;
+            this.btnThem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThem.Location = new System.Drawing.Point(404, 410);
             this.btnThem.Name = "btnThem";
             this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -196,31 +219,11 @@
             this.txtGioChieu.Size = new System.Drawing.Size(230, 22);
             this.txtGioChieu.TabIndex = 90;
             // 
-            // MaKTG
-            // 
-            this.MaKTG.DataPropertyName = "MaKTG";
-            this.MaKTG.HeaderText = "Mã Khung Thời Gian";
-            this.MaKTG.Name = "MaKTG";
-            this.MaKTG.ReadOnly = true;
-            // 
-            // NgayChieu
-            // 
-            this.NgayChieu.DataPropertyName = "NgayChieu";
-            this.NgayChieu.HeaderText = "Ngày Chiếu";
-            this.NgayChieu.Name = "NgayChieu";
-            this.NgayChieu.ReadOnly = true;
-            // 
-            // GioChieu
-            // 
-            this.GioChieu.DataPropertyName = "GioChieu";
-            this.GioChieu.HeaderText = "Giờ Chiếu";
-            this.GioChieu.Name = "GioChieu";
-            this.GioChieu.ReadOnly = true;
-            // 
             // GUI_KTG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1258, 463);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtGioChieu);
@@ -237,6 +240,7 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label2);
             this.Name = "GUI_KTG";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_KTG";
             ((System.ComponentModel.ISupportInitialize)(this.dgvKTG)).EndInit();
             this.ResumeLayout(false);
