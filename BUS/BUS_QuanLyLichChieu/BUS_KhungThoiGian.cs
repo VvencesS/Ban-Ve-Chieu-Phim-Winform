@@ -63,5 +63,33 @@ namespace BUS.BUS_QuanLyLichChieu
         {
             return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.ThongTinKTGTheoMa(maKTG);
         }
+        
+        /// <summary>
+        /// Phương thức lấy ra thông tin giờ chiếu theo ngày chiếu
+        /// </summary>
+        /// <param name="ngayChieu"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGioChieuTheoNgayChieu(int ngayChieu)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.ThongTinGioChieuTheoNgayChieu(ngayChieu);
+        }
+        /// <summary>
+        /// Phương thức lấy khung thời gian theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable LayKTGTheoMaPhim(int maPhim)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.LayKTGTheoMaPhim(maPhim);
+        }
+        /// <summary>
+        /// Phương thức lấy giờ chiếu theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable LayGioChieuTheoMaPhim(int maPhim)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.LayGioChieuTheoMaPhim(maPhim);
+        }
     }
 }

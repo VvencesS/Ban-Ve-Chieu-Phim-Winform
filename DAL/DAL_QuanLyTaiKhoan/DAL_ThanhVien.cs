@@ -45,6 +45,18 @@ namespace DAL.DAL_QuanLyTaiKhoan
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra danh sách tất cả Thành viên
+        /// <summary>
+        /// Phương thức lấy ra danh sách tất cả Thành viên
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable ThongTinTatCaThanhVien()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * from [tb_ThanhVien]");
+            cmd.CommandType = CommandType.Text;
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
         #region Phương thức xóa thành viên theo mã thành viên truyền vào
         /// <summary>
         /// Phương thức xóa thành viên theo mã thành viên truyền vào

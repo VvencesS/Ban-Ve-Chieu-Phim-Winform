@@ -27,6 +27,14 @@ namespace BUS.BUS_QuanLyTaiKhoan
             return DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThongTinThanhVienByMa(maThanhVien);
         }
         /// <summary>
+        /// Phương thức lấy tất cả thành viên
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable ThongTinTatCaThanhVien()
+        {
+            return DAL.DAL_QuanLyTaiKhoan.DAL_ThanhVien.ThongTinTatCaThanhVien();
+        }
+        /// <summary>
         /// Phương thức xóa thành viên bằng mã
         /// </summary>
         /// <param name="maThanhVien"></param>

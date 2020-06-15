@@ -1,6 +1,6 @@
 ﻿namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
 {
-    partial class GUI_Gia
+    partial class GUI_BaoGia
     {
         /// <summary>
         /// Required designer variable.

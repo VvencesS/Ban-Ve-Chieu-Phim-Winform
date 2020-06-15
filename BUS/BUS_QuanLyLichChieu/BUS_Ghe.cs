@@ -57,6 +57,14 @@ namespace BUS.BUS_QuanLyLichChieu
             return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinTatCaGhe();
         }
         /// <summary>
+        /// Phương thức lấy ra danh sách tất cả ghế
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable ThongTinTatCaGhe1()
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinTatCaGhe1();
+        }
+        /// <summary>
         /// Phương thức lấy ra ghế theo mã ghế
         /// </summary>
         /// <param name="maGhe"></param>
@@ -64,6 +72,36 @@ namespace BUS.BUS_QuanLyLichChieu
         public static DataTable LayGheTheoMa(int maGhe)
         {
             return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheTheoMa(maGhe);
+        }
+        
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế thường theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheThuongTheoMaPhong(int maPhong)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheThuongTheoMaPhong(maPhong);
+        }
+        
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế vip theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheVipTheoMaPhong(int maPhong)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheVipTheoMaPhong(maPhong);
+        }
+        
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế đôi theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheDoiTheoMaPhong(int maPhong)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheDoiTheoMaPhong(maPhong);
         }
     }
 }

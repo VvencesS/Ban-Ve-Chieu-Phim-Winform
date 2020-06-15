@@ -80,6 +80,18 @@ namespace DAL.DAL_QuanLyLichChieu
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra danh sách tất cả ghế
+        /// <summary>
+        /// Phương thức lấy ra danh sách tất cả ghế
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable ThongTinTatCaGhe1()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_Ghe]");
+            cmd.CommandType = CommandType.Text;
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
 
         #region Phương thức lấy ra thông tin ghế theo mã ghế
         /// <summary>
@@ -94,6 +106,48 @@ namespace DAL.DAL_QuanLyLichChieu
                 "INNER JOIN tb_TrangThai ON tb_TrangThai.MaTrangThai=tb_Ghe.MaTrangThai INNER JOIN tb_SoGhe ON tb_SoGhe.SoGhe=tb_Ghe.SoGhe WHERE [MaGhe]=@maGhe");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maGhe", maGhe);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
+        #region Phương thức lấy ra thông tin ghế thường theo mã phòng
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế thường theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheThuongTheoMaPhong(int maPhong)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT MaGhe, SoGhe FROM [dbo].[tb_Ghe] WHERE [MaPhong]=@maPhong and MaLoaiGhe=1 and MaTrangThai=3");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maPhong", maPhong);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
+        #region Phương thức lấy ra thông tin ghế vip theo mã phòng
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế vip theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheVipTheoMaPhong(int maPhong)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT MaGhe, SoGhe FROM [dbo].[tb_Ghe] WHERE [MaPhong]=@maPhong and MaLoaiGhe=2 and MaTrangThai=3");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maPhong", maPhong);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
+        #region Phương thức lấy ra thông tin ghế đôi theo mã phòng
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế đôi theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheDoiTheoMaPhong(int maPhong)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT MaGhe, SoGhe FROM [dbo].[tb_Ghe] WHERE [MaPhong]=@maPhong and MaLoaiGhe=3 and MaTrangThai=3");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maPhong", maPhong);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

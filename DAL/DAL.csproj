@@ -42,7 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_QuanLyDatVe\DAL_BaoGia.cs" />
+    <Compile Include="DAL_QuanLyDatVe\DAL_DatGhe.cs" />
     <Compile Include="DAL_QuanLyDatVe\DAL_DSDatVe.cs" />
+    <Compile Include="DAL_QuanLyDatVe\DAL_Gia.cs" />
+    <Compile Include="DAL_QuanLyDatVe\DAL_GiaVeDat.cs" />
     <Compile Include="DAL_QuanLyDatVe\DAL_Ve.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_Ghe.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_KhungThoiGian.cs" />

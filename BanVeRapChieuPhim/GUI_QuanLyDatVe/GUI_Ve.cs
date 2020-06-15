@@ -15,11 +15,21 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
         public GUI_Ve()
         {
             InitializeComponent();
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+
+            LoadVe();
+        }
+
+        private void LoadVe()
+        {
+            dgvVe.DataSource = BUS.BUS_QuanLyDatVe.BUS_Ve.LayTatCaVe();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            GUI_ThemVe gUI_ThemVe = new GUI_ThemVe();
+            gUI_ThemVe.ShowDialog();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -34,7 +44,17 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadVe();
         }
     }
 }

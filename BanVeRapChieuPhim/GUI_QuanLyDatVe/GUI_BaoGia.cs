@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
 {
-    public partial class GUI_Gia : Form
+    public partial class GUI_BaoGia : Form
     {
-        public GUI_Gia()
+        public GUI_BaoGia()
         {
             InitializeComponent();
         }

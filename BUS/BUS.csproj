@@ -42,7 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_QuanLyDatVe\BUS_BaoGia.cs" />
+    <Compile Include="BUS_QuanLyDatVe\BUS_DatGhe.cs" />
     <Compile Include="BUS_QuanLyDatVe\BUS_DSDatVe.cs" />
+    <Compile Include="BUS_QuanLyDatVe\BUS_Gia.cs" />
+    <Compile Include="BUS_QuanLyDatVe\BUS_GiaVeDat.cs" />
     <Compile Include="BUS_QuanLyDatVe\BUS_Ve.cs" />
     <Compile Include="BUS_QuanLyLichChieu\BUS_Ghe.cs" />
     <Compile Include="BUS_QuanLyLichChieu\BUS_KhungThoiGian.cs" />
