@@ -68,6 +68,7 @@
             this.btnThoat.TabIndex = 119;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnThem
             // 
@@ -79,6 +80,7 @@
             this.btnThem.TabIndex = 118;
             this.btnThem.Text = "Thêm/ Sửa";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtMaPhong
             // 

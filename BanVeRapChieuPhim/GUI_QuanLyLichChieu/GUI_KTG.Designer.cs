@@ -35,16 +35,17 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNgayChieu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaKTG = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtGioChieu = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKTG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             this.dgvKTG.ReadOnly = true;
             this.dgvKTG.Size = new System.Drawing.Size(1254, 209);
             this.dgvKTG.TabIndex = 61;
+            this.dgvKTG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKTG_CellClick);
             // 
             // MaKTG
             // 
@@ -95,6 +97,7 @@
             this.btnTimKiem.TabIndex = 69;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -106,7 +109,6 @@
             this.txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTimKiem.Size = new System.Drawing.Size(300, 25);
             this.txtTimKiem.TabIndex = 68;
-            this.txtTimKiem.Text = "Tìm kiếm theo giờ chiếu";
             // 
             // label2
             // 
@@ -121,49 +123,6 @@
             this.label2.Text = "QUẢN LÝ KHUNG THỜI GIAN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.UseCompatibleTextRendering = true;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.AutoSize = true;
-            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Location = new System.Drawing.Point(764, 410);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(90, 30);
-            this.btnThoat.TabIndex = 85;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(644, 410);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(90, 30);
-            this.btnXoa.TabIndex = 84;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.AutoSize = true;
-            this.btnSua.Location = new System.Drawing.Point(524, 410);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(90, 30);
-            this.btnSua.TabIndex = 83;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.AutoSize = true;
-            this.btnThem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThem.Location = new System.Drawing.Point(404, 410);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnThem.Size = new System.Drawing.Size(90, 30);
-            this.btnThem.TabIndex = 82;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -219,22 +178,81 @@
             this.txtGioChieu.Size = new System.Drawing.Size(230, 22);
             this.txtGioChieu.TabIndex = 90;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Location = new System.Drawing.Point(345, 415);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
+            this.btnRefresh.TabIndex = 96;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnThoat.Location = new System.Drawing.Point(824, 415);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(90, 30);
+            this.btnThoat.TabIndex = 95;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AutoSize = true;
+            this.btnXoa.Location = new System.Drawing.Point(704, 415);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(90, 30);
+            this.btnXoa.TabIndex = 94;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.AutoSize = true;
+            this.btnSua.Location = new System.Drawing.Point(584, 415);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(90, 30);
+            this.btnSua.TabIndex = 93;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.AutoSize = true;
+            this.btnThem.Location = new System.Drawing.Point(464, 415);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnThem.Size = new System.Drawing.Size(90, 30);
+            this.btnThem.TabIndex = 92;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // GUI_KTG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1258, 463);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtGioChieu);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNgayChieu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMaKTG);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvKTG);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
@@ -254,10 +272,6 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNgayChieu;
         private System.Windows.Forms.Label label1;
@@ -267,5 +281,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKTG;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayChieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioChieu;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
     }
 }

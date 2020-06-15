@@ -63,5 +63,15 @@ namespace BUS.BUS_QuanLyLichChieu
         {
             return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.ThongTinKTGTheoMa(maKTG);
         }
+
+        /// <summary>
+        /// Phương thức tìm kiếm theo ngày chiếu hoặc theo giờ chiếu
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public static DataTable Search(string ngayChieu, string gioChieu)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.Search(ngayChieu, gioChieu);
+        }
     }
 }
