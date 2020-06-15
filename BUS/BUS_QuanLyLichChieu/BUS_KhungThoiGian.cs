@@ -63,6 +63,7 @@ namespace BUS.BUS_QuanLyLichChieu
         {
             return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.ThongTinKTGTheoMa(maKTG);
         }
+<<<<<<< HEAD
 
         /// <summary>
         /// Phương thức tìm kiếm theo ngày chiếu hoặc theo giờ chiếu
@@ -72,6 +73,35 @@ namespace BUS.BUS_QuanLyLichChieu
         public static DataTable Search(string ngayChieu, string gioChieu)
         {
             return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.Search(ngayChieu, gioChieu);
+=======
+        
+        /// <summary>
+        /// Phương thức lấy ra thông tin giờ chiếu theo ngày chiếu
+        /// </summary>
+        /// <param name="ngayChieu"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGioChieuTheoNgayChieu(int ngayChieu)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.ThongTinGioChieuTheoNgayChieu(ngayChieu);
+        }
+        /// <summary>
+        /// Phương thức lấy khung thời gian theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable LayKTGTheoMaPhim(int maPhim)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.LayKTGTheoMaPhim(maPhim);
+        }
+        /// <summary>
+        /// Phương thức lấy giờ chiếu theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable LayGioChieuTheoMaPhim(int maPhim)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_KhungThoiGian.LayGioChieuTheoMaPhim(maPhim);
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
         }
     }
 }

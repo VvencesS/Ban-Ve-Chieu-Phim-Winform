@@ -65,5 +65,50 @@ namespace BUS.BUS_QuanLyLichChieu
         {
             return DAL.DAL_QuanLyLichChieu.DAL_Phong.ThongTinPhongTheoMa(maPhong);
         }
+        /// <summary>
+        /// Phương thức lấy ra thông tin phòng theo định dạng
+        /// </summary>
+        /// <param name="maDinhDang"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinPhongTheoDinhDang(int maDinhDang)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Phong.ThongTinPhongTheoDinhDang(maDinhDang);
+        }
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế thường theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheThuongTheoMaPhong(int maPhong)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheThuongTheoMaPhong(maPhong);
+        }
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế vip theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheVipTheoMaPhong(int maPhong)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheVipTheoMaPhong(maPhong);
+        }
+        /// <summary>
+        /// Phương thức lấy ra thông tin ghế đôi theo mã phòng
+        /// </summary>
+        /// <param name="maPhong"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinGheDoiTheoMaPhong(int maPhong)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Ghe.ThongTinGheDoiTheoMaPhong(maPhong);
+        }
+        /// <summary>
+        /// Phương thức lấy phòng theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable LayPhongTheoMaPhim(int maPhim)
+        {
+            return DAL.DAL_QuanLyLichChieu.DAL_Phong.LayPhongTheoMaPhim(maPhim);
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
         public GUI_Ve()
         {
             InitializeComponent();
+<<<<<<< HEAD
             LoadData();
         }
         public void LoadData()
@@ -28,6 +29,23 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
             ThaoTac = "themmoi";
             GUI_ThemVe themVe = new GUI_ThemVe();
             themVe.ShowDialog();
+=======
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+
+            LoadVe();
+        }
+
+        private void LoadVe()
+        {
+            dgvVe.DataSource = BUS.BUS_QuanLyDatVe.BUS_Ve.LayTatCaVe();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            GUI_ThemVe gUI_ThemVe = new GUI_ThemVe();
+            gUI_ThemVe.ShowDialog();
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
         }
         //private void btnSua_Click(object sender, EventArgs e)
         //{
@@ -84,12 +102,26 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
 
         public void GUI_Ve_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             LoadData();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
+=======
+            this.Close();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadVe();
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
         }
 
     }

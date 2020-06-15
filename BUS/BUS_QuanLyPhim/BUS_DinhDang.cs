@@ -59,5 +59,14 @@ namespace BUS.BUS_QuanLyPhim
         {
             return DAL.DAL_QuanLyPhim.DAL_DinhDang.ThongTinDinhDangTheoMa(maDinhDang);
         }
+        /// <summary>
+        /// Phương thức lấy ra thông tin định dạng theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinDinhDangTheoMaPhim(int maPhim)
+        {
+            return DAL.DAL_QuanLyPhim.DAL_DinhDang.ThongTinDinhDangTheoMaPhim(maPhim);
+        }
     }
 }

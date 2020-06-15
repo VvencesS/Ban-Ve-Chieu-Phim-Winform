@@ -93,5 +93,33 @@ namespace DAL.DAL_QuanLyLichChieu
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra thông tin phòng theo định dạng 
+        /// <summary>
+        /// Phương thức lấy ra thông tin phòng theo định dạng
+        /// </summary>
+        /// <param name="maDinhDang"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinPhongTheoDinhDang(int maDinhDang)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT [MaPhong],[TenPhong] FROM [dbo].[tb_Phong]  WHERE [MaDinhDang]=@maDinhDang");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maDinhDang", maDinhDang);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
+        #region Phương thức lấy phòng theo mã phim
+        /// <summary>
+        /// Phương thức lấy phòng theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable LayPhongTheoMaPhim(int maPhim)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT tb_Phong.MaPhong ,[TenPhong] FROM [dbo].[tb_Phong] INNER JOIN tb_LichChieu ON tb_LichChieu.MaPhong = tb_Phong.MaPhong WHERE tb_LichChieu.MaPhim = @maPhim");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maPhim", maPhim);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }

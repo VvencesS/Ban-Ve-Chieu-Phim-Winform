@@ -48,6 +48,7 @@
             this.mnuDangNhap = new System.Windows.Forms.MenuStrip();
             this.mnuDN_DX = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.mnuBaoGia = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTrangChu.SuspendLayout();
             this.mnuDangNhap.SuspendLayout();
             this.SuspendLayout();
@@ -176,7 +177,8 @@
             // 
             this.mnuQLDatVe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuVe,
-            this.mnuDSDatVe});
+            this.mnuDSDatVe,
+            this.mnuBaoGia});
             this.mnuQLDatVe.Name = "mnuQLDatVe";
             this.mnuQLDatVe.Size = new System.Drawing.Size(95, 20);
             this.mnuQLDatVe.Text = "Quản lý đặt vé";
@@ -209,7 +211,7 @@
             // mnuDN_DX
             // 
             this.mnuDN_DX.Name = "mnuDN_DX";
-            this.mnuDN_DX.Size = new System.Drawing.Size(113, 19);
+            this.mnuDN_DX.Size = new System.Drawing.Size(70, 19);
             this.mnuDN_DX.Text = "Đăng nhập";
             this.mnuDN_DX.Click += new System.EventHandler(this.mnuDN_DX_Click);
             // 
@@ -220,6 +222,12 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1242, 479);
             this.label1.TabIndex = 62;
+            // 
+            // mnuBaoGia
+            // 
+            this.mnuBaoGia.Name = "mnuBaoGia";
+            this.mnuBaoGia.Size = new System.Drawing.Size(180, 22);
+            this.mnuBaoGia.Text = "Báo giá";
             // 
             // GUI_TrangChu
             // 
@@ -266,5 +274,6 @@
         private System.Windows.Forms.MenuStrip mnuDangNhap;
         private System.Windows.Forms.ToolStripMenuItem mnuDN_DX;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem mnuBaoGia;
     }
 }
