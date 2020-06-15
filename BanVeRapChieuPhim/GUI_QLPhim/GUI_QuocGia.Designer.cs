@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvQuocGia = new System.Windows.Forms.DataGridView();
-            this.MaQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -40,6 +38,9 @@
             this.txtTenQuocGia = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.MaQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuocGia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,20 +62,6 @@
             this.dgvQuocGia.RowTemplate.Height = 24;
             this.dgvQuocGia.Size = new System.Drawing.Size(1628, 257);
             this.dgvQuocGia.TabIndex = 50;
-            // 
-            // MaQuocGia
-            // 
-            this.MaQuocGia.HeaderText = "Mã Quốc Gia";
-            this.MaQuocGia.MinimumWidth = 6;
-            this.MaQuocGia.Name = "MaQuocGia";
-            this.MaQuocGia.ReadOnly = true;
-            // 
-            // TenQuocGia
-            // 
-            this.TenQuocGia.HeaderText = "Tên Quốc Gia";
-            this.TenQuocGia.MinimumWidth = 6;
-            this.TenQuocGia.Name = "TenQuocGia";
-            this.TenQuocGia.ReadOnly = true;
             // 
             // btnThem
             // 
@@ -151,16 +138,42 @@
             this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(724, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 39);
+            this.label3.Size = new System.Drawing.Size(164, 38);
             this.label3.TabIndex = 52;
             this.label3.Text = "Quốc Gia";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(918, 472);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(94, 49);
+            this.btnRefresh.TabIndex = 53;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // MaQuocGia
+            // 
+            this.MaQuocGia.DataPropertyName = "MaQuocGia";
+            this.MaQuocGia.HeaderText = "Mã Quốc Gia";
+            this.MaQuocGia.MinimumWidth = 6;
+            this.MaQuocGia.Name = "MaQuocGia";
+            this.MaQuocGia.ReadOnly = true;
+            // 
+            // TenQuocGia
+            // 
+            this.TenQuocGia.DataPropertyName = "TenQuocGia";
+            this.TenQuocGia.HeaderText = "Tên Quốc Gia";
+            this.TenQuocGia.MinimumWidth = 6;
+            this.TenQuocGia.Name = "TenQuocGia";
+            this.TenQuocGia.ReadOnly = true;
             // 
             // GUI_QuocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1629, 552);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTenQuocGia);
@@ -183,8 +196,6 @@
 
         private System.Windows.Forms.DataGridView dgvQuocGia;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaQuocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenQuocGia;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label1;
@@ -193,5 +204,8 @@
         private System.Windows.Forms.TextBox txtTenQuocGia;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaQuocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenQuocGia;
     }
 }

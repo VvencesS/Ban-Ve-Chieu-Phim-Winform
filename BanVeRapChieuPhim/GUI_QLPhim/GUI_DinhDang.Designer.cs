@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvDinhDang = new System.Windows.Forms.DataGridView();
+            this.MaDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.btnThem = new System.Windows.Forms.Button();
@@ -40,8 +42,7 @@
             this.txtTenDinhDang = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.MaDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinhDang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +64,22 @@
             this.dgvDinhDang.RowTemplate.Height = 24;
             this.dgvDinhDang.Size = new System.Drawing.Size(1672, 257);
             this.dgvDinhDang.TabIndex = 50;
+            // 
+            // MaDinhDang
+            // 
+            this.MaDinhDang.DataPropertyName = "MaDinhDang";
+            this.MaDinhDang.HeaderText = "Mã Định Dạng";
+            this.MaDinhDang.MinimumWidth = 6;
+            this.MaDinhDang.Name = "MaDinhDang";
+            this.MaDinhDang.ReadOnly = true;
+            // 
+            // TenDinhDang
+            // 
+            this.TenDinhDang.DataPropertyName = "TenDinhDang";
+            this.TenDinhDang.HeaderText = "Tên Định Dạng";
+            this.TenDinhDang.MinimumWidth = 6;
+            this.TenDinhDang.Name = "TenDinhDang";
+            this.TenDinhDang.ReadOnly = true;
             // 
             // btnThem
             // 
@@ -145,31 +162,26 @@
             this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(781, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 39);
+            this.label3.Size = new System.Drawing.Size(180, 38);
             this.label3.TabIndex = 52;
             this.label3.Text = "Định Dạng";
             // 
-            // MaDinhDang
+            // btnRefresh
             // 
-            this.MaDinhDang.DataPropertyName = "MaDinhDang";
-            this.MaDinhDang.HeaderText = "Mã Định Dạng";
-            this.MaDinhDang.MinimumWidth = 6;
-            this.MaDinhDang.Name = "MaDinhDang";
-            this.MaDinhDang.ReadOnly = true;
-            // 
-            // TenDinhDang
-            // 
-            this.TenDinhDang.DataPropertyName = "TenDinhDang";
-            this.TenDinhDang.HeaderText = "Tên Định Dạng";
-            this.TenDinhDang.MinimumWidth = 6;
-            this.TenDinhDang.Name = "TenDinhDang";
-            this.TenDinhDang.ReadOnly = true;
+            this.btnRefresh.Location = new System.Drawing.Point(1001, 466);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(86, 49);
+            this.btnRefresh.TabIndex = 53;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
             // 
             // GUI_DinhDang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1677, 526);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTenDinhDang);
@@ -205,5 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDinhDang;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
