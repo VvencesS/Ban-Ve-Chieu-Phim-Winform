@@ -32,7 +32,16 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+=======
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
             this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +51,15 @@
             this.TenQuanHuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTinhThanhPho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
             this.PassWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+=======
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +108,7 @@
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNhanVien,
+            this.passWord,
             this.HoTen,
             this.Email,
             this.NgaySinh,
@@ -113,12 +126,80 @@
             this.dgvNhanVien.TabIndex = 40;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
+<<<<<<< HEAD
+=======
+            // btnThoat
+            // 
+            this.btnThoat.AutoSize = true;
+            this.btnThoat.Location = new System.Drawing.Point(763, 399);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(90, 30);
+            this.btnThoat.TabIndex = 51;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AutoSize = true;
+            this.btnXoa.Location = new System.Drawing.Point(643, 399);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(90, 30);
+            this.btnXoa.TabIndex = 50;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.AutoSize = true;
+            this.btnSua.Location = new System.Drawing.Point(523, 399);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(90, 30);
+            this.btnSua.TabIndex = 49;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.AutoSize = true;
+            this.btnThem.Location = new System.Drawing.Point(403, 399);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnThem.Size = new System.Drawing.Size(90, 30);
+            this.btnThem.TabIndex = 48;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Location = new System.Drawing.Point(284, 399);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
+            this.btnRefresh.TabIndex = 52;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
             // MaNhanVien
             // 
             this.MaNhanVien.DataPropertyName = "MaNhanVien";
             this.MaNhanVien.HeaderText = "Mã nhân viên";
             this.MaNhanVien.Name = "MaNhanVien";
             this.MaNhanVien.ReadOnly = true;
+            // 
+            // passWord
+            // 
+            this.passWord.DataPropertyName = "PassWord";
+            this.passWord.HeaderText = "Mật khẩu";
+            this.passWord.Name = "passWord";
+            this.passWord.ReadOnly = true;
+            this.passWord.Visible = false;
             // 
             // HoTen
             // 
@@ -188,6 +269,7 @@
             this.UserName.Name = "UserName";
             this.UserName.ReadOnly = true;
             // 
+<<<<<<< HEAD
             // PassWord
             // 
             this.PassWord.DataPropertyName = "PassWord";
@@ -248,6 +330,8 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
             // GUI_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,7 +362,16 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView dgvNhanVien;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnRefresh;
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passWord;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
@@ -288,11 +381,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenQuanHuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTinhThanhPho;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+=======
+>>>>>>> 71f46e509cceccfffcf0dbe8f7b169b3863369f5
     }
 }

@@ -59,11 +59,11 @@
     <Compile Include="GUI_QuanLyDatVe\GUI_DanhSachDatVe.Designer.cs">
       <DependentUpon>GUI_DanhSachDatVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLyDatVe\GUI_Gia.cs">
+    <Compile Include="GUI_QuanLyDatVe\GUI_BaoGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuanLyDatVe\GUI_Gia.Designer.cs">
-      <DependentUpon>GUI_Gia.cs</DependentUpon>
+    <Compile Include="GUI_QuanLyDatVe\GUI_BaoGia.Designer.cs">
+      <DependentUpon>GUI_BaoGia.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QuanLyDatVe\GUI_ThemVe.cs">
       <SubType>Form</SubType>
@@ -199,8 +199,8 @@
     <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_DanhSachDatVe.resx">
       <DependentUpon>GUI_DanhSachDatVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_Gia.resx">
-      <DependentUpon>GUI_Gia.cs</DependentUpon>
+    <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_BaoGia.resx">
+      <DependentUpon>GUI_BaoGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyDatVe\GUI_ThemVe.resx">
       <DependentUpon>GUI_ThemVe.cs</DependentUpon>

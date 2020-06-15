@@ -81,5 +81,19 @@ namespace DAL.DAL_QuanLyPhim
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra thông tin định dạng theo mã phim
+        /// <summary>
+        /// Phương thức lấy ra thông tin định dạng theo mã phim
+        /// </summary>
+        /// <param name="maPhim"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinDinhDangTheoMaPhim(int maPhim)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT tb_DinhDang.MaDinhDang,TenDinhDang FROM [dbo].[tb_DinhDang] INNER JOIN tb_Phim ON tb_Phim.MaDinhDang = tb_DinhDang.MaDinhDang WHERE tb_Phim.MaPhim = @maPhim");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maPhim", maPhim);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }
