@@ -41,7 +41,7 @@ namespace BanVeRapChieuPhim.GUI_QuanLyLichChieu
             txtTenPhong.Text = dt.Rows[0]["TenPhong"].ToString();
             txtSoHangMax.Text = dt.Rows[0]["SoHangMax"].ToString();
             txtSoCotMax.Text = dt.Rows[0]["SoCotMax"].ToString();
-            cboMaDinhDang.SelectedValue = dt.Rows[0]["MaDinhDanh"].ToString();
+            cboMaDinhDang.SelectedValue = dt.Rows[0]["MaDinhDang"].ToString();
         }
         private void btnThem_Click(object sender, EventArgs e)
         {

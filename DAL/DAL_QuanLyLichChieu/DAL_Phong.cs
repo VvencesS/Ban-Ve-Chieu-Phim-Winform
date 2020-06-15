@@ -87,7 +87,7 @@ namespace DAL.DAL_QuanLyLichChieu
         /// <returns></returns>
         public static DataTable ThongTinPhongTheoMa(int maPhong)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaPhong],[TenPhong],[SoHangMax],[SoCotMax],tb_DinhDang.TenDinhDang FROM [dbo].[tb_Phong] INNER JOIN tb_DinhDang ON tb_Phong.MaDinhDang=tb_DinhDang.MaDinhDang WHERE [MaPhong]=@maPhong");
+            SqlCommand cmd = new SqlCommand("SELECT [MaPhong],[TenPhong],[SoHangMax],[SoCotMax],tb_DinhDang.TenDinhDang,tb_DinhDang.MaDinhDang FROM [dbo].[tb_Phong] INNER JOIN tb_DinhDang ON tb_Phong.MaDinhDang=tb_DinhDang.MaDinhDang WHERE [MaPhong]=@maPhong");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maPhong", maPhong);
             return SQLDatabase.GetData(cmd);
