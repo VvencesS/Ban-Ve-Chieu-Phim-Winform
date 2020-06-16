@@ -15,6 +15,21 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
         public GUI_DanhSachDatVe()
         {
             InitializeComponent();
+
+            LoaDSDatVeCuaThanhVien();
+        }
+
+        private void LoaDSDatVeCuaThanhVien()
+        {
+            if (GUI_QuanLyTaiKhoan.GUI_ThanhVien._maThanhVien > 0)
+            {
+                dgvDanhSachDatVe.DataSource = BUS.BUS_QuanLyDatVe.BUS_DSDatVe.LayDSDatVeTheoMaThanhVien(GUI_QuanLyTaiKhoan.GUI_ThanhVien._maThanhVien);
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

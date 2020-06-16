@@ -50,11 +50,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNgaySinh = new System.Windows.Forms.TextBox();
-            this.txtGioiTinh = new System.Windows.Forms.TextBox();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
             this.cboXaPhuong = new System.Windows.Forms.ComboBox();
             this.cboQuanHuyen = new System.Windows.Forms.ComboBox();
             this.cboTinhThanhPho = new System.Windows.Forms.ComboBox();
+            this.cboGioiTinh = new System.Windows.Forms.ComboBox();
+            this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtSoThe
@@ -113,7 +113,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(686, 240);
+            this.label4.Location = new System.Drawing.Point(686, 325);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 218;
@@ -124,7 +124,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(686, 197);
+            this.label5.Location = new System.Drawing.Point(686, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 16);
             this.label5.TabIndex = 217;
@@ -229,6 +229,7 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(656, 389);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -236,6 +237,7 @@
             this.btnThoat.TabIndex = 207;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnThem
             // 
@@ -247,6 +249,7 @@
             this.btnThem.TabIndex = 206;
             this.btnThem.Text = "Thêm/ Sửa";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label2
             // 
@@ -267,7 +270,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(686, 322);
+            this.label3.Location = new System.Drawing.Point(686, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 16);
             this.label3.TabIndex = 231;
@@ -281,30 +284,15 @@
             this.txtNgaySinh.Size = new System.Drawing.Size(207, 22);
             this.txtNgaySinh.TabIndex = 233;
             // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGioiTinh.Location = new System.Drawing.Point(832, 154);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(207, 22);
-            this.txtGioiTinh.TabIndex = 234;
-            // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.Location = new System.Drawing.Point(832, 194);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(207, 22);
-            this.txtTrangThai.TabIndex = 235;
-            // 
             // cboXaPhuong
             // 
             this.cboXaPhuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboXaPhuong.FormattingEnabled = true;
-            this.cboXaPhuong.Location = new System.Drawing.Point(832, 237);
+            this.cboXaPhuong.Location = new System.Drawing.Point(832, 322);
             this.cboXaPhuong.Name = "cboXaPhuong";
             this.cboXaPhuong.Size = new System.Drawing.Size(207, 24);
             this.cboXaPhuong.TabIndex = 236;
+            this.cboXaPhuong.SelectedIndexChanged += new System.EventHandler(this.cboXaPhuong_SelectedIndexChanged);
             // 
             // cboQuanHuyen
             // 
@@ -314,26 +302,56 @@
             this.cboQuanHuyen.Name = "cboQuanHuyen";
             this.cboQuanHuyen.Size = new System.Drawing.Size(207, 24);
             this.cboQuanHuyen.TabIndex = 237;
+            this.cboQuanHuyen.SelectedIndexChanged += new System.EventHandler(this.cboQuanHuyen_SelectedIndexChanged);
             // 
             // cboTinhThanhPho
             // 
             this.cboTinhThanhPho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTinhThanhPho.FormattingEnabled = true;
-            this.cboTinhThanhPho.Location = new System.Drawing.Point(832, 319);
+            this.cboTinhThanhPho.Location = new System.Drawing.Point(832, 240);
             this.cboTinhThanhPho.Name = "cboTinhThanhPho";
             this.cboTinhThanhPho.Size = new System.Drawing.Size(207, 24);
             this.cboTinhThanhPho.TabIndex = 238;
+            this.cboTinhThanhPho.SelectedIndexChanged += new System.EventHandler(this.cboTinhThanhPho_SelectedIndexChanged);
+            // 
+            // cboGioiTinh
+            // 
+            this.cboGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGioiTinh.FormattingEnabled = true;
+            this.cboGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cboGioiTinh.Location = new System.Drawing.Point(832, 154);
+            this.cboGioiTinh.Name = "cboGioiTinh";
+            this.cboGioiTinh.Size = new System.Drawing.Size(207, 24);
+            this.cboGioiTinh.TabIndex = 239;
+            this.cboGioiTinh.Text = "--Chọn giới tính--";
+            // 
+            // cboTrangThai
+            // 
+            this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.FormattingEnabled = true;
+            this.cboTrangThai.Items.AddRange(new object[] {
+            "Đã kích hoạt",
+            "Chưa kích hoạt"});
+            this.cboTrangThai.Location = new System.Drawing.Point(832, 197);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(207, 24);
+            this.cboTrangThai.TabIndex = 240;
+            this.cboTrangThai.Text = "--Chọn trạng thái--";
             // 
             // GUI_ThemThanhVien
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1259, 450);
+            this.Controls.Add(this.cboTrangThai);
+            this.Controls.Add(this.cboGioiTinh);
             this.Controls.Add(this.cboTinhThanhPho);
             this.Controls.Add(this.cboQuanHuyen);
             this.Controls.Add(this.cboXaPhuong);
-            this.Controls.Add(this.txtTrangThai);
-            this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -357,6 +375,7 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
             this.Name = "GUI_ThemThanhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ThemThanhVien";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -386,10 +405,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNgaySinh;
-        private System.Windows.Forms.TextBox txtGioiTinh;
-        private System.Windows.Forms.TextBox txtTrangThai;
         private System.Windows.Forms.ComboBox cboXaPhuong;
         private System.Windows.Forms.ComboBox cboQuanHuyen;
         private System.Windows.Forms.ComboBox cboTinhThanhPho;
+        private System.Windows.Forms.ComboBox cboGioiTinh;
+        private System.Windows.Forms.ComboBox cboTrangThai;
     }
 }

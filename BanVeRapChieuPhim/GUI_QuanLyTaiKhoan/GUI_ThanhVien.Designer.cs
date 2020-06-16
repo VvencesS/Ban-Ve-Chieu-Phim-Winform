@@ -37,6 +37,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLichSuDatVe = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.MaThanhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,6 +114,7 @@
             this.dgvThanhVien.ReadOnly = true;
             this.dgvThanhVien.Size = new System.Drawing.Size(1254, 209);
             this.dgvThanhVien.TabIndex = 56;
+            this.dgvThanhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhVien_CellClick);
             // 
             // btnThoat
             // 
@@ -123,6 +125,7 @@
             this.btnThoat.TabIndex = 70;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -133,6 +136,7 @@
             this.btnXoa.TabIndex = 69;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -143,6 +147,7 @@
             this.btnSua.TabIndex = 68;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -154,6 +159,7 @@
             this.btnThem.TabIndex = 67;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnLichSuDatVe
             // 
@@ -164,7 +170,19 @@
             this.btnLichSuDatVe.TabIndex = 66;
             this.btnLichSuDatVe.Text = "Lịch Sử Đặt Vé";
             this.btnLichSuDatVe.UseVisualStyleBackColor = true;
-         
+            this.btnLichSuDatVe.Click += new System.EventHandler(this.btnLichSuDatVe_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Location = new System.Drawing.Point(219, 399);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
+            this.btnRefresh.TabIndex = 71;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // MaThanhVien
             // 
@@ -175,66 +193,77 @@
             // 
             // HoVaTen
             // 
+            this.HoVaTen.DataPropertyName = "HoTen";
             this.HoVaTen.HeaderText = "Họ Và Tên";
             this.HoVaTen.Name = "HoVaTen";
             this.HoVaTen.ReadOnly = true;
             // 
             // Email
             // 
+            this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
             // Password
             // 
+            this.Password.DataPropertyName = "PassWord";
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
             // 
             // SDT
             // 
+            this.SDT.DataPropertyName = "Sdt";
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
             // 
             // SoThe
             // 
+            this.SoThe.DataPropertyName = "SoThe";
             this.SoThe.HeaderText = "Số Thẻ";
             this.SoThe.Name = "SoThe";
             this.SoThe.ReadOnly = true;
             // 
             // NgaySinh
             // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
             // 
             // GioiTinh
             // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
             // 
             // TrangThai
             // 
+            this.TrangThai.DataPropertyName = "TrangThai";
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
             // 
             // TenXaPhuong
             // 
+            this.TenXaPhuong.DataPropertyName = "TenXaPhuong";
             this.TenXaPhuong.HeaderText = "Xã, Phường";
             this.TenXaPhuong.Name = "TenXaPhuong";
             this.TenXaPhuong.ReadOnly = true;
             // 
             // TenQuanHuyen
             // 
+            this.TenQuanHuyen.DataPropertyName = "TenQuanHuyen";
             this.TenQuanHuyen.HeaderText = "Quận, Huyện";
             this.TenQuanHuyen.Name = "TenQuanHuyen";
             this.TenQuanHuyen.ReadOnly = true;
             // 
             // TenTinhThanhPho
             // 
+            this.TenTinhThanhPho.DataPropertyName = "TenTinhThanhPho";
             this.TenTinhThanhPho.HeaderText = "Tỉnh,Thành Phố";
             this.TenTinhThanhPho.Name = "TenTinhThanhPho";
             this.TenTinhThanhPho.ReadOnly = true;
@@ -244,6 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -272,6 +302,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLichSuDatVe;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaThanhVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoVaTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

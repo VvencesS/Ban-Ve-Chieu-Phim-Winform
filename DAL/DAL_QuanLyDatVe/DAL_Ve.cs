@@ -60,5 +60,6 @@ namespace DAL.DAL_QuanLyDatVe
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        
     }
 }

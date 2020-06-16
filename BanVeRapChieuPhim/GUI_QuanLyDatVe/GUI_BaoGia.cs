@@ -15,6 +15,22 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
         public GUI_BaoGia()
         {
             InitializeComponent();
+
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+
+            LoadBaoGia();
+        }
+
+        private void LoadBaoGia()
+        {
+            dgvGia.DataSource = BUS.BUS_QuanLyDatVe.BUS_BaoGia.LayBaoGia();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

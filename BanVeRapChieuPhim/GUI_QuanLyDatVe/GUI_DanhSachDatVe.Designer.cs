@@ -32,6 +32,7 @@
             this.dgvDanhSachDatVe = new System.Windows.Forms.DataGridView();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.MaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,6 @@
             this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDatVe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,60 +104,6 @@
             this.txtTimKiem.Size = new System.Drawing.Size(300, 25);
             this.txtTimKiem.TabIndex = 61;
             // 
-            // MaVe
-            // 
-            this.MaVe.HeaderText = "Mã Vé";
-            this.MaVe.Name = "MaVe";
-            this.MaVe.ReadOnly = true;
-            // 
-            // TenPhim
-            // 
-            this.TenPhim.HeaderText = "Tên Phim";
-            this.TenPhim.Name = "TenPhim";
-            this.TenPhim.ReadOnly = true;
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.HeaderText = "Tên Phòng";
-            this.TenPhong.Name = "TenPhong";
-            this.TenPhong.ReadOnly = true;
-            // 
-            // TenDinhDang
-            // 
-            this.TenDinhDang.HeaderText = "Định Dạng";
-            this.TenDinhDang.Name = "TenDinhDang";
-            this.TenDinhDang.ReadOnly = true;
-            // 
-            // SoGhe
-            // 
-            this.SoGhe.HeaderText = "Số Ghế";
-            this.SoGhe.Name = "SoGhe";
-            this.SoGhe.ReadOnly = true;
-            // 
-            // NgayChieu
-            // 
-            this.NgayChieu.HeaderText = "Ngày Chiếu";
-            this.NgayChieu.Name = "NgayChieu";
-            this.NgayChieu.ReadOnly = true;
-            // 
-            // GioChieu
-            // 
-            this.GioChieu.HeaderText = "Giờ Chiếu";
-            this.GioChieu.Name = "GioChieu";
-            this.GioChieu.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "Họ Tên";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            // 
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
@@ -168,6 +114,70 @@
             this.btnThoat.TabIndex = 69;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // MaVe
+            // 
+            this.MaVe.DataPropertyName = "MaVe";
+            this.MaVe.HeaderText = "Mã Vé";
+            this.MaVe.Name = "MaVe";
+            this.MaVe.ReadOnly = true;
+            // 
+            // TenPhim
+            // 
+            this.TenPhim.DataPropertyName = "TenPhim";
+            this.TenPhim.HeaderText = "Tên Phim";
+            this.TenPhim.Name = "TenPhim";
+            this.TenPhim.ReadOnly = true;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên Phòng";
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.ReadOnly = true;
+            // 
+            // TenDinhDang
+            // 
+            this.TenDinhDang.DataPropertyName = "TenDinhDang";
+            this.TenDinhDang.HeaderText = "Định Dạng";
+            this.TenDinhDang.Name = "TenDinhDang";
+            this.TenDinhDang.ReadOnly = true;
+            // 
+            // SoGhe
+            // 
+            this.SoGhe.DataPropertyName = "SoGhe";
+            this.SoGhe.HeaderText = "Số Ghế";
+            this.SoGhe.Name = "SoGhe";
+            this.SoGhe.ReadOnly = true;
+            // 
+            // NgayChieu
+            // 
+            this.NgayChieu.DataPropertyName = "NgayChieu";
+            this.NgayChieu.HeaderText = "Ngày Chiếu";
+            this.NgayChieu.Name = "NgayChieu";
+            this.NgayChieu.ReadOnly = true;
+            // 
+            // GioChieu
+            // 
+            this.GioChieu.DataPropertyName = "GioChieu";
+            this.GioChieu.HeaderText = "Giờ Chiếu";
+            this.GioChieu.Name = "GioChieu";
+            this.GioChieu.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ Tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
             // 
             // GUI_DanhSachDatVe
             // 
@@ -194,6 +204,7 @@
         private System.Windows.Forms.DataGridView dgvDanhSachDatVe;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaVe;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhim;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
@@ -203,6 +214,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GioChieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private System.Windows.Forms.Button btnThoat;
     }
 }

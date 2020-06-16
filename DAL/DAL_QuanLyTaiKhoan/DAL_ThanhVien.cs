@@ -17,10 +17,10 @@ namespace DAL.DAL_QuanLyTaiKhoan
         /// <returns></returns>
         public static DataTable ThongTinThanhVien()
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_NhanVien.[MaThanhVien],tb_NhanVien.[HoTen],tb_NhanVien.[Email],tb_NhanVien.[PassWord],tb_NhanVien.[Sdt]," +
-                "tb_NhanVien.[SoThe],tb_NhanVien.[NgaySinh],tb_NhanVien.[GioiTinh],tb_NhanVien.[TrangThai]," +
+            SqlCommand cmd = new SqlCommand("SELECT tb_ThanhVien.[MaThanhVien],tb_ThanhVien.[HoTen],tb_ThanhVien.[Email],tb_ThanhVien.[PassWord],tb_ThanhVien.[Sdt]," +
+                "tb_ThanhVien.[SoThe],tb_ThanhVien.[NgaySinh],tb_ThanhVien.[GioiTinh],tb_ThanhVien.[TrangThai]," +
                 "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho from [tb_ThanhVien] " +
-                "inner join tb_XaPhuong on tb_NhanVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
+                "inner join tb_XaPhuong on tb_ThanhVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
                 "inner join tb_QuanHuyen on tb_QuanHuyen.IDQuanHuyen = tb_XaPhuong.IDQuanHuyen " +
                 "inner join tb_TinhThanhPho on tb_TinhThanhPho.IDTinhThanhPho = tb_QuanHuyen.IDTinhThanhPho");
             cmd.CommandType = CommandType.Text;
@@ -34,10 +34,10 @@ namespace DAL.DAL_QuanLyTaiKhoan
         /// <returns></returns>
         public static DataTable ThongTinThanhVienByMa(int maThanhVien)
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_NhanVien.[MaThanhVien],tb_NhanVien.[HoTen],tb_NhanVien.[Email],tb_NhanVien.[PassWord],tb_NhanVien.[Sdt]," +
-                "tb_NhanVien.[SoThe],tb_NhanVien.[NgaySinh],tb_NhanVien.[GioiTinh],tb_NhanVien.[TrangThai]," +
+            SqlCommand cmd = new SqlCommand("SELECT tb_ThanhVien.[MaThanhVien],tb_ThanhVien.[HoTen],tb_ThanhVien.[Email],tb_ThanhVien.[PassWord],tb_ThanhVien.[Sdt]," +
+                "tb_ThanhVien.[SoThe],tb_ThanhVien.[NgaySinh],tb_ThanhVien.[GioiTinh],tb_ThanhVien.[TrangThai]," +
                 "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho from [tb_ThanhVien] " +
-                "inner join tb_XaPhuong on tb_NhanVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
+                "inner join tb_XaPhuong on tb_ThanhVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
                 "inner join tb_QuanHuyen on tb_QuanHuyen.IDQuanHuyen = tb_XaPhuong.IDQuanHuyen " +
                 "inner join tb_TinhThanhPho on tb_TinhThanhPho.IDTinhThanhPho = tb_QuanHuyen.IDTinhThanhPho where MaThanhVien=@maThanhVien");
             cmd.CommandType = CommandType.Text;
@@ -134,6 +134,20 @@ namespace DAL.DAL_QuanLyTaiKhoan
             cmd.Parameters.AddWithValue("@idXaPhuong", idXaPhuong);
             cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
             SQLDatabase.ExecuteNoneQuery(cmd);
+        }
+        #endregion
+        #region Tìm kiếm
+        /// <summary>
+        /// Phương thức tìm kiếm theo họ tên hoặc Email
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public static DataTable Search(string search)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tb_ThanhVien WHERE Email LIKE N'%'+ @search + '%' OR HoTen LIKE N'%'+@search+'%'");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@search", search);
+            return SQLDatabase.GetData(cmd);
         }
         #endregion
     }

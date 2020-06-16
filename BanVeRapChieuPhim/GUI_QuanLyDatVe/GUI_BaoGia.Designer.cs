@@ -28,32 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvGia = new System.Windows.Forms.DataGridView();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMaGia = new System.Windows.Forms.TextBox();
+            this.DinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGia)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // MaVe
-            // 
-            this.MaVe.HeaderText = "Mã Giá";
-            this.MaVe.Name = "MaVe";
-            this.MaVe.ReadOnly = true;
             // 
             // label2
             // 
@@ -77,7 +64,10 @@
             this.dgvGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaVe,
+            this.DinhDang,
+            this.LoaiGhe,
+            this.NgayChieu,
+            this.GioChieu,
             this.DonGia});
             this.dgvGia.Location = new System.Drawing.Point(2, 152);
             this.dgvGia.Name = "dgvGia";
@@ -94,6 +84,7 @@
             this.btnThoat.TabIndex = 77;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -126,58 +117,53 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // DinhDang
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
-            this.label3.TabIndex = 85;
-            this.label3.Text = "Đơn Giá";
+            this.DinhDang.DataPropertyName = "DinhDang";
+            this.DinhDang.HeaderText = "Định dạng";
+            this.DinhDang.Name = "DinhDang";
+            this.DinhDang.ReadOnly = true;
             // 
-            // txtDonGia
+            // LoaiGhe
             // 
-            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonGia.Location = new System.Drawing.Point(160, 105);
-            this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(230, 22);
-            this.txtDonGia.TabIndex = 84;
+            this.LoaiGhe.DataPropertyName = "LoaiGhe";
+            this.LoaiGhe.HeaderText = "Loại ghế";
+            this.LoaiGhe.Name = "LoaiGhe";
+            this.LoaiGhe.ReadOnly = true;
             // 
-            // label1
+            // NgayChieu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 83;
-            this.label1.Text = "Mã Giá";
+            this.NgayChieu.DataPropertyName = "NgayChieu";
+            this.NgayChieu.HeaderText = "Ngày chiếu";
+            this.NgayChieu.Name = "NgayChieu";
+            this.NgayChieu.ReadOnly = true;
             // 
-            // txtMaGia
+            // GioChieu
             // 
-            this.txtMaGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaGia.Location = new System.Drawing.Point(160, 77);
-            this.txtMaGia.Name = "txtMaGia";
-            this.txtMaGia.Size = new System.Drawing.Size(230, 22);
-            this.txtMaGia.TabIndex = 82;
+            this.GioChieu.DataPropertyName = "GioiChieu";
+            this.GioChieu.HeaderText = "Giờ chiếu";
+            this.GioChieu.Name = "GioChieu";
+            this.GioChieu.ReadOnly = true;
             // 
-            // GUI_Gia
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // GUI_BaoGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtDonGia);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMaGia);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvGia);
-            this.Name = "GUI_Gia";
+            this.Name = "GUI_BaoGia";
             this.Text = "GUI_Gia";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGia)).EndInit();
             this.ResumeLayout(false);
@@ -186,17 +172,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaVe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvGia;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDonGia;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMaGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DinhDang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiGhe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayChieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioChieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
     }
 }

@@ -118,5 +118,11 @@ namespace BanVeRapChieuPhim
             mnuQLPhim.Enabled = false;
             mnuQLTaiKhoan.Enabled = false;
         }
+
+        private void mnuBaoGia_Click(object sender, EventArgs e)
+        {
+            GUI_QuanLyDatVe.GUI_BaoGia GUI_BaoGia = new GUI_QuanLyDatVe.GUI_BaoGia();
+            GUI_BaoGia.ShowDialog();
+        }
     }
 }
