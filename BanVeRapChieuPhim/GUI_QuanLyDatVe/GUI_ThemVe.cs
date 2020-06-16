@@ -157,27 +157,25 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
             //Lưu giá vé cho từng loại ghế
             if (txtGheThuong.Text != "")
             {
-                MessageBox.Show(cboGiaGheThuong.SelectedValue.ToString());
                 BUS.BUS_QuanLyDatVe.BUS_GiaVeDat.GiaVeDat_Insert(int.Parse(cboGiaGheThuong.SelectedValue.ToString()), maVe);
             }
             if (txtGheVip.Text != "")
             {
-                MessageBox.Show(cboGiaGheVip.SelectedValue.ToString());
                 BUS.BUS_QuanLyDatVe.BUS_GiaVeDat.GiaVeDat_Insert(int.Parse(cboGiaGheVip.SelectedValue.ToString()), maVe);
             }
             if (txtGheDoi.Text != "")
             {
-                MessageBox.Show(cboGiaGheDoi.SelectedValue.ToString());
                 BUS.BUS_QuanLyDatVe.BUS_GiaVeDat.GiaVeDat_Insert(int.Parse(cboGiaGheDoi.SelectedValue.ToString()), maVe);
             }
 
-            //Lưu dữ liệu vào bảng đặt ghế
+            //Lưu dữ liệu vào bảng đặt ghế và cập nhật trạng thái cho các ghế đã đặt
             if (txtGheThuong.Text != "")
             {
                 string[] gheThuongs = txtGheThuong.Text.Split(',');
                 for(int i = 0; i < gheThuongs.Length-1; i++)
                 {
                     BUS.BUS_QuanLyDatVe.BUS_DatGhe.DatGhe_Insert(gheThuongs[i], maVe);
+                    BUS.BUS_QuanLyLichChieu.BUS_Ghe.Ghe_UpdateBySoGhe(gheThuongs[i], 1);
                 }
             }
             if (txtGheVip.Text != "")
@@ -186,6 +184,7 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
                 for (int i = 0; i < gheVips.Length-1; i++)
                 {
                     BUS.BUS_QuanLyDatVe.BUS_DatGhe.DatGhe_Insert(gheVips[i], maVe);
+                    BUS.BUS_QuanLyLichChieu.BUS_Ghe.Ghe_UpdateBySoGhe(gheVips[i], 1);
                 }
             }
             if (txtGheDoi.Text != "")
@@ -194,7 +193,14 @@ namespace BanVeRapChieuPhim.GUI_QuanLyDatVe
                 for (int i = 0; i < gheDois.Length-1; i++)
                 {
                     BUS.BUS_QuanLyDatVe.BUS_DatGhe.DatGhe_Insert(gheDois[i], maVe);
+                    BUS.BUS_QuanLyLichChieu.BUS_Ghe.Ghe_UpdateBySoGhe(gheDois[i], 1);
                 }
+            }
+
+            //Nếu khách có tài khoản thành viên thì lưu lại lịch sửa vé và bảng ds vé đặt
+            if (cbxLaThanhVien.Checked == true)
+            {
+                BUS.BUS_QuanLyDatVe.BUS_DSDatVe.ThemMoiDSDatVe(maVe, int.Parse(cboThanhVien.SelectedValue.ToString()));
             }
             this.Close();
 

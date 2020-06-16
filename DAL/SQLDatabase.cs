@@ -22,7 +22,7 @@ namespace DAL
                 {
 
 
-                    _connectionString = @"Data Source=.\sqlexpress;Initial Catalog=BanVeRapChieuPhim;User ID=sa;password=123456789";
+                    _connectionString = @"Data Source=.\sqlexpress;Initial Catalog=BanVeRapChieuPhim;User ID=sa;password=MeoLuoi99";
                 }
                 return _connectionString;
             }

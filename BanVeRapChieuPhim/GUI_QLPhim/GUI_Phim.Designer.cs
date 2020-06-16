@@ -74,22 +74,21 @@
             this.Trailer,
             this.TenDinhDang,
             this.TenNhanVien});
-            this.dgvPhim.Location = new System.Drawing.Point(4, 191);
-            this.dgvPhim.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPhim.Location = new System.Drawing.Point(2, 152);
             this.dgvPhim.Name = "dgvPhim";
             this.dgvPhim.ReadOnly = true;
             this.dgvPhim.RowHeadersWidth = 51;
             this.dgvPhim.RowTemplate.Height = 24;
-            this.dgvPhim.Size = new System.Drawing.Size(1672, 257);
+            this.dgvPhim.Size = new System.Drawing.Size(1254, 209);
             this.dgvPhim.TabIndex = 50;
             this.dgvPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhim_CellClick);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(1094, 478);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Location = new System.Drawing.Point(820, 388);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(97, 43);
+            this.btnThem.Size = new System.Drawing.Size(73, 35);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -97,10 +96,10 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(1231, 478);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSua.Location = new System.Drawing.Point(923, 388);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 43);
+            this.btnSua.Size = new System.Drawing.Size(70, 35);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -108,10 +107,10 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(1367, 478);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Location = new System.Drawing.Point(1025, 388);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 43);
+            this.btnXoa.Size = new System.Drawing.Size(75, 35);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -120,20 +119,19 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(947, 120);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiem.Location = new System.Drawing.Point(710, 98);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(399, 30);
+            this.txtTimKiem.Size = new System.Drawing.Size(300, 25);
             this.txtTimKiem.TabIndex = 56;
             this.txtTimKiem.Text = "nhập tên phim....";
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(1375, 120);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTimKiem.Location = new System.Drawing.Point(1031, 98);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(92, 30);
+            this.btnTimKiem.Size = new System.Drawing.Size(69, 24);
             this.btnTimKiem.TabIndex = 51;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -141,10 +139,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(1511, 478);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Location = new System.Drawing.Point(1133, 388);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 43);
+            this.btnThoat.Size = new System.Drawing.Size(75, 35);
             this.btnThoat.TabIndex = 57;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -155,17 +153,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(699, 26);
+            this.label1.Location = new System.Drawing.Point(524, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 38);
+            this.label1.Size = new System.Drawing.Size(187, 31);
             this.label1.TabIndex = 58;
             this.label1.Text = "Quản lý Phim";
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(956, 478);
+            this.btnRefresh.Location = new System.Drawing.Point(717, 388);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(93, 43);
+            this.btnRefresh.Size = new System.Drawing.Size(70, 35);
             this.btnRefresh.TabIndex = 59;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -189,7 +189,6 @@
             // 
             // AnhDaiDien
             // 
-            this.AnhDaiDien.DataPropertyName = "AnhDaiDien";
             this.AnhDaiDien.HeaderText = "Ảnh Đại Diện";
             this.AnhDaiDien.MinimumWidth = 6;
             this.AnhDaiDien.Name = "AnhDaiDien";
@@ -279,9 +278,9 @@
             // 
             // GUI_Phim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1676, 546);
+            this.ClientSize = new System.Drawing.Size(1264, 450);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThoat);
@@ -291,7 +290,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvPhim);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GUI_Phim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Phim";

@@ -55,6 +55,7 @@
     <Compile Include="DAL_QuanLyLichChieu\DAL_QuanHuyen.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_SoGhe.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_TinhThanhPho.cs" />
+    <Compile Include="DAL_QuanLyLichChieu\DAL_TrangThaiGhe.cs" />
     <Compile Include="DAL_QuanLyLichChieu\DAL_XaPhuong.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_DinhDang.cs" />
     <Compile Include="DAL_QuanLyPhim\DAL_Phim.cs" />

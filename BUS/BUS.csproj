@@ -55,6 +55,7 @@
     <Compile Include="BUS_QuanLyLichChieu\BUS_QuanHuyen.cs" />
     <Compile Include="BUS_QuanLyLichChieu\BUS_SoGhe.cs" />
     <Compile Include="BUS_QuanLyLichChieu\BUS_TinhThanhPho.cs" />
+    <Compile Include="BUS_QuanLyLichChieu\BUS_TrangThaiGhe.cs" />
     <Compile Include="BUS_QuanLyLichChieu\BUS_XaPhuong.cs" />
     <Compile Include="BUS_QuanLyPhim\BUS_DinhDang.cs" />
     <Compile Include="BUS_QuanLyPhim\BUS_Phim.cs" />

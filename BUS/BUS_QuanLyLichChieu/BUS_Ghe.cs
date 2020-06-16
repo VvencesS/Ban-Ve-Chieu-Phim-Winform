@@ -49,6 +49,15 @@ namespace BUS.BUS_QuanLyLichChieu
             }
         }
         /// <summary>
+        /// Phương thức chỉnh sửa thông tin một ghế theo số ghế
+        /// </summary>
+        /// <param name="soGhe"></param>
+        /// <param name="trangThai"></param>
+        public static void Ghe_UpdateBySoGhe(string soGhe, int trangThai)
+        {
+            DAL.DAL_QuanLyLichChieu.DAL_Ghe.Ghe_UpdateBySoGhe(soGhe, trangThai);
+        }
+        /// <summary>
         /// Phương thức lấy thông tin tất cả ghế
         /// </summary>
         /// <returns></returns>

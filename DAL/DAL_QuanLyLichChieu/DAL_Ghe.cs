@@ -65,6 +65,21 @@ namespace DAL.DAL_QuanLyLichChieu
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
+        #region  Phương thức chỉnh sửa thông tin một ghế theo số ghế
+        /// <summary>
+        /// Phương thức chỉnh sửa thông tin một ghế theo số ghế
+        /// </summary>
+        /// <param name="soGhe"></param>
+        /// <param name="trangThai"></param>
+        public static void Ghe_UpdateBySoGhe(string soGhe, int trangThai)
+        {
+            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_Ghe] SET [MaTrangThai] = @trangThai WHERE SoGhe=@soGhe");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@soGhe", soGhe);
+            cmd.Parameters.AddWithValue("@trangThai", trangThai);
+            SQLDatabase.ExecuteNoneQuery(cmd);
+        }
+        #endregion
 
         #region Phương thức lấy ra danh sách tất cả ghế
         /// <summary>
