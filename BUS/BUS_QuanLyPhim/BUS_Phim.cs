@@ -36,7 +36,7 @@ namespace BUS.BUS_QuanLyPhim
         /// <param name="trailer"></param>
         /// <param name="maDinhDang"></param>
         /// <param name="maNhanVien"></param>
-        public static void ThemMoiPhim(string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, string thoiLuong, string khoiChieu, string ketThuc,
+        public static void Themmoiphim(string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, string thoiLuong, string khoiChieu, string ketThuc,
             string daoDien, string noiDung, string trailer, int maDinhDang, int maNhanVien)
         {
             DateTime kc, kt;
@@ -44,6 +44,12 @@ namespace BUS.BUS_QuanLyPhim
             kt = XuLyNgayThang.XuLyChuoiNgayThang(ketThuc);
             DAL.DAL_QuanLyPhim.DAL_Phim.Phim_Inser(tenPhim, anhDaiDien, maTheLoai, maQuocGia, thoiLuong, kc, kt, daoDien, noiDung, trailer, maDinhDang, maNhanVien);
         }
+
+        public static object TimKiem(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Phương thức cập nhật phim
         /// </summary>
@@ -88,6 +94,15 @@ namespace BUS.BUS_QuanLyPhim
         public static DataTable LayPhimTheoMa(int maPhim)
         {
             return DAL.DAL_QuanLyPhim.DAL_Phim.ThongTinPhimTheoMa(maPhim);
+        }
+
+        public static void CapNhatPhim(int v1, object maPhim, string v2, object tenPhim, string v3, object anhDaiDien, int v4, object maTheLoai, int v5, object maQuocGia, string v6, object thoiLuong, string v7, object khoiChieu, string v8, object ketThuc, string v9, object daoDien, string v10, object noiDung, string v11, object trailer, int v12, object maDinhDang, int v13, object maNhanVien)
+        {
+            throw new NotImplementedException();
+        }
+
+        public class ThemMoiPhim
+        {
         }
     }
 }

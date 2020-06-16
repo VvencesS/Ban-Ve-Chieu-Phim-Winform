@@ -297,5 +297,6 @@
   <ItemGroup>
     <None Include="Resources\beta-slide.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
