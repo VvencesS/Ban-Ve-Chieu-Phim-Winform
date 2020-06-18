@@ -56,7 +56,7 @@
             this.dgvDinhDang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDinhDang,
             this.TenDinhDang});
-            this.dgvDinhDang.Location = new System.Drawing.Point(2, 152);
+            this.dgvDinhDang.Location = new System.Drawing.Point(-1, 152);
             this.dgvDinhDang.Name = "dgvDinhDang";
             this.dgvDinhDang.ReadOnly = true;
             this.dgvDinhDang.RowHeadersWidth = 51;
@@ -83,7 +83,7 @@
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(869, 379);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(64, 40);
             this.btnThem.TabIndex = 1;
@@ -93,7 +93,7 @@
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(975, 379);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(64, 40);
             this.btnSua.TabIndex = 2;
@@ -103,7 +103,7 @@
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(1078, 379);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(64, 40);
             this.btnXoa.TabIndex = 3;
@@ -123,7 +123,7 @@
             // txtMaDinhDang
             // 
             this.txtMaDinhDang.Location = new System.Drawing.Point(134, 102);
-            this.txtMaDinhDang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaDinhDang.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaDinhDang.Name = "txtMaDinhDang";
             this.txtMaDinhDang.Size = new System.Drawing.Size(181, 20);
             this.txtMaDinhDang.TabIndex = 5;
@@ -141,7 +141,7 @@
             // txtTenDinhDang
             // 
             this.txtTenDinhDang.Location = new System.Drawing.Point(468, 104);
-            this.txtTenDinhDang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenDinhDang.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDinhDang.Name = "txtTenDinhDang";
             this.txtTenDinhDang.Size = new System.Drawing.Size(192, 20);
             this.txtTenDinhDang.TabIndex = 7;
@@ -149,7 +149,7 @@
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(1172, 379);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(64, 40);
             this.btnThoat.TabIndex = 51;
@@ -171,7 +171,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(751, 379);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(64, 40);
             this.btnRefresh.TabIndex = 53;
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
@@ -194,8 +194,9 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvDinhDang);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_DinhDang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_DinhDang";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinhDang)).EndInit();
             this.ResumeLayout(false);

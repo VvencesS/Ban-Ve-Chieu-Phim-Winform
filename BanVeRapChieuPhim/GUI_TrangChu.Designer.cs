@@ -59,7 +59,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(412, 24);
+            this.label2.Location = new System.Drawing.Point(420, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(395, 37);
             this.label2.TabIndex = 59;
@@ -76,7 +76,7 @@
             this.mnuQLDatVe});
             this.mnuTrangChu.Location = new System.Drawing.Point(0, 0);
             this.mnuTrangChu.Name = "mnuTrangChu";
-            this.mnuTrangChu.Size = new System.Drawing.Size(1159, 24);
+            this.mnuTrangChu.Size = new System.Drawing.Size(1176, 24);
             this.mnuTrangChu.TabIndex = 60;
             this.mnuTrangChu.Text = "menuStrip1";
             // 
@@ -186,21 +186,21 @@
             // mnuVe
             // 
             this.mnuVe.Name = "mnuVe";
-            this.mnuVe.Size = new System.Drawing.Size(180, 22);
+            this.mnuVe.Size = new System.Drawing.Size(164, 22);
             this.mnuVe.Text = "Vé";
             this.mnuVe.Click += new System.EventHandler(this.mnuVe_Click);
             // 
             // mnuDSDatVe
             // 
             this.mnuDSDatVe.Name = "mnuDSDatVe";
-            this.mnuDSDatVe.Size = new System.Drawing.Size(180, 22);
+            this.mnuDSDatVe.Size = new System.Drawing.Size(164, 22);
             this.mnuDSDatVe.Text = "Danh sách vé đặt";
             this.mnuDSDatVe.Click += new System.EventHandler(this.mnuDSDatVe_Click);
             // 
             // mnuBaoGia
             // 
             this.mnuBaoGia.Name = "mnuBaoGia";
-            this.mnuBaoGia.Size = new System.Drawing.Size(180, 22);
+            this.mnuBaoGia.Size = new System.Drawing.Size(164, 22);
             this.mnuBaoGia.Text = "Báo giá";
             this.mnuBaoGia.Click += new System.EventHandler(this.mnuBaoGia_Click);
             // 
@@ -209,9 +209,9 @@
             this.mnuDangNhap.Dock = System.Windows.Forms.DockStyle.Right;
             this.mnuDangNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDN_DX});
-            this.mnuDangNhap.Location = new System.Drawing.Point(1159, 0);
+            this.mnuDangNhap.Location = new System.Drawing.Point(1176, 0);
             this.mnuDangNhap.Name = "mnuDangNhap";
-            this.mnuDangNhap.Size = new System.Drawing.Size(83, 540);
+            this.mnuDangNhap.Size = new System.Drawing.Size(83, 450);
             this.mnuDangNhap.TabIndex = 61;
             this.mnuDangNhap.Text = "menuStrip2";
             // 
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1242, 540);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mnuTrangChu);

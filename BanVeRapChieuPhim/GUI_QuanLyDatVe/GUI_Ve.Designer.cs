@@ -66,7 +66,7 @@
             this.SoGhe,
             this.TenLoai,
             this.DonGia});
-            this.dgvVe.Location = new System.Drawing.Point(2, 152);
+            this.dgvVe.Location = new System.Drawing.Point(-1, 152);
             this.dgvVe.Name = "dgvVe";
             this.dgvVe.ReadOnly = true;
             this.dgvVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -166,7 +166,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(612, 22);
+            this.label2.Location = new System.Drawing.Point(609, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 37);
             this.label2.TabIndex = 57;
@@ -235,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);

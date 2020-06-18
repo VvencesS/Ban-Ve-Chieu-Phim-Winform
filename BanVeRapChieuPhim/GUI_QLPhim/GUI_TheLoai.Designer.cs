@@ -54,7 +54,7 @@
             this.dgvTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTheLoai,
             this.TenTheLoai});
-            this.dgvTheLoai.Location = new System.Drawing.Point(2, 152);
+            this.dgvTheLoai.Location = new System.Drawing.Point(-1, 152);
             this.dgvTheLoai.Name = "dgvTheLoai";
             this.dgvTheLoai.ReadOnly = true;
             this.dgvTheLoai.RowHeadersWidth = 51;
@@ -81,7 +81,7 @@
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(679, 378);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(64, 40);
             this.btnThem.TabIndex = 1;
@@ -91,7 +91,7 @@
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(785, 378);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(71, 40);
             this.btnSua.TabIndex = 2;
@@ -101,7 +101,7 @@
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(891, 378);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(68, 40);
             this.btnXoa.TabIndex = 3;
@@ -121,7 +121,7 @@
             // txtMaTheLoai
             // 
             this.txtMaTheLoai.Location = new System.Drawing.Point(112, 89);
-            this.txtMaTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaTheLoai.Name = "txtMaTheLoai";
             this.txtMaTheLoai.Size = new System.Drawing.Size(196, 20);
             this.txtMaTheLoai.TabIndex = 5;
@@ -139,7 +139,7 @@
             // txtTenTheLoai
             // 
             this.txtTenTheLoai.Location = new System.Drawing.Point(435, 89);
-            this.txtTenTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenTheLoai.Name = "txtTenTheLoai";
             this.txtTenTheLoai.Size = new System.Drawing.Size(216, 20);
             this.txtTenTheLoai.TabIndex = 7;
@@ -147,7 +147,7 @@
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(982, 378);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(64, 40);
             this.btnThoat.TabIndex = 51;
@@ -170,7 +170,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(560, 378);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(64, 40);
             this.btnRefresh.TabIndex = 53;
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThoat);
@@ -193,8 +193,9 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvTheLoai);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_TheLoai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_TheLoai";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).EndInit();
             this.ResumeLayout(false);

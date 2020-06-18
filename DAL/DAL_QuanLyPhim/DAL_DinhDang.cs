@@ -81,6 +81,20 @@ namespace DAL.DAL_QuanLyPhim
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra thông tin định dạng theo tên định dạng
+        /// <summary>
+        /// Phương thức lấy ra thông tin định dạng theo tên định dạng
+        /// </summary>
+        /// <param name="maDinhDang"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinDinhDangTheoTen(string tenDinhDang)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT [MaDinhDang],[TenDinhDang] FROM [dbo].[tb_DinhDang] WHERE [TenDinhDang]=@tenDinhDang");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@tenDinhDang", tenDinhDang);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
         #region Phương thức lấy ra thông tin định dạng theo mã phim
         /// <summary>
         /// Phương thức lấy ra thông tin định dạng theo mã phim

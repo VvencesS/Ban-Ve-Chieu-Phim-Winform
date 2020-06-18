@@ -54,7 +54,7 @@
             this.dgvQuocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaQuocGia,
             this.TenQuocGia});
-            this.dgvQuocGia.Location = new System.Drawing.Point(2, 152);
+            this.dgvQuocGia.Location = new System.Drawing.Point(-1, 152);
             this.dgvQuocGia.Name = "dgvQuocGia";
             this.dgvQuocGia.ReadOnly = true;
             this.dgvQuocGia.RowHeadersWidth = 51;
@@ -81,7 +81,7 @@
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(804, 384);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(70, 40);
             this.btnThem.TabIndex = 1;
@@ -91,7 +91,7 @@
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(915, 384);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(66, 40);
             this.btnSua.TabIndex = 2;
@@ -101,7 +101,7 @@
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(1014, 384);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(67, 40);
             this.btnXoa.TabIndex = 3;
@@ -121,7 +121,7 @@
             // txtMaQuocGia
             // 
             this.txtMaQuocGia.Location = new System.Drawing.Point(132, 94);
-            this.txtMaQuocGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaQuocGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaQuocGia.Name = "txtMaQuocGia";
             this.txtMaQuocGia.Size = new System.Drawing.Size(218, 20);
             this.txtMaQuocGia.TabIndex = 5;
@@ -139,7 +139,7 @@
             // txtTenQuocGia
             // 
             this.txtTenQuocGia.Location = new System.Drawing.Point(541, 94);
-            this.txtTenQuocGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenQuocGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenQuocGia.Name = "txtTenQuocGia";
             this.txtTenQuocGia.Size = new System.Drawing.Size(238, 20);
             this.txtTenQuocGia.TabIndex = 7;
@@ -147,7 +147,7 @@
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(1117, 384);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(66, 40);
             this.btnThoat.TabIndex = 51;
@@ -170,7 +170,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(688, 384);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(70, 40);
             this.btnRefresh.TabIndex = 53;
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
@@ -193,8 +193,9 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvQuocGia);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_QuocGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_QuocGia";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuocGia)).EndInit();
             this.ResumeLayout(false);

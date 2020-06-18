@@ -30,15 +30,15 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dgvGia = new System.Windows.Forms.DataGridView();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.DinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(537, 22);
+            this.label2.Location = new System.Drawing.Point(536, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 37);
             this.label2.TabIndex = 68;
@@ -69,11 +69,46 @@
             this.NgayChieu,
             this.GioChieu,
             this.DonGia});
-            this.dgvGia.Location = new System.Drawing.Point(2, 152);
+            this.dgvGia.Location = new System.Drawing.Point(1, 152);
             this.dgvGia.Name = "dgvGia";
             this.dgvGia.ReadOnly = true;
             this.dgvGia.Size = new System.Drawing.Size(1254, 209);
             this.dgvGia.TabIndex = 62;
+            // 
+            // DinhDang
+            // 
+            this.DinhDang.DataPropertyName = "DinhDang";
+            this.DinhDang.HeaderText = "Định dạng";
+            this.DinhDang.Name = "DinhDang";
+            this.DinhDang.ReadOnly = true;
+            // 
+            // LoaiGhe
+            // 
+            this.LoaiGhe.DataPropertyName = "LoaiGhe";
+            this.LoaiGhe.HeaderText = "Loại ghế";
+            this.LoaiGhe.Name = "LoaiGhe";
+            this.LoaiGhe.ReadOnly = true;
+            // 
+            // NgayChieu
+            // 
+            this.NgayChieu.DataPropertyName = "NgayChieu";
+            this.NgayChieu.HeaderText = "Ngày chiếu";
+            this.NgayChieu.Name = "NgayChieu";
+            this.NgayChieu.ReadOnly = true;
+            // 
+            // GioChieu
+            // 
+            this.GioChieu.DataPropertyName = "GioiChieu";
+            this.GioChieu.HeaderText = "Giờ chiếu";
+            this.GioChieu.Name = "GioChieu";
+            this.GioChieu.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
             // 
             // btnThoat
             // 
@@ -117,46 +152,11 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // DinhDang
-            // 
-            this.DinhDang.DataPropertyName = "DinhDang";
-            this.DinhDang.HeaderText = "Định dạng";
-            this.DinhDang.Name = "DinhDang";
-            this.DinhDang.ReadOnly = true;
-            // 
-            // LoaiGhe
-            // 
-            this.LoaiGhe.DataPropertyName = "LoaiGhe";
-            this.LoaiGhe.HeaderText = "Loại ghế";
-            this.LoaiGhe.Name = "LoaiGhe";
-            this.LoaiGhe.ReadOnly = true;
-            // 
-            // NgayChieu
-            // 
-            this.NgayChieu.DataPropertyName = "NgayChieu";
-            this.NgayChieu.HeaderText = "Ngày chiếu";
-            this.NgayChieu.Name = "NgayChieu";
-            this.NgayChieu.ReadOnly = true;
-            // 
-            // GioChieu
-            // 
-            this.GioChieu.DataPropertyName = "GioiChieu";
-            this.GioChieu.HeaderText = "Giờ chiếu";
-            this.GioChieu.Name = "GioChieu";
-            this.GioChieu.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
             // GUI_BaoGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -164,6 +164,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvGia);
             this.Name = "GUI_BaoGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Gia";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGia)).EndInit();
             this.ResumeLayout(false);

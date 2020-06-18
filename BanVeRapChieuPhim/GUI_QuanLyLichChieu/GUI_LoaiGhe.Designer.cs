@@ -178,6 +178,7 @@
             this.Controls.Add(this.dgvLoaiGhe);
             this.Controls.Add(this.label2);
             this.Name = "GUI_LoaiGhe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_LoaiGhe";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiGhe)).EndInit();
             this.ResumeLayout(false);

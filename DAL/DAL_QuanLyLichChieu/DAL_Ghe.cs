@@ -116,7 +116,7 @@ namespace DAL.DAL_QuanLyLichChieu
         /// <returns></returns>
         public static DataTable ThongTinGheTheoMa(int maGhe)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaGhe],tb_Phong.TenPhong,tb_LoaiGhe.TenLoai,tb_SoGhe.SoGhe,SoHang,SoCot,tb_TrangThai.MoTa FROM [dbo].[tb_Ghe] " +
+            SqlCommand cmd = new SqlCommand("SELECT [MaGhe],tb_Phong.MaPhong,tb_Phong.TenPhong,tb_LoaiGhe.TenLoai,tb_SoGhe.SoGhe,SoHang,SoCot,tb_TrangThai.MoTa,tb_LoaiGhe.MaLoaiGhe,tb_TrangThai.MaTrangThai FROM [dbo].[tb_Ghe] " +
                 "INNER JOIN tb_Phong ON tb_Phong.MaPhong=tb_Ghe.MaPhong INNER JOIN tb_LoaiGhe ON tb_LoaiGhe.MaLoaiGhe=tb_Ghe.MaLoaiGhe " +
                 "INNER JOIN tb_TrangThai ON tb_TrangThai.MaTrangThai=tb_Ghe.MaTrangThai INNER JOIN tb_SoGhe ON tb_SoGhe.SoGhe=tb_Ghe.SoGhe WHERE [MaGhe]=@maGhe");
             cmd.CommandType = CommandType.Text;

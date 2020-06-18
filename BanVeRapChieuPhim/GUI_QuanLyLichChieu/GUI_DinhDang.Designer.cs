@@ -53,7 +53,7 @@
             this.dgvDinhDang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDinhDang,
             this.TenDinhDang});
-            this.dgvDinhDang.Location = new System.Drawing.Point(2, 152);
+            this.dgvDinhDang.Location = new System.Drawing.Point(-2, 152);
             this.dgvDinhDang.Name = "dgvDinhDang";
             this.dgvDinhDang.ReadOnly = true;
             this.dgvDinhDang.Size = new System.Drawing.Size(1254, 209);
@@ -77,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(548, 22);
+            this.label2.Location = new System.Drawing.Point(544, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 37);
             this.label2.TabIndex = 63;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTenDinhDang);
             this.Controls.Add(this.label1);
@@ -178,6 +178,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvDinhDang);
             this.Name = "GUI_DinhDang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_DinhDang";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinhDang)).EndInit();
             this.ResumeLayout(false);

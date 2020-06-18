@@ -166,6 +166,7 @@
             this.btnThoat.TabIndex = 131;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnThem
             // 
@@ -177,12 +178,13 @@
             this.btnThem.TabIndex = 130;
             this.btnThem.Text = "Thêm/ Sửa";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // GUI_ThemGhe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtMaGhe);
@@ -197,6 +199,7 @@
             this.Controls.Add(this.lbMaGhe);
             this.Controls.Add(this.label1);
             this.Name = "GUI_ThemGhe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ThemGhe";
             this.ResumeLayout(false);
             this.PerformLayout();

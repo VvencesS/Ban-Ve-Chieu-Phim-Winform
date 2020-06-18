@@ -33,7 +33,7 @@
             this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoHangMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoCotMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -41,6 +41,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,42 +57,48 @@
             this.TenPhong,
             this.SoHangMax,
             this.SoCotMax,
-            this.MaDinhDang});
-            this.dgvPhong.Location = new System.Drawing.Point(3, 152);
+            this.TenDinhDang});
+            this.dgvPhong.Location = new System.Drawing.Point(2, 152);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.ReadOnly = true;
             this.dgvPhong.Size = new System.Drawing.Size(1254, 209);
             this.dgvPhong.TabIndex = 50;
+            this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             // 
             // MaPhong
             // 
+            this.MaPhong.DataPropertyName = "MaPhong";
             this.MaPhong.HeaderText = "Mã Phòng";
             this.MaPhong.Name = "MaPhong";
             this.MaPhong.ReadOnly = true;
             // 
             // TenPhong
             // 
+            this.TenPhong.DataPropertyName = "TenPhong";
             this.TenPhong.HeaderText = "Tên Phòng";
             this.TenPhong.Name = "TenPhong";
             this.TenPhong.ReadOnly = true;
             // 
             // SoHangMax
             // 
+            this.SoHangMax.DataPropertyName = "SoHangMax";
             this.SoHangMax.HeaderText = "Số Hàng Max";
             this.SoHangMax.Name = "SoHangMax";
             this.SoHangMax.ReadOnly = true;
             // 
             // SoCotMax
             // 
+            this.SoCotMax.DataPropertyName = "SoCotMax";
             this.SoCotMax.HeaderText = "Số Cột Max";
             this.SoCotMax.Name = "SoCotMax";
             this.SoCotMax.ReadOnly = true;
             // 
-            // MaDinhDang
+            // TenDinhDang
             // 
-            this.MaDinhDang.HeaderText = "Mã Định Dạng";
-            this.MaDinhDang.Name = "MaDinhDang";
-            this.MaDinhDang.ReadOnly = true;
+            this.TenDinhDang.DataPropertyName = "TenDinhDang";
+            this.TenDinhDang.HeaderText = "Định Dạng";
+            this.TenDinhDang.Name = "TenDinhDang";
+            this.TenDinhDang.ReadOnly = true;
             // 
             // label2
             // 
@@ -99,7 +106,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(510, 22);
+            this.label2.Location = new System.Drawing.Point(509, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(247, 37);
             this.label2.TabIndex = 58;
@@ -138,6 +145,7 @@
             this.btnThoat.TabIndex = 85;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -148,6 +156,7 @@
             this.btnXoa.TabIndex = 84;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -158,6 +167,7 @@
             this.btnSua.TabIndex = 83;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -169,12 +179,26 @@
             this.btnThem.TabIndex = 82;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.Location = new System.Drawing.Point(286, 399);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
+            this.btnRefresh.TabIndex = 86;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // GUI_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 450);
+            this.ClientSize = new System.Drawing.Size(1259, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -184,6 +208,7 @@
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Name = "GUI_Phong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Phong";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
             this.ResumeLayout(false);
@@ -194,11 +219,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoHangMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoCotMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDinhDang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -206,5 +226,11 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoHangMax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoCotMax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDinhDang;
     }
 }

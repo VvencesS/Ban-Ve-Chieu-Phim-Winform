@@ -127,5 +127,19 @@ namespace DAL.DAL_QuanLyLichChieu
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức tìm kiếm KTG theo ngày/giờ chiếu 
+        /// <summary>
+        /// Phương thức tìm kiếm theo ngày chiếu hoặc theo giờ chiếu
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public static DataTable Search(string search)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tb_KTG WHERE NgayChieu LIKE N'%'+ @search + '%' OR GioChieu LIKE N'%'+@search+'%'");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@search", search);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }
