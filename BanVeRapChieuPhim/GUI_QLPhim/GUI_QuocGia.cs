@@ -15,8 +15,38 @@ namespace BanVeRapChieuPhim.GUI_QLPhim
         public GUI_QuocGia()
         {
             InitializeComponent();
+
+            LoadQuocGia();
         }
 
-        
+        private void LoadQuocGia()
+        {
+            dgvQuocGia.DataSource = BUS.BUS_QuanLyPhim.BUS_QuocGia.LayTatCaQuocGia();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

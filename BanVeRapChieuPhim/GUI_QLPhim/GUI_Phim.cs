@@ -24,6 +24,10 @@ namespace BanVeRapChieuPhim.GUI_QLPhim
         public void LoadData()
         {
             dgvPhim.DataSource = BUS.BUS_QuanLyPhim.BUS_Phim.LayTatCaPhim();
+
+            //DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            //imageColumn = (DataGridViewImageColumn)dgvPhim.Columns[2];
+            //imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         private void btnThem_Click(object sender, EventArgs e)

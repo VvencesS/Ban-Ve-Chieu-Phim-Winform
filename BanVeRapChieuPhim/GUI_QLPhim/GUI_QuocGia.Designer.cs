@@ -31,9 +31,6 @@
             this.dgvQuocGia = new System.Windows.Forms.DataGridView();
             this.MaQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaQuocGia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,6 +38,9 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuocGia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,36 +77,6 @@
             this.TenQuocGia.MinimumWidth = 6;
             this.TenQuocGia.Name = "TenQuocGia";
             this.TenQuocGia.ReadOnly = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(804, 384);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(70, 40);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(915, 384);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(66, 40);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(1014, 384);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(67, 40);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -153,6 +123,7 @@
             this.btnThoat.TabIndex = 51;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label3
             // 
@@ -169,13 +140,47 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(688, 384);
+            this.btnRefresh.Location = new System.Drawing.Point(704, 384);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(70, 40);
-            this.btnRefresh.TabIndex = 53;
+            this.btnRefresh.Size = new System.Drawing.Size(64, 40);
+            this.btnRefresh.TabIndex = 57;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(1017, 384);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(68, 40);
+            this.btnXoa.TabIndex = 56;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(911, 384);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(71, 40);
+            this.btnSua.TabIndex = 55;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(805, 384);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(64, 40);
+            this.btnThem.TabIndex = 54;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // GUI_QuocGia
             // 
@@ -183,15 +188,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTenQuocGia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaQuocGia);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvQuocGia);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_QuocGia";
@@ -206,17 +211,17 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvQuocGia;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaQuocGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenQuocGia;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaQuocGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenQuocGia;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
     }
 }

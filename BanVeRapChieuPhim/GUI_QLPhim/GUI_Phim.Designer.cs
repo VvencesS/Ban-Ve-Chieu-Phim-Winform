@@ -29,9 +29,17 @@
         private void InitializeComponent()
         {
             this.dgvPhim = new System.Windows.Forms.DataGridView();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.MaPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AnhDaiDien = new System.Windows.Forms.DataGridViewImageColumn();
+            this.AnhDaiDien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenQuocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +50,6 @@
             this.Trailer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,111 +82,6 @@
             this.dgvPhim.Size = new System.Drawing.Size(1254, 209);
             this.dgvPhim.TabIndex = 50;
             this.dgvPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhim_CellClick);
-            // 
-            // MaPhim
-            // 
-            this.MaPhim.DataPropertyName = "MaPhim";
-            this.MaPhim.HeaderText = "Mã Phim";
-            this.MaPhim.MinimumWidth = 6;
-            this.MaPhim.Name = "MaPhim";
-            this.MaPhim.ReadOnly = true;
-            // 
-            // TenPhim
-            // 
-            this.TenPhim.DataPropertyName = "TenPhim";
-            this.TenPhim.HeaderText = "Tên Phim";
-            this.TenPhim.MinimumWidth = 6;
-            this.TenPhim.Name = "TenPhim";
-            this.TenPhim.ReadOnly = true;
-            // 
-            // AnhDaiDien
-            // 
-            this.AnhDaiDien.HeaderText = "Ảnh Đại Diện";
-            this.AnhDaiDien.MinimumWidth = 6;
-            this.AnhDaiDien.Name = "AnhDaiDien";
-            this.AnhDaiDien.ReadOnly = true;
-            this.AnhDaiDien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AnhDaiDien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.DataPropertyName = "TenTheLoai";
-            this.TenTheLoai.HeaderText = "Tên thể Loại";
-            this.TenTheLoai.MinimumWidth = 6;
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            // 
-            // TenQuocGia
-            // 
-            this.TenQuocGia.DataPropertyName = "TenQuocGia";
-            this.TenQuocGia.HeaderText = "Tên quốc Gia";
-            this.TenQuocGia.MinimumWidth = 6;
-            this.TenQuocGia.Name = "TenQuocGia";
-            this.TenQuocGia.ReadOnly = true;
-            // 
-            // ThoiLuong
-            // 
-            this.ThoiLuong.DataPropertyName = "ThoiLuong";
-            this.ThoiLuong.HeaderText = "Thời Lượng";
-            this.ThoiLuong.MinimumWidth = 6;
-            this.ThoiLuong.Name = "ThoiLuong";
-            this.ThoiLuong.ReadOnly = true;
-            // 
-            // KhoiChieu
-            // 
-            this.KhoiChieu.DataPropertyName = "KhoiChieu";
-            this.KhoiChieu.HeaderText = "Khởi Chiếu";
-            this.KhoiChieu.MinimumWidth = 6;
-            this.KhoiChieu.Name = "KhoiChieu";
-            this.KhoiChieu.ReadOnly = true;
-            // 
-            // KetThuc
-            // 
-            this.KetThuc.DataPropertyName = "KetThuc";
-            this.KetThuc.HeaderText = "Kết Thúc";
-            this.KetThuc.MinimumWidth = 6;
-            this.KetThuc.Name = "KetThuc";
-            this.KetThuc.ReadOnly = true;
-            // 
-            // DaoDien
-            // 
-            this.DaoDien.DataPropertyName = "DaoDien";
-            this.DaoDien.HeaderText = "Đạo Diễn";
-            this.DaoDien.MinimumWidth = 6;
-            this.DaoDien.Name = "DaoDien";
-            this.DaoDien.ReadOnly = true;
-            // 
-            // NoiDung
-            // 
-            this.NoiDung.DataPropertyName = "NoiDung";
-            this.NoiDung.HeaderText = "Nội Dung";
-            this.NoiDung.MinimumWidth = 6;
-            this.NoiDung.Name = "NoiDung";
-            this.NoiDung.ReadOnly = true;
-            // 
-            // Trailer
-            // 
-            this.Trailer.DataPropertyName = "Trailer";
-            this.Trailer.HeaderText = "Trailer";
-            this.Trailer.MinimumWidth = 6;
-            this.Trailer.Name = "Trailer";
-            this.Trailer.ReadOnly = true;
-            // 
-            // TenDinhDang
-            // 
-            this.TenDinhDang.DataPropertyName = "TenDinhDang";
-            this.TenDinhDang.HeaderText = "Tên định Dạng";
-            this.TenDinhDang.MinimumWidth = 6;
-            this.TenDinhDang.Name = "TenDinhDang";
-            this.TenDinhDang.ReadOnly = true;
-            // 
-            // TenNhanVien
-            // 
-            this.TenNhanVien.DataPropertyName = "HoTen";
-            this.TenNhanVien.HeaderText = "Tên nhân Viên";
-            this.TenNhanVien.MinimumWidth = 6;
-            this.TenNhanVien.Name = "TenNhanVien";
-            this.TenNhanVien.ReadOnly = true;
             // 
             // btnThem
             // 
@@ -276,6 +171,113 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // MaPhim
+            // 
+            this.MaPhim.DataPropertyName = "MaPhim";
+            this.MaPhim.HeaderText = "Mã Phim";
+            this.MaPhim.MinimumWidth = 6;
+            this.MaPhim.Name = "MaPhim";
+            this.MaPhim.ReadOnly = true;
+            // 
+            // TenPhim
+            // 
+            this.TenPhim.DataPropertyName = "TenPhim";
+            this.TenPhim.HeaderText = "Tên Phim";
+            this.TenPhim.MinimumWidth = 6;
+            this.TenPhim.Name = "TenPhim";
+            this.TenPhim.ReadOnly = true;
+            // 
+            // AnhDaiDien
+            // 
+            this.AnhDaiDien.DataPropertyName = "AnhDaiDien";
+            this.AnhDaiDien.HeaderText = "Ảnh Đại Diện";
+            this.AnhDaiDien.MinimumWidth = 6;
+            this.AnhDaiDien.Name = "AnhDaiDien";
+            this.AnhDaiDien.ReadOnly = true;
+            this.AnhDaiDien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AnhDaiDien.Visible = false;
+            // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.DataPropertyName = "TenTheLoai";
+            this.TenTheLoai.HeaderText = "Tên thể Loại";
+            this.TenTheLoai.MinimumWidth = 6;
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
+            // 
+            // TenQuocGia
+            // 
+            this.TenQuocGia.DataPropertyName = "TenQuocGia";
+            this.TenQuocGia.HeaderText = "Tên quốc Gia";
+            this.TenQuocGia.MinimumWidth = 6;
+            this.TenQuocGia.Name = "TenQuocGia";
+            this.TenQuocGia.ReadOnly = true;
+            // 
+            // ThoiLuong
+            // 
+            this.ThoiLuong.DataPropertyName = "ThoiLuong";
+            this.ThoiLuong.HeaderText = "Thời Lượng";
+            this.ThoiLuong.MinimumWidth = 6;
+            this.ThoiLuong.Name = "ThoiLuong";
+            this.ThoiLuong.ReadOnly = true;
+            // 
+            // KhoiChieu
+            // 
+            this.KhoiChieu.DataPropertyName = "KhoiChieu";
+            this.KhoiChieu.HeaderText = "Khởi Chiếu";
+            this.KhoiChieu.MinimumWidth = 6;
+            this.KhoiChieu.Name = "KhoiChieu";
+            this.KhoiChieu.ReadOnly = true;
+            // 
+            // KetThuc
+            // 
+            this.KetThuc.DataPropertyName = "KetThuc";
+            this.KetThuc.HeaderText = "Kết Thúc";
+            this.KetThuc.MinimumWidth = 6;
+            this.KetThuc.Name = "KetThuc";
+            this.KetThuc.ReadOnly = true;
+            // 
+            // DaoDien
+            // 
+            this.DaoDien.DataPropertyName = "DaoDien";
+            this.DaoDien.HeaderText = "Đạo Diễn";
+            this.DaoDien.MinimumWidth = 6;
+            this.DaoDien.Name = "DaoDien";
+            this.DaoDien.ReadOnly = true;
+            // 
+            // NoiDung
+            // 
+            this.NoiDung.DataPropertyName = "NoiDung";
+            this.NoiDung.HeaderText = "Nội Dung";
+            this.NoiDung.MinimumWidth = 6;
+            this.NoiDung.Name = "NoiDung";
+            this.NoiDung.ReadOnly = true;
+            // 
+            // Trailer
+            // 
+            this.Trailer.DataPropertyName = "Trailer";
+            this.Trailer.HeaderText = "Trailer";
+            this.Trailer.MinimumWidth = 6;
+            this.Trailer.Name = "Trailer";
+            this.Trailer.ReadOnly = true;
+            this.Trailer.Visible = false;
+            // 
+            // TenDinhDang
+            // 
+            this.TenDinhDang.DataPropertyName = "TenDinhDang";
+            this.TenDinhDang.HeaderText = "Tên định Dạng";
+            this.TenDinhDang.MinimumWidth = 6;
+            this.TenDinhDang.Name = "TenDinhDang";
+            this.TenDinhDang.ReadOnly = true;
+            // 
+            // TenNhanVien
+            // 
+            this.TenNhanVien.DataPropertyName = "HoTen";
+            this.TenNhanVien.HeaderText = "Tên nhân Viên";
+            this.TenNhanVien.MinimumWidth = 6;
+            this.TenNhanVien.Name = "TenNhanVien";
+            this.TenNhanVien.ReadOnly = true;
+            // 
             // GUI_Phim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,7 +316,7 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhim;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhim;
-        private System.Windows.Forms.DataGridViewImageColumn AnhDaiDien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnhDaiDien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenQuocGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiLuong;

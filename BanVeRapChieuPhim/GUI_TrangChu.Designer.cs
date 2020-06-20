@@ -44,7 +44,6 @@
             this.mnuThanhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuQLDatVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVe = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuDSDatVe = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBaoGia = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDangNhap = new System.Windows.Forms.MenuStrip();
             this.mnuDN_DX = new System.Windows.Forms.ToolStripMenuItem();
@@ -177,7 +176,6 @@
             // 
             this.mnuQLDatVe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuVe,
-            this.mnuDSDatVe,
             this.mnuBaoGia});
             this.mnuQLDatVe.Name = "mnuQLDatVe";
             this.mnuQLDatVe.Size = new System.Drawing.Size(95, 20);
@@ -189,13 +187,6 @@
             this.mnuVe.Size = new System.Drawing.Size(164, 22);
             this.mnuVe.Text = "Vé";
             this.mnuVe.Click += new System.EventHandler(this.mnuVe_Click);
-            // 
-            // mnuDSDatVe
-            // 
-            this.mnuDSDatVe.Name = "mnuDSDatVe";
-            this.mnuDSDatVe.Size = new System.Drawing.Size(164, 22);
-            this.mnuDSDatVe.Text = "Danh sách vé đặt";
-            this.mnuDSDatVe.Click += new System.EventHandler(this.mnuDSDatVe_Click);
             // 
             // mnuBaoGia
             // 
@@ -271,7 +262,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuThanhVien;
         private System.Windows.Forms.ToolStripMenuItem mnuQLDatVe;
         private System.Windows.Forms.ToolStripMenuItem mnuVe;
-        private System.Windows.Forms.ToolStripMenuItem mnuDSDatVe;
         private System.Windows.Forms.MenuStrip mnuDangNhap;
         private System.Windows.Forms.ToolStripMenuItem mnuDN_DX;
         private System.Windows.Forms.Label label1;

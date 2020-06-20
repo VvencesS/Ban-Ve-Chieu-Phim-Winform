@@ -33,16 +33,12 @@
             this.TenDinhDang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaDinhDang = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDinhDang = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDinhDang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,36 +75,6 @@
             this.TenDinhDang.MinimumWidth = 6;
             this.TenDinhDang.Name = "TenDinhDang";
             this.TenDinhDang.ReadOnly = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(869, 379);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(64, 40);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(975, 379);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(64, 40);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(1078, 379);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(64, 40);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -155,6 +121,7 @@
             this.btnThoat.TabIndex = 51;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label3
             // 
@@ -168,31 +135,17 @@
             this.label3.TabIndex = 52;
             this.label3.Text = "Định Dạng";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(751, 379);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(64, 40);
-            this.btnRefresh.TabIndex = 53;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            // 
             // GUI_DinhDang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 450);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTenDinhDang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaDinhDang);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvDinhDang);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_DinhDang";
@@ -209,9 +162,6 @@
         private System.Windows.Forms.DataGridView dgvDinhDang;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ColorDialog colorDialog2;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaDinhDang;
         private System.Windows.Forms.Label label2;
@@ -220,6 +170,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDinhDang;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

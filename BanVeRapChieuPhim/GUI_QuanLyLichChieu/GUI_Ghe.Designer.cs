@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvGhe = new System.Windows.Forms.DataGridView();
-            this.MaGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoCot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +37,13 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.MaGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,55 +68,6 @@
             this.dgvGhe.Size = new System.Drawing.Size(1254, 209);
             this.dgvGhe.TabIndex = 51;
             this.dgvGhe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGhe_CellClick);
-            // 
-            // MaGhe
-            // 
-            this.MaGhe.DataPropertyName = "MaGhe";
-            this.MaGhe.HeaderText = "Mã Ghế";
-            this.MaGhe.Name = "MaGhe";
-            this.MaGhe.ReadOnly = true;
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.DataPropertyName = "TenPhong";
-            this.TenPhong.HeaderText = "Tên Phòng";
-            this.TenPhong.Name = "TenPhong";
-            this.TenPhong.ReadOnly = true;
-            // 
-            // TenLoai
-            // 
-            this.TenLoai.DataPropertyName = "TenLoai";
-            this.TenLoai.HeaderText = "Tên loại ghế";
-            this.TenLoai.Name = "TenLoai";
-            this.TenLoai.ReadOnly = true;
-            // 
-            // SoGhe
-            // 
-            this.SoGhe.DataPropertyName = "SoGhe";
-            this.SoGhe.HeaderText = "Số Ghế";
-            this.SoGhe.Name = "SoGhe";
-            this.SoGhe.ReadOnly = true;
-            // 
-            // SoHang
-            // 
-            this.SoHang.DataPropertyName = "SoHang";
-            this.SoHang.HeaderText = "Số hàng";
-            this.SoHang.Name = "SoHang";
-            this.SoHang.ReadOnly = true;
-            // 
-            // SoCot
-            // 
-            this.SoCot.DataPropertyName = "Số cột";
-            this.SoCot.HeaderText = "Số cột";
-            this.SoCot.Name = "SoCot";
-            this.SoCot.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "MoTa";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
             // 
             // btnTimKiem
             // 
@@ -210,6 +161,55 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // MaGhe
+            // 
+            this.MaGhe.DataPropertyName = "MaGhe";
+            this.MaGhe.HeaderText = "Mã Ghế";
+            this.MaGhe.Name = "MaGhe";
+            this.MaGhe.ReadOnly = true;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên Phòng";
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.ReadOnly = true;
+            // 
+            // TenLoai
+            // 
+            this.TenLoai.DataPropertyName = "TenLoai";
+            this.TenLoai.HeaderText = "Tên loại ghế";
+            this.TenLoai.Name = "TenLoai";
+            this.TenLoai.ReadOnly = true;
+            // 
+            // SoGhe
+            // 
+            this.SoGhe.DataPropertyName = "SoGhe";
+            this.SoGhe.HeaderText = "Số Ghế";
+            this.SoGhe.Name = "SoGhe";
+            this.SoGhe.ReadOnly = true;
+            // 
+            // SoHang
+            // 
+            this.SoHang.DataPropertyName = "SoHang";
+            this.SoHang.HeaderText = "Số hàng";
+            this.SoHang.Name = "SoHang";
+            this.SoHang.ReadOnly = true;
+            // 
+            // SoCot
+            // 
+            this.SoCot.DataPropertyName = "SoCot";
+            this.SoCot.HeaderText = "Số cột";
+            this.SoCot.Name = "SoCot";
+            this.SoCot.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "MoTa";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
             // 
             // GUI_Ghe
             // 

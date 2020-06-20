@@ -79,7 +79,8 @@ namespace BanVeRapChieuPhim
 
         private void mnuDSDatVe_Click(object sender, EventArgs e)
         {
-            
+            GUI_QuanLyDatVe.GUI_DanhSachDatVe DSVeDat = new GUI_QuanLyDatVe.GUI_DanhSachDatVe();
+            DSVeDat.ShowDialog();
         }
 
         private void mnuDN_DX_Click(object sender, EventArgs e)

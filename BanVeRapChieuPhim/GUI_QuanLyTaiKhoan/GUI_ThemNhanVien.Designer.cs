@@ -34,7 +34,6 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.cboXaPhuong = new System.Windows.Forms.ComboBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@
             this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtSoThe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label2
@@ -121,14 +121,6 @@
             this.cboXaPhuong.Size = new System.Drawing.Size(207, 24);
             this.cboXaPhuong.TabIndex = 203;
             this.cboXaPhuong.SelectedIndexChanged += new System.EventHandler(this.cboXaPhuong_SelectedIndexChanged);
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Location = new System.Drawing.Point(364, 279);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(207, 22);
-            this.txtNgaySinh.TabIndex = 201;
             // 
             // txtSDT
             // 
@@ -335,18 +327,26 @@
             this.label3.TabIndex = 207;
             this.label3.Text = "Số thẻ:";
             // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgaySinh.Location = new System.Drawing.Point(364, 280);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(207, 20);
+            this.txtNgaySinh.TabIndex = 209;
+            // 
             // GUI_ThemNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 450);
+            this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.txtSoThe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboGioiTinh);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.cboXaPhuong);
-            this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtHoTen);
@@ -383,7 +383,6 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.ComboBox cboXaPhuong;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtHoTen;
@@ -404,5 +403,6 @@
         private System.Windows.Forms.ComboBox cboGioiTinh;
         private System.Windows.Forms.TextBox txtSoThe;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker txtNgaySinh;
     }
 }

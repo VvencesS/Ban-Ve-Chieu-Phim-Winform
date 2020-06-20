@@ -15,6 +15,18 @@ namespace BanVeRapChieuPhim.GUI_QLPhim
         public GUI_DinhDang()
         {
             InitializeComponent();
+
+            LoadDinhDang();
+        }
+
+        private void LoadDinhDang()
+        {
+            dgvDinhDang.DataSource = BUS.BUS_QuanLyPhim.BUS_DinhDang.LayTatCaDinhDang();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
