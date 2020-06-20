@@ -63,7 +63,6 @@ namespace BanVeRapChieuPhim.GUI_QuanLyPhim
 
             if (pathString != "")
             {
-                MessageBox.Show(pathString);
                 pictureBox1.Image = Image.FromFile(pathString);
             }
 
@@ -117,7 +116,6 @@ namespace BanVeRapChieuPhim.GUI_QuanLyPhim
             fName = "AnhDaiDienPhim_" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second + ".jpg";
             folder = "D:\\Images";
             pathString = System.IO.Path.Combine(folder, fName);
-            MessageBox.Show(pathString);
 
             if (GUI_Phim.ThaoTac == "themmoi")
             {
