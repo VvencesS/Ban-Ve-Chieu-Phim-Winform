@@ -57,6 +57,7 @@
             this.txtKhoiChieu = new System.Windows.Forms.DateTimePicker();
             this.txtKetThuc = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -331,7 +332,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(291, 182);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(81, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -412,5 +413,6 @@
         private System.Windows.Forms.DateTimePicker txtKhoiChieu;
         private System.Windows.Forms.DateTimePicker txtKetThuc;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }
