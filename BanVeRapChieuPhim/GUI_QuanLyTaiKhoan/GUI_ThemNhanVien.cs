@@ -192,5 +192,10 @@ namespace BanVeRapChieuPhim.GUI_QuanLyTaiKhoan
                 LoadQuanHuyenTheoMaTinhThanhPho(int.Parse(cboTinhThanhPho.SelectedValue.ToString()));
             }
         }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

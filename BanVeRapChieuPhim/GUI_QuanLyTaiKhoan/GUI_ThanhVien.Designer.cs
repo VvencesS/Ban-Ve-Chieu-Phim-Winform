@@ -112,13 +112,14 @@
             this.dgvThanhVien.Location = new System.Drawing.Point(2, 152);
             this.dgvThanhVien.Name = "dgvThanhVien";
             this.dgvThanhVien.ReadOnly = true;
-            this.dgvThanhVien.Size = new System.Drawing.Size(1254, 209);
+            this.dgvThanhVien.Size = new System.Drawing.Size(1254, 213);
             this.dgvThanhVien.TabIndex = 56;
             this.dgvThanhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhVien_CellClick);
             // 
             // MaThanhVien
             // 
             this.MaThanhVien.DataPropertyName = "MaThanhVien";
+            this.MaThanhVien.FillWeight = 335.0254F;
             this.MaThanhVien.HeaderText = "Mã Thành Viên";
             this.MaThanhVien.Name = "MaThanhVien";
             this.MaThanhVien.ReadOnly = true;
@@ -126,6 +127,7 @@
             // HoVaTen
             // 
             this.HoVaTen.DataPropertyName = "HoTen";
+            this.HoVaTen.FillWeight = 76.49746F;
             this.HoVaTen.HeaderText = "Họ Và Tên";
             this.HoVaTen.Name = "HoVaTen";
             this.HoVaTen.ReadOnly = true;
@@ -133,6 +135,7 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
+            this.Email.FillWeight = 76.49746F;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
@@ -143,10 +146,12 @@
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
+            this.Password.Visible = false;
             // 
             // SDT
             // 
             this.SDT.DataPropertyName = "Sdt";
+            this.SDT.FillWeight = 76.49746F;
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
@@ -154,6 +159,7 @@
             // SoThe
             // 
             this.SoThe.DataPropertyName = "SoThe";
+            this.SoThe.FillWeight = 76.49746F;
             this.SoThe.HeaderText = "Số Thẻ";
             this.SoThe.Name = "SoThe";
             this.SoThe.ReadOnly = true;
@@ -161,6 +167,7 @@
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.FillWeight = 76.49746F;
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
@@ -168,6 +175,7 @@
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.FillWeight = 76.49746F;
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
@@ -175,6 +183,7 @@
             // TrangThai
             // 
             this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.FillWeight = 76.49746F;
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
@@ -182,6 +191,7 @@
             // TenXaPhuong
             // 
             this.TenXaPhuong.DataPropertyName = "TenXaPhuong";
+            this.TenXaPhuong.FillWeight = 76.49746F;
             this.TenXaPhuong.HeaderText = "Xã, Phường";
             this.TenXaPhuong.Name = "TenXaPhuong";
             this.TenXaPhuong.ReadOnly = true;
@@ -189,6 +199,7 @@
             // TenQuanHuyen
             // 
             this.TenQuanHuyen.DataPropertyName = "TenQuanHuyen";
+            this.TenQuanHuyen.FillWeight = 76.49746F;
             this.TenQuanHuyen.HeaderText = "Quận, Huyện";
             this.TenQuanHuyen.Name = "TenQuanHuyen";
             this.TenQuanHuyen.ReadOnly = true;
@@ -196,6 +207,7 @@
             // TenTinhThanhPho
             // 
             this.TenTinhThanhPho.DataPropertyName = "TenTinhThanhPho";
+            this.TenTinhThanhPho.FillWeight = 76.49746F;
             this.TenTinhThanhPho.HeaderText = "Tỉnh,Thành Phố";
             this.TenTinhThanhPho.Name = "TenTinhThanhPho";
             this.TenTinhThanhPho.ReadOnly = true;
@@ -264,7 +276,7 @@
             this.btnRefresh.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnRefresh.Size = new System.Drawing.Size(90, 30);
             this.btnRefresh.TabIndex = 71;
-            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 

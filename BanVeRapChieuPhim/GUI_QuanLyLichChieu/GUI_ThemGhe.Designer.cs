@@ -63,7 +63,7 @@
             this.txtMaGhe.Location = new System.Drawing.Point(599, 130);
             this.txtMaGhe.Name = "txtMaGhe";
             this.txtMaGhe.Size = new System.Drawing.Size(207, 22);
-            this.txtMaGhe.TabIndex = 129;
+            this.txtMaGhe.TabIndex = 1;
             // 
             // cboMaTrangThai
             // 
@@ -99,7 +99,7 @@
             this.cboMaPhong.Location = new System.Drawing.Point(599, 169);
             this.cboMaPhong.Name = "cboMaPhong";
             this.cboMaPhong.Size = new System.Drawing.Size(207, 24);
-            this.cboMaPhong.TabIndex = 125;
+            this.cboMaPhong.TabIndex = 2;
             // 
             // lbMaTrangThai
             // 

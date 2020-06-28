@@ -13,6 +13,7 @@ namespace BanVeRapChieuPhim
     public partial class GUI_DangNhap : Form
     {
         private bool CheckLogin = false;
+        private string tenTaiKhoan;
         public GUI_DangNhap()
         {
             InitializeComponent();
@@ -25,7 +26,14 @@ namespace BanVeRapChieuPhim
         {
             return this.CheckLogin;
         }
-
+        public void SetTenTaiKhoan(string tenTaiKhoan)
+        {
+            this.tenTaiKhoan = tenTaiKhoan;
+        }
+        public string GetTenTaiKhoan()
+        {
+            return this.tenTaiKhoan;
+        }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if(txtTaiKhoan.Text.Trim().ToString() == "" || txtMatKhau.Text.Trim().ToString() == "")
@@ -37,6 +45,7 @@ namespace BanVeRapChieuPhim
                 if (dt.Rows.Count > 0)
                 {
                     SetCheckLogin(true);
+                    SetTenTaiKhoan(dt.Rows[0]["HoTen"].ToString());
                     this.Hide();
                 }
                 else

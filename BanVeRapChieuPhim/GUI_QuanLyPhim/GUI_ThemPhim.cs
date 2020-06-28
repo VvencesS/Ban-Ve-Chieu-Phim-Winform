@@ -130,7 +130,6 @@ namespace BanVeRapChieuPhim.GUI_QuanLyPhim
                     if (pictureBox1.Image != null)
                     {
                         Image a = pictureBox1.Image;
-                        MessageBox.Show(pathString);
                         a.Save(pathString);
 
                         BUS.BUS_QuanLyPhim.BUS_Phim.Themmoiphim(txtTenPhim.Text, pathString, int.Parse(cboTenTheLoai.SelectedValue.ToString()), int.Parse(cboTenQuocGia.SelectedValue.ToString()),

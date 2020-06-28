@@ -12,9 +12,12 @@ namespace BanVeRapChieuPhim
 {
     public partial class GUI_TrangChu : Form
     {
+        GUI_DangNhap dn = new GUI_DangNhap();
         public GUI_TrangChu()
         {
             InitializeComponent();
+
+            lblTenTaiKhoan.Text = "";
         }
 
         private void mnuNhanVien_Click(object sender, EventArgs e)
@@ -99,7 +102,6 @@ namespace BanVeRapChieuPhim
             }
             else
             {
-                GUI_DangNhap dn = new GUI_DangNhap();
                 dn.ShowDialog();
                 if (dn.GetCheckLogin() == true)
                 {
@@ -108,6 +110,11 @@ namespace BanVeRapChieuPhim
                     mnuQLPhim.Enabled = true;
                     mnuQLTaiKhoan.Enabled = true;
                     mnuDN_DX.Text = "Đăng xuất";
+
+                    if (dn.GetCheckLogin() == true)
+                    {
+                        lblTenTaiKhoan.Text = "Xin chào: " + dn.GetTenTaiKhoan();
+                    }
                 }
             }
         }

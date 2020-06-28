@@ -45,9 +45,14 @@ namespace BUS.BUS_QuanLyPhim
             DAL.DAL_QuanLyPhim.DAL_Phim.Phim_Inser(tenPhim, anhDaiDien, maTheLoai, maQuocGia, thoiLuong, kc, kt, daoDien, noiDung, trailer, maDinhDang, maNhanVien);
         }
 
-        public static object TimKiem(string v)
+        /// <summary>
+        /// Phương thức lấy ra thông tin phim theo tên phim
+        /// </summary>
+        /// <param name="tenPhim"></param>
+        /// <returns></returns>
+        public static DataTable TimKiem(string tenPhim)
         {
-            throw new NotImplementedException();
+            return DAL.DAL_QuanLyPhim.DAL_Phim.ThongTinPhimTheoTen(tenPhim);
         }
 
         /// <summary>

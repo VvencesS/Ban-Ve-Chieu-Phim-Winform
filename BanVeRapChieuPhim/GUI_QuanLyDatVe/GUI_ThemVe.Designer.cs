@@ -222,7 +222,7 @@
             this.cboGiaGheThuong.Location = new System.Drawing.Point(183, 298);
             this.cboGiaGheThuong.Name = "cboGiaGheThuong";
             this.cboGiaGheThuong.Size = new System.Drawing.Size(207, 24);
-            this.cboGiaGheThuong.TabIndex = 100;
+            this.cboGiaGheThuong.TabIndex = 9;
             this.cboGiaGheThuong.Text = "--Chọn giá ghế thường--";
             this.cboGiaGheThuong.SelectedIndexChanged += new System.EventHandler(this.cboGiaGheThuong_SelectedIndexChanged);
             // 
@@ -233,7 +233,7 @@
             this.cboNgayChieu.Location = new System.Drawing.Point(183, 88);
             this.cboNgayChieu.Name = "cboNgayChieu";
             this.cboNgayChieu.Size = new System.Drawing.Size(207, 24);
-            this.cboNgayChieu.TabIndex = 99;
+            this.cboNgayChieu.TabIndex = 2;
             this.cboNgayChieu.Text = "--Chọn ngày chiếu--";
             // 
             // cboPhong
@@ -243,7 +243,7 @@
             this.cboPhong.Location = new System.Drawing.Point(183, 178);
             this.cboPhong.Name = "cboPhong";
             this.cboPhong.Size = new System.Drawing.Size(207, 24);
-            this.cboPhong.TabIndex = 97;
+            this.cboPhong.TabIndex = 5;
             this.cboPhong.Text = "--Chọn phòng chiếu--";
             this.cboPhong.SelectedIndexChanged += new System.EventHandler(this.cboPhong_SelectedIndexChanged);
             // 
@@ -254,7 +254,7 @@
             this.cboPhim.Location = new System.Drawing.Point(183, 58);
             this.cboPhim.Name = "cboPhim";
             this.cboPhim.Size = new System.Drawing.Size(207, 24);
-            this.cboPhim.TabIndex = 96;
+            this.cboPhim.TabIndex = 1;
             this.cboPhim.Text = "--Chọn tên phim--";
             this.cboPhim.SelectedIndexChanged += new System.EventHandler(this.cboPhim_SelectedIndexChanged);
             // 
@@ -316,11 +316,12 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(653, 492);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
-            this.btnThoat.TabIndex = 105;
+            this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -332,7 +333,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnThem.Size = new System.Drawing.Size(90, 30);
-            this.btnThem.TabIndex = 104;
+            this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Đặt vé";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -344,7 +345,7 @@
             this.cboGioChieu.Location = new System.Drawing.Point(183, 118);
             this.cboGioChieu.Name = "cboGioChieu";
             this.cboGioChieu.Size = new System.Drawing.Size(207, 24);
-            this.cboGioChieu.TabIndex = 106;
+            this.cboGioChieu.TabIndex = 3;
             this.cboGioChieu.Text = "--Chọn giờ chiếu--";
             // 
             // cboDinhDang
@@ -354,7 +355,7 @@
             this.cboDinhDang.Location = new System.Drawing.Point(183, 148);
             this.cboDinhDang.Name = "cboDinhDang";
             this.cboDinhDang.Size = new System.Drawing.Size(207, 24);
-            this.cboDinhDang.TabIndex = 108;
+            this.cboDinhDang.TabIndex = 4;
             this.cboDinhDang.Text = "--Chọn định dạng phim--";
             // 
             // label1
@@ -584,6 +585,7 @@
             this.label5.Size = new System.Drawing.Size(111, 15);
             this.label5.TabIndex = 148;
             this.label5.Text = "Ghế đang được giữ";
+            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -593,6 +595,7 @@
             this.label4.Size = new System.Drawing.Size(71, 15);
             this.label4.TabIndex = 147;
             this.label4.Text = "Ghế đã bán";
+            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -602,6 +605,7 @@
             this.label3.Size = new System.Drawing.Size(61, 15);
             this.label3.TabIndex = 146;
             this.label3.Text = "Ghế trống";
+            this.label3.Visible = false;
             // 
             // button93
             // 
@@ -613,6 +617,7 @@
             this.button93.TabIndex = 145;
             this.button93.Text = "Ghế";
             this.button93.UseVisualStyleBackColor = false;
+            this.button93.Visible = false;
             // 
             // button81
             // 
@@ -624,6 +629,7 @@
             this.button81.TabIndex = 144;
             this.button81.Text = "Ghế";
             this.button81.UseVisualStyleBackColor = false;
+            this.button81.Visible = false;
             // 
             // button80
             // 
@@ -635,6 +641,7 @@
             this.button80.TabIndex = 143;
             this.button80.Text = "Ghế";
             this.button80.UseVisualStyleBackColor = false;
+            this.button80.Visible = false;
             // 
             // btnA2_A1
             // 
@@ -1974,7 +1981,7 @@
             this.cboGiaGheVip.Location = new System.Drawing.Point(183, 328);
             this.cboGiaGheVip.Name = "cboGiaGheVip";
             this.cboGiaGheVip.Size = new System.Drawing.Size(207, 24);
-            this.cboGiaGheVip.TabIndex = 112;
+            this.cboGiaGheVip.TabIndex = 10;
             this.cboGiaGheVip.Text = "--Chọn giá ghế vip--";
             this.cboGiaGheVip.SelectedIndexChanged += new System.EventHandler(this.cboGiaGheVip_SelectedIndexChanged);
             // 
@@ -1996,7 +2003,7 @@
             this.cboGiaGheDoi.Location = new System.Drawing.Point(183, 358);
             this.cboGiaGheDoi.Name = "cboGiaGheDoi";
             this.cboGiaGheDoi.Size = new System.Drawing.Size(207, 24);
-            this.cboGiaGheDoi.TabIndex = 114;
+            this.cboGiaGheDoi.TabIndex = 11;
             this.cboGiaGheDoi.Text = "--Chọn giá ghế đôi--";
             this.cboGiaGheDoi.SelectedIndexChanged += new System.EventHandler(this.cboGiaGheDoi_SelectedIndexChanged);
             // 
@@ -2037,7 +2044,7 @@
             this.cboGheVip.Location = new System.Drawing.Point(183, 238);
             this.cboGheVip.Name = "cboGheVip";
             this.cboGheVip.Size = new System.Drawing.Size(139, 24);
-            this.cboGheVip.TabIndex = 119;
+            this.cboGheVip.TabIndex = 7;
             this.cboGheVip.Text = "--Chọn ghế vip--";
             this.cboGheVip.SelectedIndexChanged += new System.EventHandler(this.cboGheVip_SelectedIndexChanged);
             // 
@@ -2048,7 +2055,7 @@
             this.cboGheThuong.Location = new System.Drawing.Point(183, 208);
             this.cboGheThuong.Name = "cboGheThuong";
             this.cboGheThuong.Size = new System.Drawing.Size(139, 24);
-            this.cboGheThuong.TabIndex = 118;
+            this.cboGheThuong.TabIndex = 6;
             this.cboGheThuong.Text = "--Chọn ghế thường--";
             this.cboGheThuong.SelectedIndexChanged += new System.EventHandler(this.cboGheThuong_SelectedIndexChanged);
             // 
@@ -2059,7 +2066,7 @@
             this.cboGheDoi.Location = new System.Drawing.Point(183, 268);
             this.cboGheDoi.Name = "cboGheDoi";
             this.cboGheDoi.Size = new System.Drawing.Size(139, 24);
-            this.cboGheDoi.TabIndex = 117;
+            this.cboGheDoi.TabIndex = 8;
             this.cboGheDoi.Text = "--Chọn ghế đôi--";
             this.cboGheDoi.SelectedIndexChanged += new System.EventHandler(this.cboGheDoi_SelectedIndexChanged);
             // 
@@ -2069,7 +2076,7 @@
             this.cbxLaThanhVien.Location = new System.Drawing.Point(40, 395);
             this.cbxLaThanhVien.Name = "cbxLaThanhVien";
             this.cbxLaThanhVien.Size = new System.Drawing.Size(155, 17);
-            this.cbxLaThanhVien.TabIndex = 120;
+            this.cbxLaThanhVien.TabIndex = 12;
             this.cbxLaThanhVien.Text = "Đã có tài khoản thành viên";
             this.cbxLaThanhVien.UseVisualStyleBackColor = true;
             this.cbxLaThanhVien.CheckedChanged += new System.EventHandler(this.cbxLaThanhVien_CheckedChanged);
@@ -2081,7 +2088,7 @@
             this.cboThanhVien.Location = new System.Drawing.Point(183, 415);
             this.cboThanhVien.Name = "cboThanhVien";
             this.cboThanhVien.Size = new System.Drawing.Size(207, 24);
-            this.cboThanhVien.TabIndex = 122;
+            this.cboThanhVien.TabIndex = 13;
             this.cboThanhVien.Text = "--Chọn tên tài khoản--";
             // 
             // lblTenTK
@@ -2121,8 +2128,10 @@
             // 
             // GUI_ThemVe
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1260, 544);
             this.Controls.Add(this.txtGheThuong);
             this.Controls.Add(this.txtGheVip);

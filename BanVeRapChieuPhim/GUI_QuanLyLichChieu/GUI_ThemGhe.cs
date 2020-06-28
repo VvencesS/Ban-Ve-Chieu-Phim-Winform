@@ -61,7 +61,7 @@ namespace BanVeRapChieuPhim.GUI_QuanLyLichChieu
         {
             DataTable dt = BUS.BUS_QuanLyLichChieu.BUS_LoaiGhe.LayTatCaLoaiGhe();
             cboMaLoaiGhe.DataSource = dt;
-            cboMaLoaiGhe.DisplayMember = "TenLoaiGhe";
+            cboMaLoaiGhe.DisplayMember = "TenLoai";
             cboMaLoaiGhe.ValueMember = "MaLoaiGhe";
         }
         void LoadSoGhe()

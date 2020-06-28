@@ -60,11 +60,12 @@
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(655, 382);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
-            this.btnThoat.TabIndex = 119;
+            this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -76,7 +77,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnThem.Size = new System.Drawing.Size(90, 30);
-            this.btnThem.TabIndex = 118;
+            this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm/ Sửa";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -87,7 +88,7 @@
             this.txtMaPhong.Location = new System.Drawing.Point(599, 129);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(207, 22);
-            this.txtMaPhong.TabIndex = 117;
+            this.txtMaPhong.TabIndex = 1;
             // 
             // cboMaDinhDang
             // 
@@ -96,7 +97,7 @@
             this.cboMaDinhDang.Location = new System.Drawing.Point(599, 295);
             this.cboMaDinhDang.Name = "cboMaDinhDang";
             this.cboMaDinhDang.Size = new System.Drawing.Size(207, 24);
-            this.cboMaDinhDang.TabIndex = 115;
+            this.cboMaDinhDang.TabIndex = 5;
             // 
             // lbMaDinhDang
             // 
@@ -159,7 +160,7 @@
             this.txtTenPhong.Location = new System.Drawing.Point(599, 173);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(207, 22);
-            this.txtTenPhong.TabIndex = 120;
+            this.txtTenPhong.TabIndex = 2;
             // 
             // txtSoHangMax
             // 
@@ -167,7 +168,7 @@
             this.txtSoHangMax.Location = new System.Drawing.Point(599, 216);
             this.txtSoHangMax.Name = "txtSoHangMax";
             this.txtSoHangMax.Size = new System.Drawing.Size(207, 22);
-            this.txtSoHangMax.TabIndex = 121;
+            this.txtSoHangMax.TabIndex = 3;
             // 
             // txtSoCotMax
             // 
@@ -175,12 +176,14 @@
             this.txtSoCotMax.Location = new System.Drawing.Point(599, 259);
             this.txtSoCotMax.Name = "txtSoCotMax";
             this.txtSoCotMax.Size = new System.Drawing.Size(207, 22);
-            this.txtSoCotMax.TabIndex = 122;
+            this.txtSoCotMax.TabIndex = 4;
             // 
             // GUI_ThemPhong
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1259, 450);
             this.Controls.Add(this.txtSoCotMax);
             this.Controls.Add(this.txtSoHangMax);

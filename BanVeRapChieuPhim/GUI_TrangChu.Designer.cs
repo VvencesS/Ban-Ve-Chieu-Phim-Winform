@@ -48,6 +48,8 @@
             this.mnuDangNhap = new System.Windows.Forms.MenuStrip();
             this.mnuDN_DX = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTenTaiKhoan = new System.Windows.Forms.Label();
             this.mnuTrangChu.SuspendLayout();
             this.mnuDangNhap.SuspendLayout();
             this.SuspendLayout();
@@ -58,11 +60,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(420, 24);
+            this.label2.Location = new System.Drawing.Point(394, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(395, 37);
+            this.label2.Size = new System.Drawing.Size(513, 37);
             this.label2.TabIndex = 59;
-            this.label2.Text = "QUẢN LÝ BÁN VÉ XEM PHIM";
+            this.label2.Text = "QUẢN LÝ BÁN VÉ XEM PHIM TẠI RẠP";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.UseCompatibleTextRendering = true;
             // 
@@ -184,14 +186,14 @@
             // mnuVe
             // 
             this.mnuVe.Name = "mnuVe";
-            this.mnuVe.Size = new System.Drawing.Size(164, 22);
+            this.mnuVe.Size = new System.Drawing.Size(113, 22);
             this.mnuVe.Text = "Vé";
             this.mnuVe.Click += new System.EventHandler(this.mnuVe_Click);
             // 
             // mnuBaoGia
             // 
             this.mnuBaoGia.Name = "mnuBaoGia";
-            this.mnuBaoGia.Size = new System.Drawing.Size(164, 22);
+            this.mnuBaoGia.Size = new System.Drawing.Size(113, 22);
             this.mnuBaoGia.Text = "Báo giá";
             this.mnuBaoGia.Click += new System.EventHandler(this.mnuBaoGia_Click);
             // 
@@ -218,14 +220,40 @@
             this.label1.Image = global::BanVeRapChieuPhim.Properties.Resources.beta_slide;
             this.label1.Location = new System.Drawing.Point(0, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1242, 479);
+            this.label1.Size = new System.Drawing.Size(1259, 390);
             this.label1.TabIndex = 62;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Image = global::BanVeRapChieuPhim.Properties.Resources.beta_slide;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(1065, 325);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 126);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "Nhóm 1:             Trần Đức Soạn   Khổng Ngọc Ánh Đỗ Trọng Dũng";
+            // 
+            // lblTenTaiKhoan
+            // 
+            this.lblTenTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenTaiKhoan.Location = new System.Drawing.Point(1005, 1);
+            this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
+            this.lblTenTaiKhoan.Size = new System.Drawing.Size(180, 23);
+            this.lblTenTaiKhoan.TabIndex = 64;
+            this.lblTenTaiKhoan.Text = "label4";
             // 
             // GUI_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 450);
+            this.Controls.Add(this.lblTenTaiKhoan);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mnuTrangChu);
@@ -266,5 +294,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDN_DX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem mnuBaoGia;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTenTaiKhoan;
     }
 }

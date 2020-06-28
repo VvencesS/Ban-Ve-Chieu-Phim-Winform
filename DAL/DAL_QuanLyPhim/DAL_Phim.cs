@@ -133,5 +133,19 @@ namespace DAL.DAL_QuanLyPhim
         }
         #endregion
 
+        #region Phương thức lấy ra thông tin phim theo tên phim
+        /// <summary>
+        /// Phương thức lấy ra thông tin phim theo tên phim
+        /// </summary>
+        /// <param name="tenPhim"></param>
+        /// <returns></returns>
+        public static DataTable ThongTinPhimTheoTen(string tenPhim)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT [MaPhim],[TenPhim],[AnhDaiDien], tb_TheLoai.TenTheLoai, tb_QuocGia.TenQuocGia,[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer], tb_DinhDang.TenDinhDang, tb_NhanVien.HoTen FROM[dbo].[tb_Phim] INNER JOIN tb_TheLoai ON tb_Phim.MaTheLoai = tb_TheLoai.MaTheLoai INNER JOIN tb_QuocGia ON tb_Phim.MaQuocGia = tb_QuocGia.MaQuocGia INNER JOIN tb_DinhDang ON tb_Phim.MaDinhDang = tb_DinhDang.MaDinhDang INNER JOIN tb_NhanVien ON tb_Phim.MaNhanVien = tb_NhanVien.MaNhanVien WHERE [TenPhim] LIKE N'%' + @tenPhim + '%'");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@tenPhim", tenPhim);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }

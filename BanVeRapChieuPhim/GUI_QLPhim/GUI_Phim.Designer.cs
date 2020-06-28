@@ -74,7 +74,7 @@
             this.Trailer,
             this.TenDinhDang,
             this.TenNhanVien});
-            this.dgvPhim.Location = new System.Drawing.Point(-1, 152);
+            this.dgvPhim.Location = new System.Drawing.Point(3, 154);
             this.dgvPhim.Name = "dgvPhim";
             this.dgvPhim.ReadOnly = true;
             this.dgvPhim.RowHeadersWidth = 51;
@@ -124,7 +124,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(300, 25);
             this.txtTimKiem.TabIndex = 56;
-            this.txtTimKiem.Text = "nhập tên phim....";
+            this.txtTimKiem.Text = "Nhập tên phim....";
             // 
             // btnTimKiem
             // 
@@ -167,7 +167,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(70, 35);
             this.btnRefresh.TabIndex = 59;
-            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -178,6 +178,7 @@
             this.MaPhim.MinimumWidth = 6;
             this.MaPhim.Name = "MaPhim";
             this.MaPhim.ReadOnly = true;
+            this.MaPhim.Visible = false;
             // 
             // TenPhim
             // 
